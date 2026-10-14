@@ -623,6 +623,21 @@
   --govtw-page-tools-focus-color: var(--govtw-focus-color);
   --govtw-page-tools-focus-text: var(--govtw-focus-text);
   --govtw-page-tools-focus-width: var(--govtw-focus-width);
+  --govtw-font-size-switcher-font-size: var(--govtw-font-size-base);
+  --govtw-font-size-switcher-color: var(--govtw-color-text-primary);
+  --govtw-font-size-switcher-label-color: var(--govtw-color-text-secondary);
+  --govtw-font-size-switcher-gap: var(--govtw-spacing-2);
+  --govtw-font-size-switcher-button-size: 44px;
+  --govtw-font-size-switcher-button-bg: var(--govtw-color-bg-canvas);
+  --govtw-font-size-switcher-button-color: var(--govtw-color-text-primary);
+  --govtw-font-size-switcher-button-border-color: var(--govtw-color-text-secondary);
+  --govtw-font-size-switcher-button-border-radius: var(--govtw-radius-sm);
+  --govtw-font-size-switcher-pressed-bg: var(--govtw-color-text-primary);
+  --govtw-font-size-switcher-pressed-color: var(--govtw-color-bg-canvas);
+  --govtw-font-size-switcher-pressed-font-weight: var(--govtw-font-weight-bold);
+  --govtw-font-size-switcher-focus-color: var(--govtw-focus-color);
+  --govtw-font-size-switcher-focus-text: var(--govtw-focus-text);
+  --govtw-font-size-switcher-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================
@@ -756,4 +771,16 @@ p {
   clip-path: inset(50%) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+html[data-font-size="small"] {
+  font-size: 87.5%;
+}
+
+html[data-font-size="medium"] {
+  font-size: 100%;
+}
+
+html[data-font-size="large"] {
+  font-size: 125%;
 }

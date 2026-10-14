@@ -52,6 +52,7 @@ export default defineConfig({
         'govtw-card': resolve(__dirname, 'src/govtw-card.ts'),
         'govtw-side-navigation': resolve(__dirname, 'src/govtw-side-navigation.ts'),
         'govtw-page-tools': resolve(__dirname, 'src/govtw-page-tools.ts'),
+        'govtw-font-size-switcher': resolve(__dirname, 'src/govtw-font-size-switcher.ts'),
       },
       formats: ['es'],
     },

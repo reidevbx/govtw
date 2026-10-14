@@ -158,6 +158,7 @@ export default defineConfig({
           { text: '卡片 Card', link: '/components/card' },
           { text: '側邊選單 Side Navigation', link: '/components/side-navigation' },
           { text: '頁面工具列 Page Tools', link: '/components/page-tools' },
+          { text: '字級切換 Font Size Switcher', link: '/components/font-size-switcher' },
           // <components-end>
         ],
       },

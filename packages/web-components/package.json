@@ -219,6 +219,11 @@
       "source": "./src/govtw-page-tools.ts",
       "types": "./dist/govtw-page-tools.d.ts",
       "import": "./dist/govtw-page-tools.js"
+    },
+    "./govtw-font-size-switcher": {
+      "source": "./src/govtw-font-size-switcher.ts",
+      "types": "./dist/govtw-font-size-switcher.d.ts",
+      "import": "./dist/govtw-font-size-switcher.js"
     }
   },
   "files": [

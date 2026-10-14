@@ -44,13 +44,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component font-size-switcher --type=basic --zh-name=字級切換`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-font-size-switcher-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-font-size-switcher.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/font-size-switcher.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component font-size-switcher --type=basic --zh-name=字級切換`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-font-size-switcher-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-font-size-switcher.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/font-size-switcher.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -60,3 +60,28 @@
 ## 相關任務
 
 - `header`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) FS1–FS4 完成。
+
+### 完成項目
+
+- 不改 `build.js`；`tokens.json` 的 `utilities` 加 3 條 `html[data-font-size]` 規則：87.5%／100%／125%（FS1、FS2）
+- 文件範例前加警告區塊，說明會改變整個文件站台（FS3）
+- 可見文字「小」「中」「大」，`role="group"` 的名稱取自可見標籤「字級」（FS4）
+- localStorage 讀寫包在 try/catch；`storage-key` 設空字串時不儲存
+- 以 MutationObserver 監看 `<html>` 屬性，同一頁多個切換器互相同步
+- 文件提供 `<head>` 同步程式，避免載入時字級跳動
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-font-size-switcher.ts`（新）
+- `packages/tokens/tokens.json`：`utilities` 3 條規則、`font-size-switcher` 15 個 token
+- `apps/docs/components/font-size-switcher.md`（新）
+- `apps/docs/components/page-tools.md`：相關元件改為實際連結
+- scaffolder 更新的 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 檢查既有元件是否有 px 字級：有的話切換不會縮放

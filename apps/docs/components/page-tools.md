@@ -94,5 +94,5 @@ import '@gov-tw/web-components/govtw-page-tools';
 
 ### 相關元件
 
-- 字級切換 Font Size Switcher（規劃中）
+- [字級切換 Font Size Switcher](/components/font-size-switcher)
 - [按鈕 Button](/components/button)
