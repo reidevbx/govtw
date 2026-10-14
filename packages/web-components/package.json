@@ -144,6 +144,11 @@
       "source": "./src/govtw-notification-banner.ts",
       "types": "./dist/govtw-notification-banner.d.ts",
       "import": "./dist/govtw-notification-banner.js"
+    },
+    "./govtw-summary-list": {
+      "source": "./src/govtw-summary-list.ts",
+      "types": "./dist/govtw-summary-list.d.ts",
+      "import": "./dist/govtw-summary-list.js"
     }
   },
   "files": [

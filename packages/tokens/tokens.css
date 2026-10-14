@@ -410,6 +410,7 @@
   --govtw-notification-banner-focus-color: var(--govtw-focus-color);
   --govtw-notification-banner-focus-width: var(--govtw-focus-width);
   --govtw-summary-list-border-color: var(--govtw-color-border-subtle);
+  --govtw-summary-list-border-width: 1px;
   --govtw-summary-list-key-font-weight: var(--govtw-font-weight-bold);
   --govtw-summary-list-key-width: 30%;
   --govtw-summary-list-row-padding-y: var(--govtw-spacing-3);

@@ -41,13 +41,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component summary-list --type=basic --zh-name=摘要清單`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-summary-list-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-summary-list.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/summary-list.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component summary-list --type=basic --zh-name=摘要清單`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-summary-list-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-summary-list.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/summary-list.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -58,3 +58,17 @@
 
 - `panel`
 - `table`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) C2、S1、S2：作者寫原生 `<dl>`，元件以 light DOM 只加樣式、不改寫結構；`no-border` 變體
+- ✅ 第二個 `<dd>` 為動作欄，靠右；容器寬度 40rem 以下上下排列（container query）
+- ✅ docs 示範以 `.govtw-visually-hidden`（決定 C1）讓「變更」連結名稱唯一
+- ✅ docs 頁（`default`、`no-border` 兩個 preview）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（28 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測

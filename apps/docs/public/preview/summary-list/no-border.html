@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>摘要清單 Summary List — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-summary-list no-border>
+      <dl>
+        <div><dt>發布單位</dt><dd>戶政司</dd></div>
+        <div><dt>發布日期</dt><dd><time datetime="2026-10-08">115-10-08</time></dd></div>
+        <div><dt>更新日期</dt><dd><time datetime="2026-10-14">115-10-14</time></dd></div>
+      </dl>
+    </govtw-summary-list>
+  </div>
+</body>
+</html>
