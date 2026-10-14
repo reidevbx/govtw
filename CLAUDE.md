@@ -153,21 +153,29 @@ pnpm new:component   # 建立新元件（見「新增元件步驟」）
 ⚠️ **不要手工建立**，使用 scaffolder：
 
 ```bash
-pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名]
+pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
 ```
 
 scaffolder 會自動：
 - 建立 `packages/web-components/src/govtw-<name>.ts`（依 type 套用 basic / form / layout 模板）
 - 建立 `apps/docs/components/<name>.md` 骨架（含 `<DemoBlock variant="default">`）
-- 更新 `index.ts` export、`package.json` exports、VitePress sidebar
+- 更新 `index.ts` export、`package.json` exports、`vite.config.ts` entry、VitePress sidebar
+- sidebar 英文名由 name 推導為 Title Case 加空格（`date-input` → `Date Input`），可用 `--en-name` 覆寫
+- `--type=layout` 插入「佈局元件」群組（`<layout-start/end>` marker），其餘插入「元件」群組（`<components-start/end>` marker）
 
-（preview HTML 由 `pnpm build:previews` 自動生成，scaffolder 不再手動產）
+（preview HTML 由 `pnpm build:previews` 自動生成，scaffolder 不產）
 
-產生後的工作：
-1. 填寫元件 `.ts` 中的 TODO 區塊（屬性、樣式、render）
-2. 補 docs 頁的屬性表、事件表、無障礙說明，並在 `<DemoBlock>` 內寫示範 HTML 與 `variant` 名
-3. `pnpm build`（依序跑 build:components → sync:public → build:previews → docs build）
-4. `pnpm check:components` 稽核所有元件完整性
+產生後的工作（完整檢查清單見 `.claude/skills/new-component/SKILL.md`）：
+1. 在 `tokens.json` 新增 component token，`pnpm build:tokens`
+2. 填寫元件 `.ts` 中的 TODO 區塊（屬性、樣式、render）
+3. 補 docs 頁的屬性表、事件表、無障礙說明，並在 `<DemoBlock>` 內寫示範 HTML 與 `variant` 名
+4. `pnpm build`（依序跑 build:tokens → build:components → sync:public → build:previews → docs build）
+5. `pnpm check:components` 稽核所有元件完整性，`pnpm lint`
+
+### AI 指引檔
+
+- `CLAUDE.md` 是唯一來源；`AGENTS.md` 是指向它的 symlink，不要直接編輯
+- skill 唯一來源在 `.claude/skills/`；`.agents/skills/` 內是指向它的 symlink
 
 ## 技術約束
 
