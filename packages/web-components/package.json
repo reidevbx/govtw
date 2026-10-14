@@ -154,6 +154,11 @@
       "source": "./src/govtw-table.ts",
       "types": "./dist/govtw-table.d.ts",
       "import": "./dist/govtw-table.js"
+    },
+    "./govtw-error-summary": {
+      "source": "./src/govtw-error-summary.ts",
+      "types": "./dist/govtw-error-summary.d.ts",
+      "import": "./dist/govtw-error-summary.js"
     }
   },
   "files": [

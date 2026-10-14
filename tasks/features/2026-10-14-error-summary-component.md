@@ -42,13 +42,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component error-summary --type=basic --zh-name=錯誤摘要`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-error-summary-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-error-summary.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/error-summary.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component error-summary --type=basic --zh-name=錯誤摘要`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-error-summary-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-error-summary.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/error-summary.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -59,3 +59,23 @@
 
 - `date-input`
 - `text-input`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) E1–E3
+- ✅ `govtw-error-summary`：light DOM 包裝作者的 `<ul><li><a>`，加上 `<h2>` 標題與 `role="alert"` 容器（巢狀連結需要 light DOM 樣式，`::slotted` 選不到）
+- ✅ 出現時自動聚焦一次；`no-autofocus` 可關閉
+- ✅ 點 `#id` 連結：先在元件所在 root 找目標再退回 document，`scrollIntoView` 後以 `focus({ preventScroll: true })` 聚焦。表單元件的 `delegatesFocus` 會把焦點轉到內部 input
+- ✅ 標題 id 以計數器產生，避免重複
+- ✅ docs 頁（`default` preview，搭配兩個帶 `error` 的 text-input）
+
+### 與決定表的差異
+
+- 決定表未指定 DOM。實作採 light DOM 包裝（同 breadcrumbs），原因是作者清單中的巢狀 `<a>` 需要樣式
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（30 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：自動聚焦、點連結後焦點是否進到內部 input

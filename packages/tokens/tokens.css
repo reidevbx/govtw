@@ -434,6 +434,7 @@
   --govtw-error-summary-heading-font-size: var(--govtw-font-size-xl);
   --govtw-error-summary-heading-font-weight: var(--govtw-font-weight-bold);
   --govtw-error-summary-link-color: var(--govtw-color-feedback-error);
+  --govtw-error-summary-underline-offset: 0.25em;
   --govtw-error-summary-focus-color: var(--govtw-focus-color);
   --govtw-error-summary-focus-width: var(--govtw-focus-width);
   --govtw-error-summary-focus-text: var(--govtw-focus-text);

@@ -27,3 +27,4 @@ export { GovtwPanel } from './govtw-panel.js';
 export { GovtwNotificationBanner } from './govtw-notification-banner.js';
 export { GovtwSummaryList } from './govtw-summary-list.js';
 export { GovtwTable } from './govtw-table.js';
+export { GovtwErrorSummary } from './govtw-error-summary.js';

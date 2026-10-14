@@ -145,6 +145,7 @@ export default defineConfig({
           { text: '通知橫幅 Notification Banner', link: '/components/notification-banner' },
           { text: '摘要清單 Summary List', link: '/components/summary-list' },
           { text: '表格 Table', link: '/components/table' },
+          { text: '錯誤摘要 Error Summary', link: '/components/error-summary' },
           // <components-end>
         ],
       },
