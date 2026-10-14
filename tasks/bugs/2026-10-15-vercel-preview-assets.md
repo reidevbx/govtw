@@ -11,8 +11,8 @@
 
 ## 需求定義
 
-- 根目錄新增 `vercel.json`：`buildCommand` 為 `pnpm build`，`outputDirectory` 為 `apps/docs/.vitepress/dist`
-- 前提：Vercel 專案的 Root Directory 為 repo 根目錄；若為 `apps/docs`，根目錄的 `vercel.json` 不生效
+- `apps/docs/vercel.json`：`buildCommand` 為 `cd ../.. && pnpm build`，`outputDirectory` 為 `.vitepress/dist`
+- Vercel 專案的 Root Directory 是 `apps/docs`（建置紀錄的 install 指令為 `cd ../.. && pnpm install`），設定檔要放在這層
 
 ### 驗收標準
 
@@ -27,4 +27,4 @@
 
 ## 影響範圍
 
-- 新增：`vercel.json`
+- 新增：`apps/docs/vercel.json`
