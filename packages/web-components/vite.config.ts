@@ -49,6 +49,7 @@ export default defineConfig({
         'govtw-step-indicator': resolve(__dirname, 'src/govtw-step-indicator.ts'),
         'govtw-attachment': resolve(__dirname, 'src/govtw-attachment.ts'),
         'govtw-document-list': resolve(__dirname, 'src/govtw-document-list.ts'),
+        'govtw-card': resolve(__dirname, 'src/govtw-card.ts'),
       },
       formats: ['es'],
     },

@@ -204,6 +204,11 @@
       "source": "./src/govtw-document-list.ts",
       "types": "./dist/govtw-document-list.d.ts",
       "import": "./dist/govtw-document-list.js"
+    },
+    "./govtw-card": {
+      "source": "./src/govtw-card.ts",
+      "types": "./dist/govtw-card.d.ts",
+      "import": "./dist/govtw-card.js"
     }
   },
   "files": [

@@ -44,13 +44,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component card --type=basic --zh-name=卡片`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-card-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-card.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/card.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component card --type=basic --zh-name=卡片`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-card-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-card.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/card.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -60,3 +60,29 @@
 ## 相關任務
 
 - `document-list`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) CD1–CD3 完成。
+
+### 完成項目
+
+- 做卡片；設計指引寫明沒有圖片時改用連結清單（CD1）
+- `heading`、`href`、`heading-level` 屬性，說明用 default slot，圖片用 `slot="image"`；標題連結的 `::after` 擴大到整張卡（CD2）
+- 文件寫明卡片圖片設 `alt=""`（CD3）
+
+### 實作時新增
+
+- `target="_blank"` 時標題後加可見的「（另開新視窗）」，與 link 元件一致。理由：調查發現台北服務通的卡片連到外部網域沒有提示
+- 聚焦時整張卡加黑框，讓使用者看出點擊範圍
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-card.ts`（新）
+- `packages/tokens/tokens.json`：`card` 16 個 token
+- `apps/docs/components/card.md`（新）
+- scaffolder 更新的 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 在瀏覽器確認：點卡片任何位置都會開啟連結；聚焦框在圓角處的顯示

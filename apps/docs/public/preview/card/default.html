@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>卡片 Card — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1rem;">
+      <govtw-card heading="戶籍謄本申請" href="#">
+        <p>線上申請電子戶籍謄本，免臨櫃。</p>
+      </govtw-card>
+      <govtw-card heading="綜合所得稅申報" href="#">
+        <p>每年 5 月申報，可用自然人憑證或行動身分識別登入。</p>
+      </govtw-card>
+      <govtw-card heading="駕照換發" href="#">
+        <p>駕照到期前可預約監理站換發。</p>
+      </govtw-card>
+    </div>
+  </div>
+</body>
+</html>

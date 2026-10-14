@@ -37,3 +37,4 @@ export { GovtwCaptcha } from './govtw-captcha.js';
 export { GovtwStepIndicator } from './govtw-step-indicator.js';
 export { GovtwAttachment, GovtwAttachmentFile } from './govtw-attachment.js';
 export { GovtwDocumentList, GovtwDocumentListItem } from './govtw-document-list.js';
+export { GovtwCard } from './govtw-card.js';

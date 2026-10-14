@@ -584,6 +584,22 @@
   --govtw-document-list-focus-color: var(--govtw-focus-color);
   --govtw-document-list-focus-text: var(--govtw-focus-text);
   --govtw-document-list-focus-width: var(--govtw-focus-width);
+  --govtw-card-font-size: var(--govtw-font-size-base);
+  --govtw-card-color: var(--govtw-color-text-primary);
+  --govtw-card-bg: var(--govtw-color-bg-canvas);
+  --govtw-card-border-color: var(--govtw-color-border-subtle);
+  --govtw-card-border-width: 1px;
+  --govtw-card-border-radius: var(--govtw-radius-md);
+  --govtw-card-padding: var(--govtw-spacing-4);
+  --govtw-card-gap: var(--govtw-spacing-2);
+  --govtw-card-heading-font-size: var(--govtw-font-size-lg);
+  --govtw-card-heading-font-weight: var(--govtw-font-weight-bold);
+  --govtw-card-link-color: var(--govtw-color-link-default);
+  --govtw-card-underline-offset: 0.25em;
+  --govtw-card-hover-underline-thickness: 3px;
+  --govtw-card-focus-color: var(--govtw-focus-color);
+  --govtw-card-focus-text: var(--govtw-focus-text);
+  --govtw-card-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================
