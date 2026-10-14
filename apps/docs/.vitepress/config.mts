@@ -121,7 +121,6 @@ export default defineConfig({
         items: [
           {
             text: '表單與操作',
-            collapsed: false,
             items: [
               // <form-start>
               { text: '按鈕 Button', link: '/components/button' },
@@ -141,7 +140,6 @@ export default defineConfig({
           },
           {
             text: '導覽',
-            collapsed: false,
             items: [
               // <navigation-start>
               { text: '連結 Link', link: '/components/link' },
@@ -157,7 +155,6 @@ export default defineConfig({
           },
           {
             text: '內容呈現',
-            collapsed: false,
             items: [
               // <content-start>
               { text: '補充說明 Inset Text', link: '/components/inset-text' },
@@ -176,7 +173,6 @@ export default defineConfig({
           },
           {
             text: '訊息與狀態',
-            collapsed: false,
             items: [
               // <feedback-start>
               { text: '錯誤摘要 Error Summary', link: '/components/error-summary' },
@@ -188,7 +184,6 @@ export default defineConfig({
           },
           {
             text: '頁面框架',
-            collapsed: false,
             items: [
               // <page-start>
               { text: '頁首 Header', link: '/components/header' },
@@ -221,7 +216,6 @@ export default defineConfig({
           { text: '概述', link: '/patterns/' },
           {
             text: '協助使用者',
-            collapsed: false,
             items: [
               { text: '表單錯誤處理', link: '/patterns/validation' },
               { text: '確認手機號碼', link: '/patterns/confirm-phone-number' },
@@ -230,7 +224,6 @@ export default defineConfig({
           },
           {
             text: '頁面',
-            collapsed: false,
             items: [
               { text: '多步驟表單', link: '/patterns/multi-step-form' },
               { text: '完成頁', link: '/patterns/confirmation-page' },
