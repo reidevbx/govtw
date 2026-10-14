@@ -600,6 +600,20 @@
   --govtw-card-focus-color: var(--govtw-focus-color);
   --govtw-card-focus-text: var(--govtw-focus-text);
   --govtw-card-focus-width: var(--govtw-focus-width);
+  --govtw-side-navigation-font-size: var(--govtw-font-size-base);
+  --govtw-side-navigation-color: var(--govtw-color-text-primary);
+  --govtw-side-navigation-link-color: var(--govtw-color-link-default);
+  --govtw-side-navigation-item-padding-y: var(--govtw-spacing-2);
+  --govtw-side-navigation-item-padding-x: var(--govtw-spacing-3);
+  --govtw-side-navigation-nested-indent: var(--govtw-spacing-4);
+  --govtw-side-navigation-current-font-weight: var(--govtw-font-weight-bold);
+  --govtw-side-navigation-current-color: var(--govtw-color-text-primary);
+  --govtw-side-navigation-current-border-color: var(--govtw-color-brand-primary);
+  --govtw-side-navigation-current-border-width: 4px;
+  --govtw-side-navigation-underline-offset: 0.25em;
+  --govtw-side-navigation-focus-color: var(--govtw-focus-color);
+  --govtw-side-navigation-focus-text: var(--govtw-focus-text);
+  --govtw-side-navigation-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================

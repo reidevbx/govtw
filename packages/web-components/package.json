@@ -209,6 +209,11 @@
       "source": "./src/govtw-card.ts",
       "types": "./dist/govtw-card.d.ts",
       "import": "./dist/govtw-card.js"
+    },
+    "./govtw-side-navigation": {
+      "source": "./src/govtw-side-navigation.ts",
+      "types": "./dist/govtw-side-navigation.d.ts",
+      "import": "./dist/govtw-side-navigation.js"
     }
   },
   "files": [

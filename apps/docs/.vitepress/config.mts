@@ -156,6 +156,7 @@ export default defineConfig({
           { text: '附件下載 Attachment', link: '/components/attachment' },
           { text: '文件列表 Document List', link: '/components/document-list' },
           { text: '卡片 Card', link: '/components/card' },
+          { text: '側邊選單 Side Navigation', link: '/components/side-navigation' },
           // <components-end>
         ],
       },

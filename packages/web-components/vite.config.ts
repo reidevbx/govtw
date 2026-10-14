@@ -50,6 +50,7 @@ export default defineConfig({
         'govtw-attachment': resolve(__dirname, 'src/govtw-attachment.ts'),
         'govtw-document-list': resolve(__dirname, 'src/govtw-document-list.ts'),
         'govtw-card': resolve(__dirname, 'src/govtw-card.ts'),
+        'govtw-side-navigation': resolve(__dirname, 'src/govtw-side-navigation.ts'),
       },
       formats: ['es'],
     },

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>側邊選單 Side Navigation — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <div style="max-inline-size: 18rem;">
+      <govtw-side-navigation>
+        <ul>
+          <li><a href="#">戶籍登記</a></li>
+          <li>
+            <a href="#">戶籍謄本</a>
+            <ul>
+              <li><a href="#">臨櫃申請</a></li>
+              <li><a href="#" aria-current="page">線上申請</a></li>
+              <li><a href="#">跨機關查詢</a></li>
+            </ul>
+          </li>
+          <li><a href="#">身分證</a></li>
+          <li><a href="#">門牌</a></li>
+        </ul>
+      </govtw-side-navigation>
+    </div>
+  </div>
+</body>
+</html>
