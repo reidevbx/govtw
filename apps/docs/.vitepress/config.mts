@@ -134,6 +134,7 @@ export default defineConfig({
           { text: '導盲磚 Accesskey', link: '/components/accesskey' },
           { text: '麵包屑 Breadcrumbs', link: '/components/breadcrumbs' },
           { text: '搜尋框 Search', link: '/components/search' },
+          { text: '主選單 Service Navigation', link: '/components/service-navigation' },
           // <components-end>
         ],
       },

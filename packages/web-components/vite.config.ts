@@ -28,6 +28,7 @@ export default defineConfig({
         'govtw-accesskey': resolve(__dirname, 'src/govtw-accesskey.ts'),
         'govtw-breadcrumbs': resolve(__dirname, 'src/govtw-breadcrumbs.ts'),
         'govtw-search': resolve(__dirname, 'src/govtw-search.ts'),
+        'govtw-service-navigation': resolve(__dirname, 'src/govtw-service-navigation.ts'),
       },
       formats: ['es'],
     },

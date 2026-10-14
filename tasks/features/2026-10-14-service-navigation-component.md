@@ -45,13 +45,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component service-navigation --type=basic --zh-name=主選單`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-service-navigation-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-service-navigation.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/service-navigation.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component service-navigation --type=basic --zh-name=主選單`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-service-navigation-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-service-navigation.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/service-navigation.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -62,3 +62,26 @@
 
 - `header`
 - `side-navigation`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P0 決定表](./2026-10-14-p0-decisions.md) A1、A2、A4、N1–N3 實作
+- ✅ `govtw-service-navigation`：light DOM，作者寫 `<a>`，元件包成 `<nav aria-label><ul><li>`；只支援單層
+- ✅ 目前頁由作者加 `aria-current="page"`，顯示粗體加指示線（寬版底線、窄版左線）
+- ✅ 容器寬度 40rem 以下收合成「選單」`<button aria-expanded aria-controls>`，以 container query 判斷
+- ✅ 寬窄版面共用同一份 DOM
+- ✅ docs 頁（`default`、`collapsed` 兩個 preview）；breadcrumbs 補回相關元件連結
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（19 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：container query 收合、按鈕展開
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-service-navigation.ts` — 新增
+- `apps/docs/components/service-navigation.md`、preview 2 份 — 新增
+- `apps/docs/components/breadcrumbs.md` — 補相關元件連結
+- `packages/tokens/tokens.json` — service-navigation 補 3 個底線 token

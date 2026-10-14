@@ -99,6 +99,11 @@
       "source": "./src/govtw-search.ts",
       "types": "./dist/govtw-search.d.ts",
       "import": "./dist/govtw-search.js"
+    },
+    "./govtw-service-navigation": {
+      "source": "./src/govtw-service-navigation.ts",
+      "types": "./dist/govtw-service-navigation.d.ts",
+      "import": "./dist/govtw-service-navigation.js"
     }
   },
   "files": [

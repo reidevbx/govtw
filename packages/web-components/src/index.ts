@@ -16,3 +16,4 @@ export { GovtwSkipLink } from './govtw-skip-link.js';
 export { GovtwAccesskey } from './govtw-accesskey.js';
 export { GovtwBreadcrumbs } from './govtw-breadcrumbs.js';
 export { GovtwSearch } from './govtw-search.js';
+export { GovtwServiceNavigation } from './govtw-service-navigation.js';

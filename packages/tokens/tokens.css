@@ -316,6 +316,9 @@
   --govtw-service-navigation-border-color: var(--govtw-color-border-subtle);
   --govtw-service-navigation-gap: var(--govtw-spacing-6);
   --govtw-service-navigation-item-min-height: 44px;
+  --govtw-service-navigation-underline-thickness: 1px;
+  --govtw-service-navigation-hover-underline-thickness: 3px;
+  --govtw-service-navigation-underline-offset: 0.25em;
   --govtw-service-navigation-toggle-color: var(--govtw-color-brand-primary);
   --govtw-service-navigation-focus-bg: var(--govtw-focus-color);
   --govtw-service-navigation-focus-color: var(--govtw-focus-text);

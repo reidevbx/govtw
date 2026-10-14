@@ -124,4 +124,5 @@ import '@gov-tw/web-components/govtw-breadcrumbs';
 
 ### 相關元件
 
+- [主選單 Service Navigation](/components/service-navigation)
 - [連結 Link](/components/link)
