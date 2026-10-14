@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>完成頁 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="6">
+      <govtw-panel>
+        <h1 slot="title">申請已送出</h1>
+        案件編號<br><strong>A1150001234</strong>
+      </govtw-panel>
+      <p>我們已寄送確認信到 wang@example.com。</p>
+      <h2>接下來會發生什麼事</h2>
+      <p>戶政事務所會在 3 個工作天內審核。審核通過後，我們會寄 Email 通知你到所選的戶政事務所領取。</p>
+      <p>你可以用案件編號<govtw-link href="#">查詢申請進度</govtw-link>。</p>
+      <h2>需要協助</h2>
+      <p>請撥打 0800-000-000，週一至週五 8:30 至 17:30。</p>
+      <p><govtw-link href="#">這項服務好用嗎？給我們意見</govtw-link>（約 1 分鐘）</p>
+    </govtw-stack>
+  </div>
+</body>
+</html>

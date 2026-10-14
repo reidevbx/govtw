@@ -90,6 +90,11 @@ import '@gov-tw/web-components/govtw-panel';
 - **一頁只放一個**
 - **一定要給案件編號**：讓使用者能查進度、能向客服說明
 - **說明下一步**：面板下方寫明審核時間、通知方式、進度查詢方式
+- **整頁的內容**：聯絡方式、意見回饋、保存紀錄等，見[完成頁](/patterns/confirmation-page)模式
+
+### 相關模式
+
+- [完成頁](/patterns/confirmation-page)
 
 ### 相關元件
 

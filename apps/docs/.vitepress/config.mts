@@ -233,6 +233,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: '多步驟表單', link: '/patterns/multi-step-form' },
+              { text: '完成頁', link: '/patterns/confirmation-page' },
             ],
           },
         ],
