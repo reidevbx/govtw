@@ -148,6 +148,7 @@ export default defineConfig({
           { text: '錯誤摘要 Error Summary', link: '/components/error-summary' },
           { text: '日期輸入 Date Input', link: '/components/date-input' },
           { text: '頁籤 Tabs', link: '/components/tabs' },
+          { text: '手風琴 Accordion', link: '/components/accordion' },
           // <components-end>
         ],
       },

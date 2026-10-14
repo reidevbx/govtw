@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>手風琴 Accordion — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-accordion>
+      <govtw-accordion-section heading="戶籍謄本可以線上申請嗎？">
+        <p>可以。持自然人憑證到戶政線上申辦系統申請電子戶籍謄本。</p>
+      </govtw-accordion-section>
+      <govtw-accordion-section heading="委託他人申請要帶什麼？">
+        <p>委託書、委託人身分證影本、受託人身分證正本。</p>
+      </govtw-accordion-section>
+      <govtw-accordion-section heading="申請後多久可以拿到？">
+        <p>臨櫃申請當場核發；線上申請電子謄本可立即下載。</p>
+      </govtw-accordion-section>
+    </govtw-accordion>
+  </div>
+</body>
+</html>

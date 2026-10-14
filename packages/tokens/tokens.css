@@ -470,7 +470,10 @@
   --govtw-tabs-focus-width: var(--govtw-focus-width);
   --govtw-accordion-color: var(--govtw-color-text-primary);
   --govtw-accordion-toggle-color: var(--govtw-color-link-default);
+  --govtw-accordion-toggle-font-size: var(--govtw-font-size-base);
   --govtw-accordion-border-color: var(--govtw-color-border-subtle);
+  --govtw-accordion-border-width: 1px;
+  --govtw-accordion-underline-offset: 0.25em;
   --govtw-accordion-heading-font-size: var(--govtw-font-size-lg);
   --govtw-accordion-heading-font-weight: var(--govtw-font-weight-bold);
   --govtw-accordion-padding-y: var(--govtw-spacing-4);

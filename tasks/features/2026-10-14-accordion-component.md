@@ -44,13 +44,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component accordion --type=basic --zh-name=手風琴`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-accordion-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-accordion.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/accordion.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component accordion --type=basic --zh-name=手風琴`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-accordion-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-accordion.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/accordion.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -61,3 +61,20 @@
 
 - `details`
 - `tabs`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) H1–H5
+- ✅ `govtw-accordion`（容器）＋ `govtw-accordion-section`（每段），兩個類別放在同一個檔案；`index.ts` 手動補上 `GovtwAccordionSection` export
+- ✅ section 為 Shadow DOM：`role="heading"`（層級取自容器的 `heading-level`，限 2–6）內含原生 `<button aria-expanded aria-controls>`，內容在同一個 shadow
+- ✅ 容器「全部展開／全部收合」按鈕，依各段狀態同步文字與 `aria-expanded`
+- ✅ 網址 `#id` 相符時該段自動展開；不內建複製連結；不支援巢狀；不使用 `hidden="until-found"`
+- ✅ 可見的「展開／收合」文字加 `aria-hidden`，避免與 `aria-expanded` 重複朗讀
+- ✅ docs 頁（`default` preview，另附 hash 展開範例）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（33 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測

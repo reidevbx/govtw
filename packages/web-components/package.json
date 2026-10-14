@@ -169,6 +169,11 @@
       "source": "./src/govtw-tabs.ts",
       "types": "./dist/govtw-tabs.d.ts",
       "import": "./dist/govtw-tabs.js"
+    },
+    "./govtw-accordion": {
+      "source": "./src/govtw-accordion.ts",
+      "types": "./dist/govtw-accordion.d.ts",
+      "import": "./dist/govtw-accordion.js"
     }
   },
   "files": [

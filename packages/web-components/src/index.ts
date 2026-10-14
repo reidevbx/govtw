@@ -30,3 +30,4 @@ export { GovtwTable } from './govtw-table.js';
 export { GovtwErrorSummary } from './govtw-error-summary.js';
 export { GovtwDateInput } from './govtw-date-input.js';
 export { GovtwTabs } from './govtw-tabs.js';
+export { GovtwAccordion, GovtwAccordionSection } from './govtw-accordion.js';
