@@ -141,6 +141,7 @@ export default defineConfig({
           { text: '警告文字 Warning Text', link: '/components/warning-text' },
           { text: '可展開說明 Details', link: '/components/details' },
           { text: '返回連結 Back Link', link: '/components/back-link' },
+          { text: '完成面板 Panel', link: '/components/panel' },
           // <components-end>
         ],
       },

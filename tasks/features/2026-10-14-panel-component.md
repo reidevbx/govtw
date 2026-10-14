@@ -33,13 +33,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component panel --type=basic --zh-name=完成面板`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-panel-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-panel.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/panel.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component panel --type=basic --zh-name=完成面板`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-panel-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-panel.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/panel.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -50,3 +50,17 @@
 
 - `notification-banner`
 - `summary-list`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) M1：標題以 `slot="title"` 傳入 `<h1>`，元件清除 margin 並改為繼承面板文字色
+- ✅ `govtw-panel`：Shadow DOM，置中，Windows 高對比模式保留透明邊框
+- ✅ docs 頁（`default` 一個 preview，另附完成頁結構範例）
+
+### 驗證
+
+- 對比度：淺色主題 green.8 對 neutral.1 為 5.97:1；深色主題 green.5 對 neutral.12 為 10.05:1
+- `pnpm build`、`pnpm check:components`（26 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測

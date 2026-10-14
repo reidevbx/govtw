@@ -134,6 +134,11 @@
       "source": "./src/govtw-back-link.ts",
       "types": "./dist/govtw-back-link.d.ts",
       "import": "./dist/govtw-back-link.js"
+    },
+    "./govtw-panel": {
+      "source": "./src/govtw-panel.ts",
+      "types": "./dist/govtw-panel.d.ts",
+      "import": "./dist/govtw-panel.js"
     }
   },
   "files": [
