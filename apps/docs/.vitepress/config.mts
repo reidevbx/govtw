@@ -151,6 +151,7 @@ export default defineConfig({
           { text: '手風琴 Accordion', link: '/components/accordion' },
           { text: '密碼輸入 Password Input', link: '/components/password-input' },
           { text: '檔案上傳 File Upload', link: '/components/file-upload' },
+          { text: '圖形驗證碼 Captcha', link: '/components/captcha' },
           // <components-end>
         ],
       },

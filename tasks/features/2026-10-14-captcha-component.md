@@ -43,13 +43,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component captcha --type=form --zh-name=圖形驗證碼`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-captcha-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-captcha.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/captcha.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component captcha --type=form --zh-name=圖形驗證碼`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-captcha-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-captcha.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/captcha.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -60,3 +60,28 @@
 
 - `otp-input`
 - `text-input`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) CA1–CA5 完成。
+
+### 完成項目
+
+- 文件開頭用警告區塊說明優先用其他防濫用做法（CA1）
+- `src`、`alt` 屬性；「換一張」只發出 `govtw-refresh` 事件，換圖後清空輸入（CA2）
+- `audio-src` 缺少時 console 警告；「語音播放」播放元件內的 `<audio preload="none">`（CA3）
+- 文件說明 WCAG 3.3.8：登入流程需另外提供不用驗證碼的登入方式（CA4）
+- 輸入框 `autocomplete="off"`、`spellcheck="false"`，`inputmode`、`maxlength` 可設（CA5）
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-captcha.ts`（新）
+- `packages/tokens/tokens.json`：`captcha` 20 個 token
+- `apps/docs/components/captcha.md`（新）
+- `apps/docs/public/assets/captcha-sample.svg`（新，範例圖片）
+- scaffolder 更新的 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 範例沒有語音檔；若要示範播放，需準備一段授權可用的音檔
+- 各機關登入流程是否符合 3.3.8 未查證

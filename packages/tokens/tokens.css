@@ -519,6 +519,26 @@
   --govtw-file-upload-focus-color: var(--govtw-focus-color);
   --govtw-file-upload-focus-text: var(--govtw-focus-text);
   --govtw-file-upload-focus-width: var(--govtw-focus-width);
+  --govtw-captcha-font-family: var(--govtw-font-sans);
+  --govtw-captcha-font-size: var(--govtw-font-size-base);
+  --govtw-captcha-color: var(--govtw-color-text-primary);
+  --govtw-captcha-bg: var(--govtw-color-bg-canvas);
+  --govtw-captcha-border-color: var(--govtw-color-text-primary);
+  --govtw-captcha-border-radius: var(--govtw-radius-sm);
+  --govtw-captcha-padding: var(--govtw-spacing-2);
+  --govtw-captcha-label-font-weight: var(--govtw-font-weight-bold);
+  --govtw-captcha-hint-color: var(--govtw-color-text-secondary);
+  --govtw-captcha-error-color: var(--govtw-color-feedback-error);
+  --govtw-captcha-stack-gap: var(--govtw-spacing-2);
+  --govtw-captcha-error-padding: var(--govtw-spacing-3);
+  --govtw-captcha-image-border-color: var(--govtw-color-border-default);
+  --govtw-captcha-image-height: 3rem;
+  --govtw-captcha-actions-gap: var(--govtw-spacing-3);
+  --govtw-captcha-action-color: var(--govtw-color-link-default);
+  --govtw-captcha-underline-offset: 0.25em;
+  --govtw-captcha-focus-color: var(--govtw-focus-color);
+  --govtw-captcha-focus-text: var(--govtw-focus-text);
+  --govtw-captcha-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================

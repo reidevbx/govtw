@@ -184,6 +184,11 @@
       "source": "./src/govtw-file-upload.ts",
       "types": "./dist/govtw-file-upload.d.ts",
       "import": "./dist/govtw-file-upload.js"
+    },
+    "./govtw-captcha": {
+      "source": "./src/govtw-captcha.ts",
+      "types": "./dist/govtw-captcha.d.ts",
+      "import": "./dist/govtw-captcha.js"
     }
   },
   "files": [
