@@ -47,13 +47,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component header --type=layout --zh-name=頁首`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-header-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-header.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/header.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component header --type=layout --zh-name=頁首`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-header-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-header.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/header.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -67,3 +67,28 @@
 - `font-size-switcher`
 - `skip-link`
 - `accesskey`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P0 決定表](./2026-10-14-p0-decisions.md) A3、H1–H4 實作
+- ✅ `govtw-header`：Shadow DOM，slot 為 default（導盲磚）、`logo`、`service-name`、`tools`、`navigation`
+- ✅ 版面寬度上限 1020px；工具列以 flex-wrap 自動換行，不需要 media query
+- ✅ 不自動插入導盲磚；工具列 5 項上限只寫在設計指引；不納入 ADHD 友善介面、大型游標
+- ✅ docs 頁（`default`、`minimal` 兩個 preview）
+
+### 實作時的調整
+
+- scaffolder 以 `--type=layout` 建立，sidebar 被放進「佈局元件」群組。header 不是佈局原語，已手動移到「元件」群組。footer 改用 `--type=basic`
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（20 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：窄寬度下工具列換行、與 search 及 service-navigation 的組合畫面
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-header.ts` — 新增
+- `apps/docs/components/header.md`、preview 2 份 — 新增
+- scaffolder 自動更新 `index.ts`、`package.json`、`vite.config.ts`；`config.mts` 手動調整群組

@@ -104,6 +104,11 @@
       "source": "./src/govtw-service-navigation.ts",
       "types": "./dist/govtw-service-navigation.d.ts",
       "import": "./dist/govtw-service-navigation.js"
+    },
+    "./govtw-header": {
+      "source": "./src/govtw-header.ts",
+      "types": "./dist/govtw-header.d.ts",
+      "import": "./dist/govtw-header.js"
     }
   },
   "files": [

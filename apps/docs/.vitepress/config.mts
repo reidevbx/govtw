@@ -135,6 +135,7 @@ export default defineConfig({
           { text: '麵包屑 Breadcrumbs', link: '/components/breadcrumbs' },
           { text: '搜尋框 Search', link: '/components/search' },
           { text: '主選單 Service Navigation', link: '/components/service-navigation' },
+          { text: '頁首 Header', link: '/components/header' },
           // <components-end>
         ],
       },

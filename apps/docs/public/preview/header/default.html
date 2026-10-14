@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>頁首 Header — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-header>
+      <govtw-accesskey key="U" label="上方功能區塊"></govtw-accesskey>
+      <a slot="logo" href="#"><img src="/logo.svg" alt="範例機關首頁" style="block-size: 40px; inline-size: auto; display: block;"></a>
+      <span slot="service-name">線上申辦服務</span>
+      <govtw-search slot="tools" label="搜尋本網站" hide-label></govtw-search>
+      <govtw-service-navigation slot="navigation">
+        <a href="#">首頁</a>
+        <a href="#" aria-current="page">申辦服務</a>
+        <a href="#">最新消息</a>
+        <a href="#">聯絡我們</a>
+      </govtw-service-navigation>
+    </govtw-header>
+  </div>
+</body>
+</html>

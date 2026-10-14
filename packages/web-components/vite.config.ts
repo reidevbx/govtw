@@ -29,6 +29,7 @@ export default defineConfig({
         'govtw-breadcrumbs': resolve(__dirname, 'src/govtw-breadcrumbs.ts'),
         'govtw-search': resolve(__dirname, 'src/govtw-search.ts'),
         'govtw-service-navigation': resolve(__dirname, 'src/govtw-service-navigation.ts'),
+        'govtw-header': resolve(__dirname, 'src/govtw-header.ts'),
       },
       formats: ['es'],
     },
