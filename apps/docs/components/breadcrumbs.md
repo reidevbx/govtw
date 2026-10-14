@@ -98,7 +98,7 @@ import '@gov-tw/web-components/govtw-breadcrumbs';
 ## 無障礙
 
 - **地標**：自動包成 `<nav aria-label="麵包屑">`，螢幕閱讀器可從地標清單跳到這裡
-- **清單語意**：自動包成 `<ol>`，螢幕閱讀器會念出「清單，4 個項目」
+- **清單語意**：自動包成 `<ol>`，螢幕閱讀器會念出「清單，4 個項目」。清單加 `role="list"`，因為 Safari 會移除 `list-style: none` 清單的清單語意
 - **目前頁**：最後一項自動加 `aria-current="page"`
 - **分隔符號**：用 CSS 畫的箭頭，不是文字，螢幕閱讀器不會念出
 - **聚焦樣式**：黃色背景加黑色底線，與 [連結 Link](/components/link) 一致

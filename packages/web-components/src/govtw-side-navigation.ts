@@ -1,6 +1,6 @@
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { adoptStyles, takeChildElements, whenParsed } from './internal/light-dom.js';
+import { adoptStyles, restoreListRole, takeChildElements, whenParsed } from './internal/light-dom.js';
 
 /**
  * light DOM 元件的樣式，以 adoptedStyleSheets 掛到所在 root。
@@ -92,7 +92,9 @@ export class GovtwSideNavigation extends LitElement {
     adoptStyles(this.getRootNode(), styles);
     if (this.items) return;
     whenParsed(() => {
-      if (!this.items) this.items = takeChildElements(this);
+      if (this.items) return;
+      this.items = takeChildElements(this);
+      restoreListRole(this.items);
     });
   }
 

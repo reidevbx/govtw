@@ -1,6 +1,6 @@
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { adoptStyles, takeChildElements, whenParsed } from './internal/light-dom.js';
+import { adoptStyles, restoreListRole, takeChildElements, whenParsed } from './internal/light-dom.js';
 
 let idCounter = 0;
 
@@ -100,11 +100,7 @@ export class GovtwContentsList extends LitElement {
     whenParsed(() => {
       if (this.items) return;
       this.items = takeChildElements(this);
-      // Safari 會移除 list-style: none 清單的清單語意，明確加回 role="list"
-      for (const item of this.items) {
-        if (item.matches('ol, ul')) item.setAttribute('role', 'list');
-        item.querySelectorAll('ol, ul').forEach((list) => list.setAttribute('role', 'list'));
-      }
+      restoreListRole(this.items);
     });
   }
 

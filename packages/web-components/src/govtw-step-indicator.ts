@@ -1,6 +1,6 @@
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { adoptStyles, takeChildElements, whenParsed } from './internal/light-dom.js';
+import { adoptStyles, restoreListRole, takeChildElements, whenParsed } from './internal/light-dom.js';
 
 const DONE_CLASS = 'govtw-step-indicator__step--done';
 const DONE_TEXT_CLASS = 'govtw-step-indicator__done-text';
@@ -154,6 +154,7 @@ export class GovtwStepIndicator extends LitElement {
       if (this.list) return;
       const list = takeChildElements(this).find((el): el is HTMLOListElement => el instanceof HTMLOListElement);
       if (!list) console.warn('[govtw-step-indicator] 需要一個 <ol> 子元素');
+      if (list) restoreListRole([list]);
       this.list = list;
     });
   }

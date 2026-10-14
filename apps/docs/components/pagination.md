@@ -170,6 +170,7 @@ import '@gov-tw/web-components/govtw-pagination';
 ## 無障礙
 
 - **Landmark**：根元素 `<nav>` 配 `aria-label`，多個分頁共存時建議自訂 `landmark-label`（如「搜尋結果頁數」「文章目錄頁數」）以利區分
+- **清單語意**：清單加 `role="list"`，因為 Safari 會移除 `list-style: none` 清單的清單語意
 - **當前頁**：以 `aria-current="page"` 標記，輔助科技會宣告「目前頁面」
 - **頁碼語意**：每個頁碼連結附 `aria-label="第 N 頁"`，避免螢幕閱讀器只唸出數字
 - **rel 提示**：上一頁／下一頁連結加 `rel="prev"` / `rel="next"`，協助瀏覽器與爬蟲理解導覽關係

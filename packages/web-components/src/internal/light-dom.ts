@@ -39,3 +39,16 @@ export function whenParsed(callback: () => void) {
     callback();
   }
 }
+
+/**
+ * 對元素本身及其內所有 `<ul>`／`<ol>` 加 `role="list"`。
+ *
+ * Safari 會移除 `list-style: none` 清單的清單語意，VoiceOver 不念「清單，N 項」。
+ * 給包裝作者清單的 light DOM 元件用；元件自己渲染的清單直接在模板寫 `role="list"`。
+ */
+export function restoreListRole(elements: Iterable<Element>) {
+  for (const el of elements) {
+    if (el.matches('ul, ol')) el.setAttribute('role', 'list');
+    el.querySelectorAll('ul, ol').forEach((list) => list.setAttribute('role', 'list'));
+  }
+}

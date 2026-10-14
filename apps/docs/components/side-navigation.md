@@ -99,6 +99,7 @@ import '@gov-tw/web-components/govtw-side-navigation';
 - **目前頁**：作者在 `<a>` 加 `aria-current="page"`；畫面上以左側粗線加粗體標示，不只靠顏色
 - **不收合**：沒有收合開關，所有項目都能直接用 Tab 走到
 - **觸控目標**：每個項目高度至少 44px
+- **清單語意**：清單加 `role="list"`，因為 Safari 會移除 `list-style: none` 清單的清單語意
 - **巢狀清單**：第二層是第一層 `<li>` 裡的 `<ul>`，螢幕閱讀器會念出層級
 
 ## 設計指引

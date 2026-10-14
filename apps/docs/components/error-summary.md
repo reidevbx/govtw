@@ -89,6 +89,7 @@ import '@gov-tw/web-components/govtw-error-summary';
 
 - **立即念出**：`role="alert"`，出現時自動取得焦點，螢幕閱讀器馬上念出標題與錯誤
 - **連結到欄位**：點連結後，頁面捲到欄位頂端，焦點移進欄位的輸入框。表單元件都設了 `delegatesFocus`，所以焦點會進到元件內部的 `<input>`
+- **清單語意**：清單加 `role="list"`，因為 Safari 會移除 `list-style: none` 清單的清單語意
 - **文案一致**：摘要中的錯誤文字，與欄位旁的錯誤訊息相同
 
 ## 設計指引

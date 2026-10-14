@@ -169,7 +169,7 @@ export class GovtwServiceNavigation extends LitElement {
           aria-controls=${this.listId}
           @click=${this.toggle}
         >${this.toggleText}</button>
-        <ul id=${this.listId}>${this.items.map((item) => html`<li>${item}</li>`)}</ul>
+        <ul id=${this.listId} role="list">${this.items.map((item) => html`<li>${item}</li>`)}</ul>
       </nav>
     `;
   }

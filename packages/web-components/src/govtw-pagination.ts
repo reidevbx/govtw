@@ -233,7 +233,7 @@ export class GovtwPagination extends LitElement {
     return html`
       <nav aria-label=${this.landmarkLabel}>
         ${current > 1 ? this.renderNavLink('prev', this.hrefForPage(current - 1)) : nothing}
-        <ul>
+        <ul role="list">
           ${items.map((item) => this.renderItem(item, current))}
         </ul>
         ${current < total ? this.renderNavLink('next', this.hrefForPage(current + 1)) : nothing}

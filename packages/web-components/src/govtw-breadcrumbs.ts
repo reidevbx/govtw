@@ -108,7 +108,7 @@ export class GovtwBreadcrumbs extends LitElement {
     if (!this.items) return nothing;
     return html`
       <nav aria-label=${this.label}>
-        <ol>${this.items.map((item) => html`<li>${item}</li>`)}</ol>
+        <ol role="list">${this.items.map((item) => html`<li>${item}</li>`)}</ol>
       </nav>
     `;
   }

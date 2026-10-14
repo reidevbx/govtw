@@ -167,7 +167,7 @@ export class GovtwPageTools extends LitElement {
   render() {
     const useNative = this.canShare && !this.noNativeShare;
     return html`
-      <ul>
+      <ul role="list">
         ${this.noPrint ? nothing : html`<li><button type="button" @click=${this.print}>列印</button></li>`}
         ${useNative
           ? html`<li><button type="button" @click=${this.share}>分享</button></li>`

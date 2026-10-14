@@ -101,6 +101,7 @@ import '@gov-tw/web-components/govtw-service-navigation';
 ## 無障礙
 
 - **地標**：自動包成 `<nav aria-label="主選單">`。一頁有多個 `<nav>` 時，每個都要有不同的名稱
+- **清單語意**：清單加 `role="list"`，因為 Safari 會移除 `list-style: none` 清單的清單語意
 - **目前頁**：以 `aria-current="page"` 標示，螢幕閱讀器會念出「目前頁面」。視覺上用粗體加指示線，不只靠顏色
 - **收合按鈕**：原生 `<button>`，`aria-expanded` 表示展開狀態，`aria-controls` 指向清單
 - **觸控目標**：每個項目高度至少 44px
