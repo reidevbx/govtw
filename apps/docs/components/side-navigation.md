@@ -120,6 +120,10 @@ import '@gov-tw/web-components/govtw-side-navigation';
 - **只展開目前分支**：其他分支只列第一層，選單才不會太長
 - **最多兩層**：需要更多層時，表示單元要重新分類
 
+### 相關模式
+
+- [長篇內容頁](/patterns/content-page)
+
 ### 相關元件
 
 - [Sidebar](/components/sidebar)

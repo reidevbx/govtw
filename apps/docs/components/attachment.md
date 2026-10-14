@@ -124,6 +124,10 @@ import '@gov-tw/web-components/govtw-attachment';
 - **大小用 KB 或 MB**：使用者用行動網路時，可先判斷是否要下載
 - **不顯示下載次數**：對使用者決定是否下載沒有幫助
 
+### 相關模式
+
+- [長篇內容頁](/patterns/content-page)
+
 ### 相關元件
 
 - [檔案上傳 File Upload](/components/file-upload)

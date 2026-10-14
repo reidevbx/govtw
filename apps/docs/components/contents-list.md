@@ -126,6 +126,10 @@ import '@gov-tw/web-components/govtw-contents-list';
 - **放在 `<h1>` 下方**：在主內容開頭、第一個段落之前
 - **固定頁首會遮住標題**：如果網站有固定在畫面頂端的頁首，在標題加 `scroll-margin-block-start`，捲動後標題才不會被遮住
 
+### 相關模式
+
+- [長篇內容頁](/patterns/content-page)
+
 ### 相關元件
 
 - [側邊選單 Side Navigation](/components/side-navigation)

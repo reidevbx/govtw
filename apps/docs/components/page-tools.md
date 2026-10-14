@@ -93,6 +93,10 @@ import '@gov-tw/web-components/govtw-page-tools';
 - **列印前先確認版面**：用瀏覽器的列印預覽檢查內容是否完整，必要時為頁面加列印樣式
 - **不需要「回上一頁」「回頂端」按鈕**：瀏覽器已經提供
 
+### 相關模式
+
+- [長篇內容頁](/patterns/content-page)
+
 ### 相關元件
 
 - [字級切換 Font Size Switcher](/components/font-size-switcher)

@@ -96,3 +96,41 @@
 8. 長篇內容頁
 
 第 1 步一個 commit，之後每頁一個 commit。
+
+## 總結
+
+### 完成項目
+
+| Commit | 項目 |
+|---|---|
+| `0657600` | PA4 模式頁支援獨立預覽（`build-previews.mjs`、`DemoBlock.vue`）、PA6 改寫模式首頁 |
+| `9b7dd61` | **實作時發現**：`govtw-button type="submit"` 無法送出外層表單，另開 [bug 任務](../bugs/2026-10-14-button-form-submit.md) 修正 |
+| `01b9081` | 表單錯誤處理 |
+| `efc707e` | 確認手機號碼；otp-input 範例改為註冊情境（CP3） |
+| `f228a96` | 登入 |
+| `df0cee0` | 多步驟表單 |
+| `a9bb5bd` | 完成頁 |
+| `2fdd506` | 搜尋結果頁；pagination 的每頁筆數範例搬入（SR3） |
+| 本次 | 長篇內容頁 |
+
+### 與決定表不同之處
+
+- **MS2**：GOV.UK Question pages 原文不建議「同時列出所有步驟」的進度條，step-indicator 正是這種設計。模式頁改為：先不用進度指示 → 必要時用「第 x 題，共 n 題」文字 → step-indicator 只在步驟少、固定、有名稱且經研究證明有幫助時用。step-indicator 文件加上同樣的警告
+- **CF2**：GOV.UK 沒有規定必須寄確認信，文件改寫為「可以寄」
+- **SI**：調查中的圖形驗證碼出現在申辦／查詢頁，不是登入頁，概述照實寫
+- **SI2**：依 W3C 原文補上「語音驗證碼不算替代方式」
+- 範例表單都加 `onsubmit="event.preventDefault()"`，按鈕修正後才不會讓文件頁重新載入；程式碼區塊不含這段
+
+### 變更檔案
+
+- 新增：`apps/docs/patterns/{validation,confirm-phone-number,sign-in,multi-step-form,confirmation-page,search-results,content-page}.md`、`apps/docs/public/preview/patterns/`
+- 修改：`scripts/{paths,build-previews}.mjs`、`apps/docs/.vitepress/theme/DemoBlock.vue`、`apps/docs/.vitepress/config.mts`、`apps/docs/patterns/index.md`、`CLAUDE.md`
+- 元件文件加「相關模式」或改連結：error-summary、otp-input、captcha、step-indicator、panel、pagination、document-list、search、contents-list、side-navigation、attachment、page-tools
+- 刪除：`apps/docs/public/preview/pagination/page-size.html`
+
+### 後續建議
+
+- text-input 的 `label` 是屬性，不能當頁面 `<h1>`；GOV.UK 的「label 當標題」做法目前只有 fieldset 的 legend 做得到。可考慮讓 text-input 支援 `slot="label"`
+- 文字欄位內按 Enter 是否送出表單，需在瀏覽器確認
+- 確認 Email 模式（GOV.UK Confirm an email address）尚未撰寫
+- 搜尋結果頁的篩選條件尚未設計

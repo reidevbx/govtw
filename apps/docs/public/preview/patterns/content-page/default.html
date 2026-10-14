@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>長篇內容頁 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="6">
+      <govtw-breadcrumbs>
+        <a href="#">首頁</a>
+        <a href="#">施政計畫</a>
+        <span>數位服務創新計畫</span>
+      </govtw-breadcrumbs>
+      <govtw-sidebar side="left" side-width="14rem" space="8">
+        <govtw-side-navigation label="施政計畫選單">
+          <ul>
+            <li><a href="#">年度施政計畫</a></li>
+            <li><a href="#" aria-current="page">數位服務創新計畫</a></li>
+            <li><a href="#">資訊安全計畫</a></li>
+          </ul>
+        </govtw-side-navigation>
+        <div>
+          <govtw-stack space="6">
+            <h1>數位服務創新計畫</h1>
+            <govtw-contents-list>
+              <ol>
+                <li><a href="#background">一、計畫緣起</a></li>
+                <li><a href="#goals">二、計畫目標</a></li>
+                <li><a href="#budget">三、經費需求</a></li>
+                <li><a href="#contact">四、聯絡窗口</a></li>
+              </ol>
+            </govtw-contents-list>
+            <h2 id="background">一、計畫緣起</h2>
+            <p>（內文）</p>
+            <h2 id="goals">二、計畫目標</h2>
+            <p>（內文）</p>
+            <h2 id="budget">三、經費需求</h2>
+            <p>（內文）</p>
+            <h2 id="contact">四、聯絡窗口</h2>
+            <p>（內文）</p>
+            <govtw-attachment heading="數位服務創新計畫書">
+              <govtw-attachment-file href="#" format="PDF" size="1.2 MB"></govtw-attachment-file>
+              <govtw-attachment-file href="#" format="ODT" size="86 KB"></govtw-attachment-file>
+            </govtw-attachment>
+            <govtw-page-tools></govtw-page-tools>
+          </govtw-stack>
+        </div>
+      </govtw-sidebar>
+    </govtw-stack>
+  </div>
+</body>
+</html>
