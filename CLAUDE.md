@@ -145,6 +145,7 @@ pnpm new:component   # 建立新元件（見「新增元件步驟」）
 - 沒有 `variant` 的 DemoBlock 不會生 preview，也不顯示「在新分頁預覽」按鈕（適合狀態對照這類不需要獨立頁面的情境）
 - 改 md 的 demo 內容後執行 `pnpm build:previews` 重新生成；`pnpm build` 會自動前置跑一次
 - 生成流程：`scripts/build-previews.mjs` + `scripts/preview-template.html`（統一 boilerplate 與 `.demo-layout` flex 版型）
+- 模式頁（`apps/docs/patterns/<name>.md`，`index.md` 除外）同樣適用，輸出到 `public/preview/patterns/<name>/<xxx>.html`
 - preview HTML 是 build 產物但**有 commit**（方便 dev 啟動立即可用、PR 可 review）；編輯器看到它們即可視為「不要手改」
 - `apps/docs/public/tokens.css` 與 `gov-tw.iife.js` 是從 packages 複製來的，每次 build 後由 `sync:public` 同步更新
 

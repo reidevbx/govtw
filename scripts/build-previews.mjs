@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 /**
- * 從元件 md 自動生成 preview HTML。
+ * 從元件與模式 md 自動生成 preview HTML。
  *
  * 來源：apps/docs/components/<name>.md 中的 <DemoBlock variant="x" ...>...</DemoBlock>
  * 輸出：apps/docs/public/preview/<name>/<x>.html
+ *
+ * 來源：apps/docs/patterns/<name>.md（index.md 除外）
+ * 輸出：apps/docs/public/preview/patterns/<name>/<x>.html
  *
  * 規則：
  *   1. 只處理有 `variant="..."` 的 DemoBlock；無 variant 則跳過（如狀態對照）
@@ -99,34 +102,40 @@ function main() {
     rmSync(P.docs.preview, { recursive: true, force: true });
   }
 
-  const mdFiles = readdirSync(P.docs.components)
-    .filter(f => f.endsWith('.md'))
-    .sort();
+  const stats = { components: 0, patterns: 0, generated: 0, unchanged: 0 };
+  const sources = [
+    { dir: P.docs.components, outDir: P.docs.preview, key: 'components' },
+    { dir: P.docs.patterns, outDir: resolve(P.docs.preview, 'patterns'), key: 'patterns' },
+  ];
 
-  const stats = { components: 0, generated: 0, unchanged: 0 };
+  for (const { dir, outDir, key } of sources) {
+    if (!existsSync(dir)) continue;
+    const mdFiles = readdirSync(dir)
+      .filter(f => f.endsWith('.md') && f !== 'index.md')
+      .sort();
 
-  for (const mdFile of mdFiles) {
-    const name = mdFile.replace(/\.md$/, '');
-    const mdPath = resolve(P.docs.components, mdFile);
-    const md = readFileSync(mdPath, 'utf-8');
-    const title = extractTitle(md, name);
-    const demos = extractDemos(md);
+    for (const mdFile of mdFiles) {
+      const name = mdFile.replace(/\.md$/, '');
+      const md = readFileSync(resolve(dir, mdFile), 'utf-8');
+      const title = extractTitle(md, name);
+      const demos = extractDemos(md);
 
-    if (demos.length === 0) continue;
-    stats.components += 1;
+      if (demos.length === 0) continue;
+      stats[key] += 1;
 
-    for (const demo of demos) {
-      const out = resolve(P.docs.preview, name, `${demo.variant}.html`);
-      const html = render({ title, direction: demo.direction, body: demo.body });
-      const changed = writeIfChanged(out, html);
-      if (changed) stats.generated += 1;
-      else stats.unchanged += 1;
+      for (const demo of demos) {
+        const out = resolve(outDir, name, `${demo.variant}.html`);
+        const html = render({ title, direction: demo.direction, body: demo.body });
+        const changed = writeIfChanged(out, html);
+        if (changed) stats.generated += 1;
+        else stats.unchanged += 1;
+      }
     }
   }
 
   const total = stats.generated + stats.unchanged;
   console.log(
-    `✅ ${stats.components} 個元件｜${total} 個 preview HTML｜` +
+    `✅ ${stats.components} 個元件、${stats.patterns} 個模式｜${total} 個 preview HTML｜` +
     `${stats.generated} 生成/更新、${stats.unchanged} 未變`
   );
   console.log(`   輸出：${rel(P.docs.preview)}/`);

@@ -69,11 +69,15 @@ const props = defineProps({
 const route = useRoute()
 
 // preview prop 優先；否則從 route 推 /preview/<component>/<variant>.html
+// 或 /preview/patterns/<pattern>/<variant>.html
 const previewUrl = computed(() => {
   if (props.preview) return props.preview
   if (!props.variant) return ''
-  const m = route.path.match(/\/components\/([^/]+?)(?:\.html)?\/?$/)
-  return m ? `/preview/${m[1]}/${props.variant}.html` : ''
+  const m = route.path.match(/\/(components|patterns)\/([^/]+?)(?:\.html)?\/?$/)
+  if (!m) return ''
+  return m[1] === 'patterns'
+    ? `/preview/patterns/${m[2]}/${props.variant}.html`
+    : `/preview/${m[2]}/${props.variant}.html`
 })
 
 const open = ref(false)

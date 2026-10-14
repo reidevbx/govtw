@@ -17,6 +17,7 @@ export const P = {
   },
   docs: {
     components: resolve(ROOT, 'apps/docs/components'),
+    patterns: resolve(ROOT, 'apps/docs/patterns'),
     preview: resolve(ROOT, 'apps/docs/public/preview'),
     public: resolve(ROOT, 'apps/docs/public'),
     vpConfig: resolve(ROOT, 'apps/docs/.vitepress/config.mts'),
