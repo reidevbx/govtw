@@ -69,6 +69,7 @@ description: 建立新的 govtw-* Lit 元件（scaffolder-backed）。使用者�
 - [ ] 重要資訊（另開新視窗、目前狀態）不只放在 `title` 屬性
 - [ ] 狀態不只靠顏色表達（`aria-pressed`、`aria-current`、`aria-expanded`、視覺隱藏文字）
 - [ ] 圖片 alt 必填，或明確標為裝飾
+- [ ] 清單設 `list-style: none` 時加 `role="list"`（Safari 會移除清單語意）：模板直接寫；包裝作者的清單用 `internal/light-dom.ts` 的 `restoreListRole()`
 
 ### 文件
 
