@@ -8,7 +8,7 @@ export class GovtwButton extends LitElement {
     delegatesFocus: true,
   };
 
-  @property({ type: String, reflect: true }) variant: 'primary' | 'secondary' | 'danger' = 'primary';
+  @property({ type: String, reflect: true }) variant: 'primary' | 'secondary' | 'danger' | 'start' = 'primary';
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: String, reflect: true }) size: 'sm' | 'md' | 'lg' = 'md';
   @property({ type: String }) type: 'button' | 'submit' | 'reset' = 'button';
@@ -67,17 +67,39 @@ export class GovtwButton extends LitElement {
     }
 
     /* ===== Primary ===== */
-    :host([variant="primary"]) :is(button, a) {
+    :host(:is([variant="primary"], [variant="start"])) :is(button, a) {
       --_bg: var(--govtw-button-primary-bg);
       --_shadow-color: color-mix(in srgb, var(--_bg) 60%, black);
       background: var(--_bg);
       color: var(--govtw-button-primary-color);
     }
-    :host([variant="primary"]) :is(button, a):hover:not(:disabled):not([aria-disabled="true"]) {
+    :host(:is([variant="primary"], [variant="start"])) :is(button, a):hover:not(:disabled):not([aria-disabled="true"]) {
       background: color-mix(in srgb, var(--_bg) 85%, black);
     }
-    :host([variant="primary"]) :is(button, a):active:not(:disabled):not([aria-disabled="true"]) {
+    :host(:is([variant="primary"], [variant="start"])) :is(button, a):active:not(:disabled):not([aria-disabled="true"]) {
       background: color-mix(in srgb, var(--_bg) 65%, black);
+    }
+
+    /* ===== Start — 服務入口主要行動（如「我要線上申辦」），沿用 primary 配色 ===== */
+    :host([variant="start"]) :is(button, a) {
+      font-size: var(--govtw-button-start-font-size);
+      font-weight: var(--govtw-button-start-font-weight);
+    }
+
+    .start-icon {
+      inline-size: var(--govtw-button-start-icon-size);
+      block-size: var(--govtw-button-start-icon-size);
+      flex-shrink: 0;
+      forced-color-adjust: auto;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
     }
 
     /* ===== Secondary ===== */
@@ -150,6 +172,17 @@ export class GovtwButton extends LitElement {
     }
   }
 
+  private renderExtras() {
+    const startIcon = this.variant === 'start'
+      ? html`<svg class="start-icon" viewBox="0 0 33 40" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/></svg>`
+      : nothing;
+    // 按鈕上加可見括號文字會過長，改用視覺隱藏文字
+    const newWindowText = this.href && this.target === '_blank'
+      ? html`<span class="visually-hidden">（另開新視窗）</span>`
+      : nothing;
+    return html`${startIcon}${newWindowText}`;
+  }
+
   render() {
     if (this.href) {
       // target="_blank" 時自動補上 rel="noopener noreferrer" 防止反向 tabnabbing
@@ -166,7 +199,7 @@ export class GovtwButton extends LitElement {
           aria-disabled=${this.disabled ? 'true' : 'false'}
           tabindex=${this.disabled ? -1 : 0}
           @keydown=${this._handleLinkKeydown}
-        ><slot></slot></a>
+        ><slot></slot>${this.renderExtras()}</a>
       `;
     }
 
@@ -176,7 +209,7 @@ export class GovtwButton extends LitElement {
         ?disabled=${this.disabled}
         aria-disabled=${this.disabled ? 'true' : 'false'}
       >
-        <slot></slot>
+        <slot></slot>${this.renderExtras()}
       </button>
     `;
   }

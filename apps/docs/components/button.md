@@ -78,6 +78,24 @@
   </template>
 </DemoBlock>
 
+### 開始按鈕
+
+服務入口頁的主要行動，如「我要線上申辦」。比一般按鈕大，右側有箭頭。通常搭配 `href` 連到申辦流程第一頁。
+
+<DemoBlock variant="start">
+  <govtw-button variant="start" href="#">我要線上申辦</govtw-button>
+
+  <template #code>
+
+```html
+<govtw-button variant="start" href="/apply">我要線上申辦</govtw-button>
+```
+
+  </template>
+</DemoBlock>
+
+一頁只放一個開始按鈕，放在服務說明之後。連到其他機關的系統時加 `target="_blank"`，元件會加上視覺隱藏的「（另開新視窗）」。
+
 ## 互動狀態展示
 
 按鈕的互動回饋參考 [GOV.UK Design System](https://design-system.service.gov.uk/components/button/) 的設計手法，核心目標是**不依賴顏色作為唯一的視覺指示**。
@@ -200,7 +218,7 @@ onMounted(() => {
 
 | 屬性 | 型別 | 預設值 | 說明 |
 |------|------|--------|------|
-| `variant` | `'primary' \| 'secondary' \| 'danger'` | `'primary'` | 按鈕樣式 |
+| `variant` | `'primary' \| 'secondary' \| 'danger' \| 'start'` | `'primary'` | 按鈕樣式 |
 | `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | 按鈕大小 |
 | `disabled` | `boolean` | `false` | 是否停用 |
 | `href` | `string` | `''` | 連結網址，有值時渲染為 `<a>` |
@@ -230,6 +248,13 @@ onMounted(() => {
 - 背景色：`--govtw-color-feedback-error`
 - 文字色：`--govtw-color-text-on-primary`
 
+### Start（開始按鈕）
+
+服務入口頁的主要行動。配色同 Primary，字級較大、粗體，右側有箭頭圖示（`aria-hidden`）。
+
+- 字級：`--govtw-button-start-font-size`
+- 字重：`--govtw-button-start-font-weight`
+
 ## 無障礙
 
 - 無 `href` 時使用語意化的 `<button>` 元素；有 `href` 時渲染為 `<a role="button">`
@@ -238,6 +263,8 @@ onMounted(() => {
 - 互動回饋透過 inset shadow 消失傳達按壓感，不僅依靠色彩
 - 停用狀態使用 `aria-disabled` 而非移除元素
 - 連結按鈕停用時移除 `href` 並設定 `tabindex="-1"` 防止聚焦
+- 連結按鈕設 `target="_blank"` 時，自動加上視覺隱藏的「（另開新視窗）」，螢幕閱讀器會念出
+- 開始按鈕的箭頭是裝飾，加了 `aria-hidden`
 - 透明邊框確保 Windows 高對比模式下可見
 - 色彩對比度符合 WCAG 2.2 AA 標準（至少 4.5:1）
 

@@ -196,6 +196,7 @@
   --govtw-button-focus-color: var(--govtw-focus-color);
   --govtw-button-focus-width: var(--govtw-focus-width);
   --govtw-button-start-font-size: var(--govtw-font-size-lg);
+  --govtw-button-start-font-weight: var(--govtw-font-weight-bold);
   --govtw-button-start-icon-size: 1.25em;
   --govtw-text-input-font-family: var(--govtw-font-sans);
   --govtw-text-input-font-size: var(--govtw-font-size-base);
