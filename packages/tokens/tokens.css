@@ -418,7 +418,9 @@
   --govtw-table-font-size: var(--govtw-font-size-base);
   --govtw-table-color: var(--govtw-color-text-primary);
   --govtw-table-border-color: var(--govtw-color-border-subtle);
+  --govtw-table-border-width: 1px;
   --govtw-table-header-font-weight: var(--govtw-font-weight-bold);
+  --govtw-table-caption-gap: var(--govtw-spacing-3);
   --govtw-table-caption-font-size: var(--govtw-font-size-lg);
   --govtw-table-caption-font-weight: var(--govtw-font-weight-bold);
   --govtw-table-cell-padding-y: var(--govtw-spacing-3);

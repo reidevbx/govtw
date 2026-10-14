@@ -149,6 +149,11 @@
       "source": "./src/govtw-summary-list.ts",
       "types": "./dist/govtw-summary-list.d.ts",
       "import": "./dist/govtw-summary-list.js"
+    },
+    "./govtw-table": {
+      "source": "./src/govtw-table.ts",
+      "types": "./dist/govtw-table.d.ts",
+      "import": "./dist/govtw-table.js"
     }
   },
   "files": [

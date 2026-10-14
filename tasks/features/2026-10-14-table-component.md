@@ -45,13 +45,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component table --type=basic --zh-name=表格`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-table-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-table.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/table.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component table --type=basic --zh-name=表格`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-table-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-table.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/table.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -62,3 +62,21 @@
 
 - `summary-list`
 - `pagination`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) C2、R1–R3：作者寫原生 `<table>`，元件以 light DOM 只加樣式
+- ✅ 元件本身為水平捲動容器；以 ResizeObserver 判斷溢出，溢出時才加 `role="region"`、`tabindex="0"`、`aria-label`（取自 caption），不溢出時移除
+- ✅ `govtw-table__numeric` class：靠右、等寬數字
+- ✅ docs 頁（`default`、`scroll` 兩個 preview）
+
+### 與決定表的差異
+
+- R2 原訂「自動加 region 與 tabindex」。實作改為「只在溢出時加」，避免不需捲動的表格多一個 Tab 停留點
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（29 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：溢出偵測、鍵盤捲動

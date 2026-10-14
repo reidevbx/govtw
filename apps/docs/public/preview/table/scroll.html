@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>表格 Table — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <div style="max-inline-size: 360px;">
+      <govtw-table>
+        <table>
+          <caption>各縣市戶籍謄本申請件數</caption>
+          <thead>
+            <tr>
+              <th scope="col">縣市</th>
+              <th scope="col" class="govtw-table__numeric">1 月</th>
+              <th scope="col" class="govtw-table__numeric">2 月</th>
+              <th scope="col" class="govtw-table__numeric">3 月</th>
+              <th scope="col" class="govtw-table__numeric">4 月</th>
+              <th scope="col" class="govtw-table__numeric">5 月</th>
+              <th scope="col" class="govtw-table__numeric">6 月</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">臺北市</th><td class="govtw-table__numeric">12,340</td><td class="govtw-table__numeric">10,215</td><td class="govtw-table__numeric">13,002</td><td class="govtw-table__numeric">12,876</td><td class="govtw-table__numeric">11,930</td><td class="govtw-table__numeric">12,451</td></tr>
+            <tr><th scope="row">高雄市</th><td class="govtw-table__numeric">9,812</td><td class="govtw-table__numeric">8,903</td><td class="govtw-table__numeric">10,114</td><td class="govtw-table__numeric">9,987</td><td class="govtw-table__numeric">9,560</td><td class="govtw-table__numeric">9,734</td></tr>
+          </tbody>
+        </table>
+      </govtw-table>
+    </div>
+  </div>
+</body>
+</html>

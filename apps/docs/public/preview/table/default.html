@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>表格 Table — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-table>
+      <table>
+        <caption>勞工保險普通事故保險費率</caption>
+        <thead>
+          <tr>
+            <th scope="col">年度</th>
+            <th scope="col" class="govtw-table__numeric">費率</th>
+            <th scope="col">說明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">113 年</th><td class="govtw-table__numeric">11.5%</td><td>依勞工保險條例第 13 條調整</td></tr>
+          <tr><th scope="row">114 年</th><td class="govtw-table__numeric">12.0%</td><td>依勞工保險條例第 13 條調整</td></tr>
+          <tr><th scope="row">115 年</th><td class="govtw-table__numeric">12.0%</td><td>維持前一年度費率</td></tr>
+        </tbody>
+      </table>
+    </govtw-table>
+  </div>
+</body>
+</html>
