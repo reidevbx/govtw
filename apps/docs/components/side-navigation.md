@@ -111,6 +111,7 @@ import '@gov-tw/web-components/govtw-side-navigation';
 
 - 單元只有兩三頁：在內文用連結即可
 - 整個網站的主選單：用[服務導覽](/components/service-navigation)
+- 連到同一頁的段落：用[頁內目錄](/components/contents-list)
 
 ### 設計建議
 
@@ -123,3 +124,4 @@ import '@gov-tw/web-components/govtw-side-navigation';
 - [Sidebar](/components/sidebar)
 - [服務導覽 Service Navigation](/components/service-navigation)
 - [麵包屑 Breadcrumbs](/components/breadcrumbs)
+- [頁內目錄 Contents List](/components/contents-list)

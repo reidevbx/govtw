@@ -229,6 +229,11 @@
       "source": "./src/govtw-otp-input.ts",
       "types": "./dist/govtw-otp-input.d.ts",
       "import": "./dist/govtw-otp-input.js"
+    },
+    "./govtw-contents-list": {
+      "source": "./src/govtw-contents-list.ts",
+      "types": "./dist/govtw-contents-list.d.ts",
+      "import": "./dist/govtw-contents-list.js"
     }
   },
   "files": [

@@ -32,13 +32,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component contents-list --type=basic --zh-name=頁內目錄`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-contents-list-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-contents-list.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/contents-list.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component contents-list --type=basic --zh-name=頁內目錄`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-contents-list-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-contents-list.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/contents-list.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -48,3 +48,26 @@
 ## 相關任務
 
 - `side-navigation`
+
+## 總結
+
+依 [P3 決定表](./2026-10-14-p3-decisions.md) CL1–CL7 實作。
+
+### 完成項目
+
+- light DOM 元件 `govtw-contents-list`：作者寫 `<ol>`／`<ul>` 加錨點連結，元件包上 `<nav aria-labelledby>` 與可見的 `<h2>`「目錄」
+- 中文編號由作者寫在連結文字裡（CL2），元件以 `list-style: none` 隱藏清單符號
+- **實作時新增**：清單加 `role="list"`。Safari 會移除 `list-style: none` 清單的清單語意
+- 第二層縮排；連結高度至少 44px
+- 12 個 component token
+- side-navigation 文件加上與頁內目錄的分工說明（CL6）
+
+### 變更檔案
+
+- 新增：`packages/web-components/src/govtw-contents-list.ts`、`apps/docs/components/contents-list.md`、`apps/docs/public/preview/contents-list/`
+- 修改：`packages/tokens/tokens.json`、`packages/web-components/{index.ts,package.json,vite.config.ts}`、`apps/docs/.vitepress/config.mts`、`apps/docs/components/side-navigation.md`
+
+### 後續建議
+
+- side-navigation 同樣用 `list-style: none`，但沒有加 `role="list"`，Safari 的 VoiceOver 可能不念項目數。建議另開 bug 任務處理
+- 未用螢幕閱讀器實測

@@ -160,6 +160,7 @@ export default defineConfig({
           { text: '頁面工具列 Page Tools', link: '/components/page-tools' },
           { text: '字級切換 Font Size Switcher', link: '/components/font-size-switcher' },
           { text: '一次性驗證碼 OTP Input', link: '/components/otp-input' },
+          { text: '頁內目錄 Contents List', link: '/components/contents-list' },
           // <components-end>
         ],
       },

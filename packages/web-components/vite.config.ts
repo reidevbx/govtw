@@ -54,6 +54,7 @@ export default defineConfig({
         'govtw-page-tools': resolve(__dirname, 'src/govtw-page-tools.ts'),
         'govtw-font-size-switcher': resolve(__dirname, 'src/govtw-font-size-switcher.ts'),
         'govtw-otp-input': resolve(__dirname, 'src/govtw-otp-input.ts'),
+        'govtw-contents-list': resolve(__dirname, 'src/govtw-contents-list.ts'),
       },
       formats: ['es'],
     },
