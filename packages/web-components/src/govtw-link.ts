@@ -13,6 +13,8 @@ export class GovtwLink extends LitElement {
   @property({ type: String }) rel = '';
   @property({ type: Boolean, reflect: true, attribute: 'no-visited' }) noVisited = false;
   @property({ type: Boolean, reflect: true, attribute: 'no-underline' }) noUnderline = false;
+  /** target="_blank" 時不自動加「（另開新視窗）」。只在連結周圍已有說明時使用 */
+  @property({ type: Boolean, attribute: 'no-new-window-text' }) noNewWindowText = false;
 
   static styles = css`
     :host {
@@ -95,12 +97,17 @@ export class GovtwLink extends LitElement {
       ? 'noopener noreferrer'
       : this.rel;
 
+    // 另開新視窗時加可見提示，讓所有使用者都知道（不只放在 title）
+    const newWindowText = this.target === '_blank' && !this.noNewWindowText
+      ? '（另開新視窗）'
+      : nothing;
+
     return html`
       <a
         href=${this.href}
         target=${this.target || nothing}
         rel=${autoRel || nothing}
-      ><slot></slot></a>
+      ><slot></slot>${newWindowText}</a>
     `;
   }
 }

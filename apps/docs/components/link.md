@@ -92,17 +92,16 @@
 
 ### 開新視窗的連結
 
+`target="_blank"` 時，元件自動在連結文字後加上可見的「（另開新視窗）」，並補上 `rel="noopener noreferrer"`。不用自己寫。
+
 <DemoBlock variant="new-tab">
-  <govtw-link href="https://example.gov.tw" target="_blank" rel="noreferrer noopener">外部系統（另開新視窗）</govtw-link>
+  <govtw-link href="https://example.gov.tw" target="_blank">外部系統</govtw-link>
 
   <template #code>
 
 ```html
-<govtw-link href="https://example.gov.tw"
-            target="_blank"
-            rel="noreferrer noopener">
-  外部系統（另開新視窗）
-</govtw-link>
+<govtw-link href="https://example.gov.tw" target="_blank">外部系統</govtw-link>
+<!-- 顯示為：外部系統（另開新視窗） -->
 ```
 
   </template>
@@ -206,12 +205,8 @@ onMounted(() => {
 <!-- 無底線（hover 時才出現） -->
 <govtw-link href="#" no-underline>導覽連結</govtw-link>
 
-<!-- 開新視窗 -->
-<govtw-link href="https://example.gov.tw"
-            target="_blank"
-            rel="noreferrer noopener">
-  外部連結（另開新視窗）
-</govtw-link>
+<!-- 開新視窗：自動加「（另開新視窗）」 -->
+<govtw-link href="https://example.gov.tw" target="_blank">外部連結</govtw-link>
 ```
 
 ## 屬性
@@ -223,6 +218,7 @@ onMounted(() => {
 | `rel` | `string` | `''` | 連結關係（如 `noreferrer noopener`） |
 | `no-visited` | `boolean` | `false` | 是否隱藏已造訪狀態 |
 | `no-underline` | `boolean` | `false` | 預設不顯示底線，hover 與 focus/active 時才出現 |
+| `no-new-window-text` | `boolean` | `false` | `target="_blank"` 時不自動加「（另開新視窗）」。只在連結周圍已有說明時使用 |
 
 ## 樣式 Token
 
@@ -278,7 +274,7 @@ Active 與 Focus 使用相同的雙色指標（GOV.UK `govuk-focused-text` 手�
 - Focus 狀態以黃底 + 黑色底線的雙色指標清晰標示，符合 WCAG 2.2 AA
 - `outline: 3px solid transparent` 確保高對比模式下仍可見
 - 底線預設開啟，不依賴色彩作為唯一的連結辨識方式
-- 開新視窗的連結需在文字中明確提示（如「另開新視窗」）
+- 開新視窗的連結自動加上可見的「（另開新視窗）」，所有使用者都看得到，不只放在 `title`
 - 色彩對比度符合 WCAG 2.2 AA 標準（至少 4.5:1）
 
 ## 設計指引

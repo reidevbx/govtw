@@ -21,13 +21,30 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] 修改 `packages/web-components/src/govtw-link.ts`
-- [ ] 更新對應 docs 頁的範例與屬性表
-- [ ] `pnpm build:previews` → `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] 修改 `packages/web-components/src/govtw-link.ts`
+- [x] 更新對應 docs 頁的範例與屬性表
+- [x] `pnpm build:previews` → `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
 - 修改：`packages/web-components/src/govtw-link.ts` 與對應 docs 頁
 - 既有使用者行為可能改變，需在 docs 註明
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) L1、L2：`target="_blank"` 時在連結文字後加可見的「（另開新視窗）」；新增 `no-new-window-text` 屬性可關閉
+- ✅ `rel="noopener noreferrer"` 原本就會自動補（`govtw-link.ts:93`），未變動
+- ✅ 更新 4 處原本手寫「（另開新視窗）」的範例，避免文字重複：`link.md` 2 處、`typography.md` 1 處（`link.md` 的 new-tab preview 一併重生）
+
+### 行為變更
+
+- **既有使用者受影響**：所有 `target="_blank"` 的 `<govtw-link>` 都會多出「（另開新視窗）」。若連結文字原本已手寫此提示，會重複出現，需移除手寫文字或加 `no-new-window-text`
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（26 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測

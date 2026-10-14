@@ -289,19 +289,15 @@
 
 ### 開新視窗的連結
 
-當連結必須在新視窗開啟時，加入明確的文字提示：
+當連結必須在新視窗開啟時，要有明確的文字提示。`<govtw-link>` 設定 `target="_blank"` 時會自動加上「（另開新視窗）」：
 
 <DemoBlock>
-  <govtw-link href="https://example.gov.tw" target="_blank" rel="noreferrer noopener">外部系統（另開新視窗）</govtw-link>
+  <govtw-link href="https://example.gov.tw" target="_blank">外部系統</govtw-link>
 
   <template #code>
 
 ```html
-<govtw-link href="https://example.gov.tw"
-            target="_blank"
-            rel="noreferrer noopener">
-  外部系統（另開新視窗）
-</govtw-link>
+<govtw-link href="https://example.gov.tw" target="_blank">外部系統</govtw-link>
 ```
 
   </template>
