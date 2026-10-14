@@ -16,12 +16,13 @@ description: 建立新的 govtw-* Lit 元件（scaffolder-backed）。使用者�
 
 2. **跑 scaffolder**：
    ```bash
-   pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
+   pnpm new:component <name> --category=<分類> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
    ```
    - `basic`：一般互動元件（如 button、link）
    - `form`：表單元件（含 `formAssociated`、`attachInternals`、`setFormValue`、`formResetCallback`）
    - `layout`：佈局原語（含 `styleMap` + token），sidebar 自動放進「佈局元件」群組
      只用於 Container、Stack 這類佈局原語；header、footer 等頁面元件用 `basic`
+   - `--category`：sidebar 分類，`layout` 以外必填。`form`（表單與操作）、`navigation`（導覽）、`content`（內容呈現）、`feedback`（訊息與狀態）、`page`（頁面框架）。分不清時看 CLAUDE.md「新增元件步驟」的範例
    - `--en-name`：sidebar 英文名；省略時由 name 推導（`date-input` → `Date Input`）
 
    scaffolder 會建立 `.ts` 與 docs `.md`，並更新 `index.ts`、`package.json` exports、`vite.config.ts` entry、VitePress sidebar。

@@ -3,7 +3,8 @@
  * Scaffolder: 產生新 Lit 元件的完整檔案結構。
  *
  * 用法：
- *   pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名]
+ *   pnpm new:component <name> --category=<分類> [--type=basic|form] [--zh-name=中文名]
+ *   pnpm new:component <name> --type=layout [--zh-name=中文名]
  *
  * 產生：
  *   - packages/web-components/src/govtw-<name>.ts
@@ -14,7 +15,7 @@
  *   - packages/web-components/src/index.ts （append export）
  *   - packages/web-components/package.json （add exports entry）
  *   - packages/web-components/vite.config.ts （add build.lib.entry）
- *   - apps/docs/.vitepress/config.mts （透過 marker 註解插入 sidebar；layout 進「佈局元件」群組）
+ *   - apps/docs/.vitepress/config.mts （透過 marker 註解插入 sidebar 對應分類；layout 進「佈局元件」群組）
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -24,17 +25,30 @@ import { P, rel } from './paths.mjs';
 
 /* ========== CLI ========== */
 
+/** sidebar「元件」底下的分類；key 同時是 config.mts 的 marker 名稱（`// <form-start>`） */
+const CATEGORIES = {
+  form: '表單與操作',
+  navigation: '導覽',
+  content: '內容呈現',
+  feedback: '訊息與狀態',
+  page: '頁面框架',
+};
+
+const categoryHelp = Object.entries(CATEGORIES).map(([key, zh]) => `${key}（${zh}）`).join(' | ');
+
 function usage() {
-  return `Usage: pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
+  return `Usage: pnpm new:component <name> --category=<分類> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
 
   name        kebab-case 名稱，例如 "select" 或 "radio-group"（最少 2 字元）
   --type      basic（預設）| form | layout
+  --category  sidebar 分類，type 不是 layout 時必填：
+              ${categoryHelp}
   --zh-name   中文名稱，供 sidebar 使用。省略時使用 name。
   --en-name   英文名稱，供 sidebar 使用。省略時由 name 推導（"date-input" → "Date Input"）。
 
 範例:
-  pnpm new:component select --zh-name="下拉選單"
-  pnpm new:component radio-group --type=form --zh-name="單選群組"
+  pnpm new:component select --category=form --zh-name="下拉選單"
+  pnpm new:component radio-group --type=form --category=form --zh-name="單選群組"
   pnpm new:component grid --type=layout --zh-name="網格"
 `;
 }
@@ -49,6 +63,7 @@ function parseOptions(argv) {
     args: argv,
     options: {
       type: { type: 'string', default: 'basic' },
+      category: { type: 'string', default: '' },
       'zh-name': { type: 'string', default: '' },
       'en-name': { type: 'string', default: '' },
     },
@@ -76,19 +91,34 @@ function parseOptions(argv) {
     process.exit(1);
   }
 
+  // layout 固定進「佈局元件」群組；其餘必須指定分類
+  const category = values.type === 'layout' ? 'layout' : values.category;
+  if (values.type === 'layout' && values.category) {
+    console.warn('⚠️  --type=layout 會放進「佈局元件」群組，忽略 --category');
+  }
+  if (category !== 'layout' && !(category in CATEGORIES)) {
+    console.error(
+      (category ? `❌ --category 不合法（目前：${category}）。\n` : '❌ 未提供 --category。\n') +
+      `   可選：${categoryHelp}`
+    );
+    process.exit(1);
+  }
+
   return {
     name,
     type: values.type,
+    category,
     zhName: values['zh-name'] || name,
     enName: values['en-name'],
   };
 }
 
-function deriveIdentifiers({ name, type, zhName, enName }) {
+function deriveIdentifiers({ name, type, category, zhName, enName }) {
   const words = name.split('-').map(w => w[0].toUpperCase() + w.slice(1));
   return {
     name,
     type,
+    category,
     zhName,
     // sidebar 用 Title Case 加空格（"Text Input"），與既有項目一致
     enName: enName || words.join(' '),
@@ -435,13 +465,13 @@ function updateViteConfig({ tag }) {
 
 /**
  * 透過 marker 註解在 VitePress sidebar 插入新項目。
- * config.mts 必須含兩組 marker，新項目插在 end marker 之前：
- *   // <components-start> … // <components-end>   一般元件
- *   // <layout-start> … // <layout-end>           佈局元件（--type=layout）
+ * config.mts 每個分類一組 marker，新項目插在該分類的 end marker 之前：
+ *   // <form-start> … // <form-end>       「元件 > 表單與操作」，其他分類同理（見 CATEGORIES）
+ *   // <layout-start> … // <layout-end>   佈局元件（--type=layout）
  */
-function updateSidebar({ name, type, zhName, enName }) {
+function updateSidebar({ name, category, zhName, enName }) {
   const vpContent = readFileSync(P.docs.vpConfig, 'utf-8');
-  const endMarker = type === 'layout' ? '// <layout-end>' : '// <components-end>';
+  const endMarker = `// <${category}-end>`;
   const endIdx = vpContent.indexOf(endMarker);
   const item = `{ text: '${zhName} ${enName}', link: '/components/${name}' },`;
 

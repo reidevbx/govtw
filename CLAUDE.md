@@ -153,7 +153,7 @@ pnpm new:component   # 建立新元件（見「新增元件步驟」）
 ⚠️ **不要手工建立**，使用 scaffolder：
 
 ```bash
-pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
+pnpm new:component <name> --category=<分類> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
 ```
 
 scaffolder 會自動：
@@ -161,7 +161,17 @@ scaffolder 會自動：
 - 建立 `apps/docs/components/<name>.md` 骨架（含 `<DemoBlock variant="default">`）
 - 更新 `index.ts` export、`package.json` exports、`vite.config.ts` entry、VitePress sidebar
 - sidebar 英文名由 name 推導為 Title Case 加空格（`date-input` → `Date Input`），可用 `--en-name` 覆寫
-- `--type=layout` 插入「佈局元件」群組（`<layout-start/end>` marker），其餘插入「元件」群組（`<components-start/end>` marker）
+- `--category` 決定插入「元件」底下哪個分類（marker `<分類-start/end>`），`--type=layout` 以外必填：
+
+  | `--category` | 分類 | 範例 |
+  |---|---|---|
+  | `form` | 表單與操作 | button、text-input、file-upload |
+  | `navigation` | 導覽 | link、breadcrumbs、pagination |
+  | `content` | 內容呈現 | details、table、card |
+  | `feedback` | 訊息與狀態 | error-summary、notification-banner |
+  | `page` | 頁面框架 | header、footer、skip-link |
+
+- `--type=layout` 固定插入「佈局元件」群組（`<layout-start/end>` marker），不需要 `--category`
 
 （preview HTML 由 `pnpm build:previews` 自動生成，scaffolder 不產）
 
