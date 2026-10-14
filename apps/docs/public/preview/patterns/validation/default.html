@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>表單錯誤處理 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="6">
+      <govtw-error-summary no-autofocus>
+        <ul>
+          <li><a href="#name">請輸入姓名</a></li>
+          <li><a href="#id-number">身分證統一編號應為 1 個英文字母加 9 個數字</a></li>
+        </ul>
+      </govtw-error-summary>
+      <h1>申請戶籍謄本</h1>
+      <form novalidate onsubmit="event.preventDefault()">
+        <govtw-stack space="6">
+          <govtw-text-input id="name" name="name" label="姓名" error="請輸入姓名"></govtw-text-input>
+          <govtw-text-input id="id-number" name="id-number" label="身分證統一編號" width="10" value="A12345" error="身分證統一編號應為 1 個英文字母加 9 個數字"></govtw-text-input>
+          <div><govtw-button type="submit">繼續</govtw-button></div>
+        </govtw-stack>
+      </form>
+    </govtw-stack>
+  </div>
+</body>
+</html>

@@ -219,6 +219,13 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '概述', link: '/patterns/' },
+          {
+            text: '協助使用者',
+            collapsed: false,
+            items: [
+              { text: '表單錯誤處理', link: '/patterns/validation' },
+            ],
+          },
         ],
       },
       {
