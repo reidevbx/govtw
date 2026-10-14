@@ -112,7 +112,7 @@ import '@gov-tw/web-components/govtw-breadcrumbs';
 
 ### 何時不使用
 
-- 多步驟申辦流程中：使用者應依步驟前進或返回，改用 [返回連結 Back Link](https://design-system.service.gov.uk/components/back-link/)（規劃中）
+- 多步驟申辦流程中：使用者應依步驟前進或返回，改用 [返回連結 Back Link](/components/back-link)
 - 只有一層的網站
 
 ### 設計建議

@@ -84,7 +84,7 @@ import '@gov-tw/web-components/govtw-warning-text';
 ### 何時不使用
 
 - 一般補充說明 → 用 [補充說明 Inset Text](/components/inset-text)
-- 整個網站的公告（如系統維護） → 用通知橫幅 Notification Banner（規劃中）
+- 整個網站的公告（如系統維護） → 用 [通知橫幅 Notification Banner](/components/notification-banner)
 - 表單驗證錯誤 → 用欄位的 `error` 屬性
 
 ### 設計建議

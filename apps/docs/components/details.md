@@ -88,7 +88,7 @@ import '@gov-tw/web-components/govtw-details';
 ### 何時不使用
 
 - 多數使用者都需要的資訊 → 直接寫在頁面上
-- 多段相關內容需要逐段展開 → 用手風琴 Accordion（規劃中）
+- 多段相關內容需要逐段展開 → 用 [手風琴 Accordion](/components/accordion)
 
 ### 設計建議
 

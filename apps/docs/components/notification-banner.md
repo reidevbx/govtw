@@ -122,7 +122,7 @@ import '@gov-tw/web-components/govtw-notification-banner';
 
 ### 何時不使用
 
-- 表單驗證錯誤 → 用錯誤摘要 Error Summary（規劃中）
+- 表單驗證錯誤 → 用 [錯誤摘要 Error Summary](/components/error-summary)
 - 交易完成頁 → 用 [完成面板 Panel](/components/panel)
 - 只跟某段內容有關的提醒 → 用 [警告文字 Warning Text](/components/warning-text) 或 [補充說明 Inset Text](/components/inset-text)
 

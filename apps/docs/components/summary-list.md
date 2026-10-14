@@ -138,7 +138,7 @@ import '@gov-tw/web-components/govtw-summary-list';
 
 ### 何時不使用
 
-- 多欄、需要比較的資料 → 用表格 Table（規劃中）
+- 多欄、需要比較的資料 → 用 [表格 Table](/components/table)
 - 只有一兩項資訊 → 直接寫在段落中
 
 ### 設計建議

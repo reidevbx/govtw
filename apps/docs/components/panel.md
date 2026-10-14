@@ -82,7 +82,7 @@ import '@gov-tw/web-components/govtw-panel';
 
 ### 何時不使用
 
-- 一般提示訊息 → 用通知橫幅 Notification Banner（規劃中）
+- 一般提示訊息 → 用 [通知橫幅 Notification Banner](/components/notification-banner)
 - 表單頁或內容頁：面板只用於「流程結束」
 
 ### 設計建議
