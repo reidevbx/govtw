@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>分頁 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <form action="#" method="get">
+      <govtw-stack space="4">
+        <p>共 128 筆，第 2 / 13 頁</p>
+        <govtw-cluster space="3" vertical-align="end">
+          <govtw-select name="per-page" label="每頁筆數" value="10">
+            <option value="10">10 筆</option>
+            <option value="20">20 筆</option>
+            <option value="50">50 筆</option>
+          </govtw-select>
+          <govtw-button type="submit" variant="secondary">套用</govtw-button>
+        </govtw-cluster>
+        <govtw-pagination total="13" current="2" href-template="?page={n}&per-page=10"></govtw-pagination>
+      </govtw-stack>
+    </form>
+  </div>
+</body>
+</html>

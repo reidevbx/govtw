@@ -21,13 +21,31 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] 修改 `packages/web-components/src/govtw-pagination.ts`
-- [ ] 更新對應 docs 頁的範例與屬性表
-- [ ] `pnpm build:previews` → `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] ~~修改 `packages/web-components/src/govtw-pagination.ts`~~（依 PG1 不修改）
+- [x] 更新對應 docs 頁的範例與屬性表
+- [x] `pnpm build:previews` → `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
 - 修改：`packages/web-components/src/govtw-pagination.ts` 與對應 docs 頁
 - 既有使用者行為可能改變，需在 docs 註明
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) PG1 完成：只在文件示範組合，不改 pagination 程式碼。
+
+### 完成項目
+
+- `pagination.md` 新增「結果筆數與每頁筆數」範例：段落「共 128 筆，第 2 / 13 頁」、`govtw-select` 加送出按鈕、分頁
+- 設計建議：用送出按鈕，不在選項改變時自動跳頁（WCAG 3.2.2）；每頁筆數改變時回到第 1 頁
+
+### 變更檔案
+
+- `apps/docs/components/pagination.md`
+- `apps/docs/public/preview/pagination/page-size.html`（自動生成）
+
+### 後續建議
+
+- 無
