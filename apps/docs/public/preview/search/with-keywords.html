@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>搜尋框 Search — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="3">
+      <govtw-search label="找服務"></govtw-search>
+      <govtw-cluster space="3">
+        <span>熱門搜尋：</span>
+        <govtw-link href="#">育兒津貼</govtw-link>
+        <govtw-link href="#">護照</govtw-link>
+        <govtw-link href="#">戶籍謄本</govtw-link>
+        <govtw-link href="#">勞保</govtw-link>
+      </govtw-cluster>
+    </govtw-stack>
+  </div>
+</body>
+</html>

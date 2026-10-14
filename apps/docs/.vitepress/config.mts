@@ -133,6 +133,7 @@ export default defineConfig({
           { text: '跳至主要內容 Skip Link', link: '/components/skip-link' },
           { text: '導盲磚 Accesskey', link: '/components/accesskey' },
           { text: '麵包屑 Breadcrumbs', link: '/components/breadcrumbs' },
+          { text: '搜尋框 Search', link: '/components/search' },
           // <components-end>
         ],
       },

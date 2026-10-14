@@ -45,13 +45,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component search --type=form --zh-name=搜尋框`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-search-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-search.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/search.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component search --type=form --zh-name=搜尋框`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-search-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-search.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/search.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -62,3 +62,24 @@
 
 - `header`
 - `tag`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P0 決定表](./2026-10-14-p0-decisions.md) S1、S2 實作：不做搜尋範圍 select；熱門關鍵字放元件外
+- ✅ `govtw-search`：Shadow DOM，內含原生 `<form role="search">`、可見 `<label>`、`<input type="search">`、`<button type="submit">`
+- ✅ 屬性：`action`、`method`、`name`、`label`、`hide-label`、`value`、`button-text`；刻意不提供 `placeholder`
+- ✅ 可取消的 `govtw-search` 事件，供 SPA 改用 JavaScript 處理
+- ✅ docs 頁（`default`、`hide-label`、`with-keywords` 三個 preview）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（18 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：Shadow DOM 內 `<form>` 的原生送出、Enter 送出
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-search.ts` — 新增
+- `apps/docs/components/search.md`、preview 3 份 — 新增
+- scaffolder 自動更新 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`

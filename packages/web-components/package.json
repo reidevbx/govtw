@@ -94,6 +94,11 @@
       "source": "./src/govtw-breadcrumbs.ts",
       "types": "./dist/govtw-breadcrumbs.d.ts",
       "import": "./dist/govtw-breadcrumbs.js"
+    },
+    "./govtw-search": {
+      "source": "./src/govtw-search.ts",
+      "types": "./dist/govtw-search.d.ts",
+      "import": "./dist/govtw-search.js"
     }
   },
   "files": [
