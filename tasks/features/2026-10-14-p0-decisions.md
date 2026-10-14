@@ -51,7 +51,7 @@ breadcrumbs、search、service-navigation、header、footer 五個元件動手�
 |---|---|---|
 | F1 | 瀏覽人次是否納入 | **不納入**。屬站台後端功能 |
 | F2 | 無障礙標章的 alt 與連結 | 標章由作者以 `badge` slot 傳入 `<a><img alt></a>`。文件建議 alt「通過 AA 等級無障礙網頁檢測」，連結填數位發展部核發的該站檢測頁網址。規範原文未查證，文件註明 |
-| F3 | **新增**：slot 結構 | `meta`（政策連結）、`contact`（機關資訊）、`badge`、`updated`（更新日期）、default（網站地圖連結群組，選用） |
+| F3 | **新增**：slot 結構 | `meta`（政策連結）、`contact`（機關資訊）、`badge`、`updated`（更新日期）、`navigation`（網站地圖連結群組，選用）、default（導盲磚）。**實作時調整**：原訂 default 放網站地圖，改為與 header 一致放導盲磚，網站地圖改用 `navigation` slot |
 | F4 | **新增**：更新日期的格式 | 元件不格式化。作者傳入 `<time datetime="2026-10-14">`，顯示文字（民國或西元）由作者決定 |
 
 ## 執行順序

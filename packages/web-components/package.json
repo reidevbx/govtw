@@ -109,6 +109,11 @@
       "source": "./src/govtw-header.ts",
       "types": "./dist/govtw-header.d.ts",
       "import": "./dist/govtw-header.js"
+    },
+    "./govtw-footer": {
+      "source": "./src/govtw-footer.ts",
+      "types": "./dist/govtw-footer.d.ts",
+      "import": "./dist/govtw-footer.js"
     }
   },
   "files": [

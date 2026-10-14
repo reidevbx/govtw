@@ -136,6 +136,7 @@ export default defineConfig({
           { text: '搜尋框 Search', link: '/components/search' },
           { text: '主選單 Service Navigation', link: '/components/service-navigation' },
           { text: '頁首 Header', link: '/components/header' },
+          { text: '頁尾 Footer', link: '/components/footer' },
           // <components-end>
         ],
       },

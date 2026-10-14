@@ -343,6 +343,8 @@
   --govtw-footer-padding-y: var(--govtw-spacing-8);
   --govtw-footer-gap: var(--govtw-spacing-6);
   --govtw-footer-divider-color: var(--govtw-color-border-default);
+  --govtw-footer-divider-width: 1px;
+  --govtw-footer-info-min-width: 20rem;
 }
 
 /* ==========================================================================

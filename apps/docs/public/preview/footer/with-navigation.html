@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>頁尾 Footer — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-footer>
+      <govtw-cluster slot="navigation" space="6">
+        <govtw-link href="#">申辦服務</govtw-link>
+        <govtw-link href="#">最新消息</govtw-link>
+        <govtw-link href="#">政府資訊公開</govtw-link>
+        <govtw-link href="#">網站導覽</govtw-link>
+      </govtw-cluster>
+      <address slot="contact" style="font-style: normal;">範例機關｜服務電話：(02) 1234-5678</address>
+      <p slot="updated">更新日期：<time datetime="2026-10-14">115-10-14</time></p>
+    </govtw-footer>
+  </div>
+</body>
+</html>

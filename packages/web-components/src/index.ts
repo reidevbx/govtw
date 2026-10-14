@@ -18,3 +18,4 @@ export { GovtwBreadcrumbs } from './govtw-breadcrumbs.js';
 export { GovtwSearch } from './govtw-search.js';
 export { GovtwServiceNavigation } from './govtw-service-navigation.js';
 export { GovtwHeader } from './govtw-header.js';
+export { GovtwFooter } from './govtw-footer.js';

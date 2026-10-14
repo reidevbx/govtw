@@ -47,13 +47,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component footer --type=layout --zh-name=頁尾`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-footer-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-footer.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/footer.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component footer --type=layout --zh-name=頁尾`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-footer-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-footer.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/footer.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -64,3 +64,30 @@
 
 - `header`
 - `accesskey`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P0 決定表](./2026-10-14-p0-decisions.md) A3、F1–F4 實作
+- ✅ `govtw-footer`：Shadow DOM，slot 為 default（導盲磚）、`navigation`、`contact`、`meta`、`updated`、`badge`
+- ✅ `navigation` 有內容時才顯示分隔線（slotchange 判斷）
+- ✅ 版面寬度上限 1020px，標章在寬度不足時換行；清除 slot 內容首尾 margin
+- ✅ 不做瀏覽人次；日期不格式化，由作者傳入 `<time>`
+- ✅ docs 頁（`default`、`with-navigation` 兩個 preview），標章文案未查證以 warning 註明
+
+### 與決定表的差異
+
+- F3 原訂 default slot 放網站地圖。實作時改為 default 放導盲磚、網站地圖改用 `navigation` slot，與 header 的 slot 用法一致。決定表已同步更新
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（21 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-footer.ts` — 新增
+- `apps/docs/components/footer.md`、preview 2 份 — 新增
+- `packages/tokens/tokens.json` — footer 補 `divider-width`、`info-min-width`
+- `tasks/features/2026-10-14-p0-decisions.md` — F3 更新

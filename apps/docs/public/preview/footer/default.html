@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>頁尾 Footer — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-footer>
+      <govtw-accesskey key="Z" label="下方功能區塊"></govtw-accesskey>
+      <address slot="contact" style="font-style: normal;">
+        範例機關｜100057 臺北市中正區範例路 1 號<br>
+        服務電話：(02) 1234-5678（週一至週五 08:30–17:30）
+      </address>
+      <govtw-cluster slot="meta" space="4">
+        <govtw-link href="#">隱私權政策</govtw-link>
+        <govtw-link href="#">資訊安全政策</govtw-link>
+        <govtw-link href="#">政府網站資料開放宣告</govtw-link>
+      </govtw-cluster>
+      <p slot="updated">更新日期：<time datetime="2026-10-14">115-10-14</time></p>
+      <div slot="badge" style="padding: 12px; border: 1px dashed var(--govtw-color-border-default); border-radius: var(--govtw-radius-sm);">無障礙標章圖片</div>
+    </govtw-footer>
+  </div>
+</body>
+</html>
