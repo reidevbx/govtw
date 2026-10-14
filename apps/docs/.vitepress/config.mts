@@ -146,6 +146,7 @@ export default defineConfig({
           { text: '摘要清單 Summary List', link: '/components/summary-list' },
           { text: '表格 Table', link: '/components/table' },
           { text: '錯誤摘要 Error Summary', link: '/components/error-summary' },
+          { text: '日期輸入 Date Input', link: '/components/date-input' },
           // <components-end>
         ],
       },

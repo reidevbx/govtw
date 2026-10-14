@@ -159,6 +159,11 @@
       "source": "./src/govtw-error-summary.ts",
       "types": "./dist/govtw-error-summary.d.ts",
       "import": "./dist/govtw-error-summary.js"
+    },
+    "./govtw-date-input": {
+      "source": "./src/govtw-date-input.ts",
+      "types": "./dist/govtw-date-input.d.ts",
+      "import": "./dist/govtw-date-input.js"
     }
   },
   "files": [

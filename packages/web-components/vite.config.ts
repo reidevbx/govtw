@@ -40,6 +40,7 @@ export default defineConfig({
         'govtw-summary-list': resolve(__dirname, 'src/govtw-summary-list.ts'),
         'govtw-table': resolve(__dirname, 'src/govtw-table.ts'),
         'govtw-error-summary': resolve(__dirname, 'src/govtw-error-summary.ts'),
+        'govtw-date-input': resolve(__dirname, 'src/govtw-date-input.ts'),
       },
       formats: ['es'],
     },

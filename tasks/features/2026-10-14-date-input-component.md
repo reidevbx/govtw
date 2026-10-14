@@ -48,13 +48,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component date-input --type=form --zh-name=日期輸入`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-date-input-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-date-input.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/date-input.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component date-input --type=form --zh-name=日期輸入`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-date-input-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-date-input.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/date-input.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -65,3 +65,22 @@
 
 - `error-summary`
 - `fieldset`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) I1–I6
+- ✅ `govtw-date-input`：formAssociated，元件自帶 `<fieldset>`（`legend` 屬性），欄位順序年、月、日
+- ✅ `calendar="roc"`（預設）年份欄標「民國年」、寬 3 碼；`gregorian` 標「西元年」、寬 4 碼
+- ✅ 送出值以 FormData 同時送 `{name}`（ISO 日期，不完整或不存在時為空字串）與 `{name}-year/-month/-day` 原始輸入
+- ✅ `value` 接受 ISO 日期並拆入欄位；`error-fields` 指定紅框欄位；`autocomplete="bday"`（民國年時年份欄不加，避免瀏覽器填入西元年）
+- ✅ 不內建日期合理性驗證
+- ✅ docs 頁（`default`、`gregorian`、`error` 三個 preview，另附日期區間組合範例）
+
+### 驗證
+
+- 日期換算以 10 組案例檢查（與 `isoValue()` 相同演算法）：民國 78/7/2 → 1989-07-02、閏年 113/2/29 有效、114/2/29 無效、2/30、13 月、缺欄位、補零輸入，全部正確
+- 已知特性：`Date.UTC` 把 0–99 年視為 1900–1999，西元年輸入 2 位數會被判為無效。實際使用不受影響
+- `pnpm build`、`pnpm check:components`（31 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：FormData 送出、`delegatesFocus` 讓錯誤摘要連結聚焦到年份欄
