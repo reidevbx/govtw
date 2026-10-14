@@ -100,7 +100,7 @@ import '@gov-tw/web-components/govtw-password-input';
 
 ### 何時不使用
 
-- 一次性驗證碼（簡訊、Email 收到的數字）：用[文字輸入](/components/text-input)加 `autocomplete="one-time-code"`
+- 一次性驗證碼（簡訊、Email 收到的數字）：用[一次性驗證碼](/components/otp-input)
 
 ### 設計建議
 

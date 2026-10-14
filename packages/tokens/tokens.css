@@ -638,6 +638,27 @@
   --govtw-font-size-switcher-focus-color: var(--govtw-focus-color);
   --govtw-font-size-switcher-focus-text: var(--govtw-focus-text);
   --govtw-font-size-switcher-focus-width: var(--govtw-focus-width);
+  --govtw-otp-input-font-family: var(--govtw-font-sans);
+  --govtw-otp-input-font-size: var(--govtw-font-size-base);
+  --govtw-otp-input-color: var(--govtw-color-text-primary);
+  --govtw-otp-input-bg: var(--govtw-color-bg-canvas);
+  --govtw-otp-input-border-color: var(--govtw-color-text-primary);
+  --govtw-otp-input-border-radius: var(--govtw-radius-sm);
+  --govtw-otp-input-padding: var(--govtw-spacing-2);
+  --govtw-otp-input-label-font-weight: var(--govtw-font-weight-bold);
+  --govtw-otp-input-hint-color: var(--govtw-color-text-secondary);
+  --govtw-otp-input-error-color: var(--govtw-color-feedback-error);
+  --govtw-otp-input-stack-gap: var(--govtw-spacing-2);
+  --govtw-otp-input-resend-gap: var(--govtw-spacing-3);
+  --govtw-otp-input-resend-padding-x: var(--govtw-spacing-3);
+  --govtw-otp-input-resend-bg: var(--govtw-color-bg-surface);
+  --govtw-otp-input-resend-color: var(--govtw-color-text-primary);
+  --govtw-otp-input-resend-border-color: var(--govtw-color-border-default);
+  --govtw-otp-input-countdown-color: var(--govtw-color-text-secondary);
+  --govtw-otp-input-disabled-bg: var(--govtw-color-bg-surface);
+  --govtw-otp-input-focus-color: var(--govtw-focus-color);
+  --govtw-otp-input-focus-width: var(--govtw-focus-width);
+  --govtw-otp-input-focus-text: var(--govtw-focus-text);
 }
 
 /* ==========================================================================

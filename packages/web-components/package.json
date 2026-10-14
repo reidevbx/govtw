@@ -224,6 +224,11 @@
       "source": "./src/govtw-font-size-switcher.ts",
       "types": "./dist/govtw-font-size-switcher.d.ts",
       "import": "./dist/govtw-font-size-switcher.js"
+    },
+    "./govtw-otp-input": {
+      "source": "./src/govtw-otp-input.ts",
+      "types": "./dist/govtw-otp-input.d.ts",
+      "import": "./dist/govtw-otp-input.js"
     }
   },
   "files": [

@@ -41,3 +41,4 @@ export { GovtwCard } from './govtw-card.js';
 export { GovtwSideNavigation } from './govtw-side-navigation.js';
 export { GovtwPageTools } from './govtw-page-tools.js';
 export { GovtwFontSizeSwitcher } from './govtw-font-size-switcher.js';
+export { GovtwOtpInput } from './govtw-otp-input.js';

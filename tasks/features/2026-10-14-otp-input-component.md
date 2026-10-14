@@ -32,13 +32,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component otp-input --type=form --zh-name=簡訊驗證碼`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-otp-input-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-otp-input.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/otp-input.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component otp-input --type=form --zh-name=一次性驗證碼`（依 OT3 改名）
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-otp-input-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-otp-input.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/otp-input.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -49,3 +49,27 @@
 
 - `captcha`
 - `text-input`
+
+## 總結
+
+依 [P3 決定表](./2026-10-14-p3-decisions.md) OT1–OT9 實作。
+
+### 完成項目
+
+- 獨立元件 `govtw-otp-input`，中文名稱改為「一次性驗證碼」（OT3）
+- 輸入框固定 `inputmode="numeric"`、`autocomplete="one-time-code"`，不限長度、不自動送出
+- `resend-delay`（預設 60 秒）倒數；倒數期間按鈕 `aria-disabled`，聚焦時以 `aria-describedby` 念出剩餘秒數
+- 倒數結束時 live region 宣告一次「現在可以重新傳送驗證碼」
+- 按下重新傳送發出 `govtw-resend` 事件並重新倒數
+- 剩餘秒數以截止時間計算，不累積 `setInterval` 延遲
+- 21 個 component token
+
+### 變更檔案
+
+- 新增：`packages/web-components/src/govtw-otp-input.ts`、`apps/docs/components/otp-input.md`、`apps/docs/public/preview/otp-input/`
+- 修改：`packages/tokens/tokens.json`、`packages/web-components/{index.ts,package.json,vite.config.ts}`、`apps/docs/.vitepress/config.mts`、`apps/docs/components/password-input.md`
+
+### 後續建議
+
+- 未在瀏覽器實測倒數與宣告，也未用螢幕閱讀器確認念法
+- `autocomplete="one-time-code"` 的簡訊自動填入未在 iOS／Android 實機驗證
