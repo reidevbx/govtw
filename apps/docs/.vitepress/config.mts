@@ -142,6 +142,7 @@ export default defineConfig({
           { text: '可展開說明 Details', link: '/components/details' },
           { text: '返回連結 Back Link', link: '/components/back-link' },
           { text: '完成面板 Panel', link: '/components/panel' },
+          { text: '通知橫幅 Notification Banner', link: '/components/notification-banner' },
           // <components-end>
         ],
       },

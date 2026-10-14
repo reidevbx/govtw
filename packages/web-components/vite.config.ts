@@ -36,6 +36,7 @@ export default defineConfig({
         'govtw-details': resolve(__dirname, 'src/govtw-details.ts'),
         'govtw-back-link': resolve(__dirname, 'src/govtw-back-link.ts'),
         'govtw-panel': resolve(__dirname, 'src/govtw-panel.ts'),
+        'govtw-notification-banner': resolve(__dirname, 'src/govtw-notification-banner.ts'),
       },
       formats: ['es'],
     },

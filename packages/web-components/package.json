@@ -139,6 +139,11 @@
       "source": "./src/govtw-panel.ts",
       "types": "./dist/govtw-panel.d.ts",
       "import": "./dist/govtw-panel.js"
+    },
+    "./govtw-notification-banner": {
+      "source": "./src/govtw-notification-banner.ts",
+      "types": "./dist/govtw-notification-banner.d.ts",
+      "import": "./dist/govtw-notification-banner.js"
     }
   },
   "files": [

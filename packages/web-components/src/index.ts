@@ -24,3 +24,4 @@ export { GovtwWarningText } from './govtw-warning-text.js';
 export { GovtwDetails } from './govtw-details.js';
 export { GovtwBackLink } from './govtw-back-link.js';
 export { GovtwPanel } from './govtw-panel.js';
+export { GovtwNotificationBanner } from './govtw-notification-banner.js';

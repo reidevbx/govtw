@@ -45,13 +45,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component notification-banner --type=basic --zh-name=通知橫幅`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-notification-banner-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-notification-banner.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/notification-banner.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component notification-banner --type=basic --zh-name=通知橫幅`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-notification-banner-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-notification-banner.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/notification-banner.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -62,3 +62,23 @@
 
 - `warning-text`
 - `panel`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) N1–N3
+- ✅ `govtw-notification-banner`：`type="info"` 為 `role="region"`；`type="success"` 為 `role="alert"` 並自動聚焦
+- ✅ `heading` 屬性，預設 info「重要訊息」、success「成功」
+- ✅ `dismissible` 顯示 44×44px 原生關閉按鈕（`aria-label="關閉通知"`）；可取消的 `govtw-dismiss` 事件；元件不記住關閉狀態
+- ✅ docs 頁（`default`、`success`、`dismissible` 三個 preview）
+
+### 與決定表的差異
+
+- 新增 N3 `no-autofocus`：文件頁的 success 範例若自動聚焦，會在載入時搶焦點並捲動頁面。已補進決定表
+
+### 驗證
+
+- 對比度：白字對 blue.9 為 9.21:1、對 green.8 為 5.97:1（淺色）；深色主題 neutral.12 對 blue.6 為 6.88:1、對 green.5 為 10.05:1
+- `pnpm build`、`pnpm check:components`（27 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測
