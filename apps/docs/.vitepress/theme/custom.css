@@ -116,6 +116,20 @@ p {
   padding-left: 40px;
 }
 
+/* 巢狀分組（如「元件 > 表單與操作」）：副標題縮小，子項目不再縮排 */
+.VPSidebarItem.level-1:not(.is-link) > .item > .text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+}
+.VPSidebarItem.level-1:not(.is-link) {
+  margin-top: 8px;
+}
+.VPSidebarItem.level-1 > .items {
+  border-left: 0;
+  padding-left: 0;
+}
+
 /* ===== Navbar logo ===== */
 .VPNavBarTitle .logo {
   height: 56px;
