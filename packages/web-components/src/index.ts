@@ -20,3 +20,4 @@ export { GovtwServiceNavigation } from './govtw-service-navigation.js';
 export { GovtwHeader } from './govtw-header.js';
 export { GovtwFooter } from './govtw-footer.js';
 export { GovtwTag } from './govtw-tag.js';
+export { GovtwWarningText } from './govtw-warning-text.js';

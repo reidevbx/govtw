@@ -35,13 +35,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component warning-text --type=basic --zh-name=警告文字`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-warning-text-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-warning-text.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/warning-text.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component warning-text --type=basic --zh-name=警告文字`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-warning-text-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-warning-text.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/warning-text.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -52,3 +52,16 @@
 
 - `inset-text`
 - `notification-banner`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) W1：視覺隱藏前綴預設「警告」，可用 `icon-label` 改寫
+- ✅ `govtw-warning-text`：Shadow DOM，驚嘆號圖示 `aria-hidden`，內容包在 `<strong>`
+- ✅ docs 頁（`default`、`with-content` 兩個 preview）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（23 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測

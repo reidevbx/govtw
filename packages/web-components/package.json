@@ -119,6 +119,11 @@
       "source": "./src/govtw-tag.ts",
       "types": "./dist/govtw-tag.d.ts",
       "import": "./dist/govtw-tag.js"
+    },
+    "./govtw-warning-text": {
+      "source": "./src/govtw-warning-text.ts",
+      "types": "./dist/govtw-warning-text.d.ts",
+      "import": "./dist/govtw-warning-text.js"
     }
   },
   "files": [

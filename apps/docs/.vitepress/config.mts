@@ -138,6 +138,7 @@ export default defineConfig({
           { text: '頁首 Header', link: '/components/header' },
           { text: '頁尾 Footer', link: '/components/footer' },
           { text: '標籤 Tag', link: '/components/tag' },
+          { text: '警告文字 Warning Text', link: '/components/warning-text' },
           // <components-end>
         ],
       },
