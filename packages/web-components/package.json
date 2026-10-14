@@ -124,6 +124,11 @@
       "source": "./src/govtw-warning-text.ts",
       "types": "./dist/govtw-warning-text.d.ts",
       "import": "./dist/govtw-warning-text.js"
+    },
+    "./govtw-details": {
+      "source": "./src/govtw-details.ts",
+      "types": "./dist/govtw-details.d.ts",
+      "import": "./dist/govtw-details.js"
     }
   },
   "files": [

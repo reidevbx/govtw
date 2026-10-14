@@ -35,13 +35,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component details --type=basic --zh-name=可展開說明`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-details-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-details.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/details.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component details --type=basic --zh-name=可展開說明`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-details-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-details.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/details.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -52,3 +52,17 @@
 
 - `accordion`
 - `inset-text`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) D1：`summary` 屬性 + default slot，Shadow DOM 內使用原生 `<details>`
+- ✅ `open` 屬性與原生 toggle 事件雙向同步
+- ✅ 以 `::before` 畫三角形取代各瀏覽器不一致的原生 marker
+- ✅ docs 頁（`default`、`open` 兩個 preview）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（24 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測；頁內搜尋自動展開在 Shadow DOM 下是否有效未確認，docs 已註明

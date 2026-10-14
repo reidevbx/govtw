@@ -33,6 +33,7 @@ export default defineConfig({
         'govtw-footer': resolve(__dirname, 'src/govtw-footer.ts'),
         'govtw-tag': resolve(__dirname, 'src/govtw-tag.ts'),
         'govtw-warning-text': resolve(__dirname, 'src/govtw-warning-text.ts'),
+        'govtw-details': resolve(__dirname, 'src/govtw-details.ts'),
       },
       formats: ['es'],
     },

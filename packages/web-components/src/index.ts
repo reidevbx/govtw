@@ -21,3 +21,4 @@ export { GovtwHeader } from './govtw-header.js';
 export { GovtwFooter } from './govtw-footer.js';
 export { GovtwTag } from './govtw-tag.js';
 export { GovtwWarningText } from './govtw-warning-text.js';
+export { GovtwDetails } from './govtw-details.js';
