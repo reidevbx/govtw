@@ -132,6 +132,7 @@ export default defineConfig({
           { text: '選擇清單 Select', link: '/components/select' },
           { text: '跳至主要內容 Skip Link', link: '/components/skip-link' },
           { text: '導盲磚 Accesskey', link: '/components/accesskey' },
+          { text: '麵包屑 Breadcrumbs', link: '/components/breadcrumbs' },
           // <components-end>
         ],
       },

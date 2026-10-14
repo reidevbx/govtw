@@ -26,6 +26,7 @@ export default defineConfig({
         'govtw-select': resolve(__dirname, 'src/govtw-select.ts'),
         'govtw-skip-link': resolve(__dirname, 'src/govtw-skip-link.ts'),
         'govtw-accesskey': resolve(__dirname, 'src/govtw-accesskey.ts'),
+        'govtw-breadcrumbs': resolve(__dirname, 'src/govtw-breadcrumbs.ts'),
       },
       formats: ['es'],
     },

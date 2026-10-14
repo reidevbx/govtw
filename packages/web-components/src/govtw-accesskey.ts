@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { adoptStyles } from './internal/light-dom.js';
 
 /**
  * 樣式以 adoptedStyleSheets 掛到元件所在的 root（document 或 ShadowRoot），
@@ -72,7 +73,7 @@ export class GovtwAccesskey extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    adoptStyles(this.getRootNode());
+    adoptStyles(this.getRootNode(), styles);
   }
 
   render() {
@@ -89,15 +90,6 @@ export class GovtwAccesskey extends LitElement {
       accesskey=${key}
     ><span aria-hidden="true">:::</span><span class="govtw-accesskey__label">${this.label}</span></a>`;
   }
-}
-
-/** 每個 root 只掛一次樣式表 */
-function adoptStyles(root: Node) {
-  const sheet = styles.styleSheet;
-  if (!sheet) return;
-  if (!(root instanceof Document || root instanceof ShadowRoot)) return;
-  if (root.adoptedStyleSheets.includes(sheet)) return;
-  root.adoptedStyleSheets = [...root.adoptedStyleSheets, sheet];
 }
 
 declare global {
