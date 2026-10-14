@@ -34,3 +34,4 @@ export { GovtwAccordion, GovtwAccordionSection } from './govtw-accordion.js';
 export { GovtwPasswordInput } from './govtw-password-input.js';
 export { GovtwFileUpload } from './govtw-file-upload.js';
 export { GovtwCaptcha } from './govtw-captcha.js';
+export { GovtwStepIndicator } from './govtw-step-indicator.js';

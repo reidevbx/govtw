@@ -42,13 +42,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component step-indicator --type=basic --zh-name=步驟指示`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-step-indicator-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-step-indicator.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/step-indicator.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component step-indicator --type=basic --zh-name=步驟指示`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-step-indicator-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-step-indicator.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/step-indicator.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -58,3 +58,29 @@
 ## 相關任務
 
 - `back-link`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) SI1–SI4 完成。
+
+### 完成項目
+
+- 步驟條；容器寬度 40rem 以下只顯示「第 x 步，共 n 步」（SI1，container query）
+- 作者寫 `<ol><li>`，元件以 light DOM 加狀態；只有 `current` 屬性，總步數取 `<li>` 數量（SI2）
+- 步驟不可點擊（SI3）；未用瀏覽器實測申辦流程（SI4）
+- 已完成：實心圓加視覺隱藏「（已完成）」；目前：粗框、粗體、`aria-current="step"`
+
+### 實作時調整
+
+- 未到步驟的圓框原本用 `border.default`，對比只有 1.41:1，改用 `text.secondary`（淺色 4.71:1、深色 6.05:1）
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-step-indicator.ts`（新）
+- `packages/tokens/tokens.json`：`step-indicator` 15 個 token
+- `apps/docs/components/step-indicator.md`（新）
+- scaffolder 更新的 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 在瀏覽器確認窄容器範例只顯示摘要文字

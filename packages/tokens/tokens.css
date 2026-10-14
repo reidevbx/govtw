@@ -539,6 +539,21 @@
   --govtw-captcha-focus-color: var(--govtw-focus-color);
   --govtw-captcha-focus-text: var(--govtw-focus-text);
   --govtw-captcha-focus-width: var(--govtw-focus-width);
+  --govtw-step-indicator-font-size: var(--govtw-font-size-base);
+  --govtw-step-indicator-color: var(--govtw-color-text-primary);
+  --govtw-step-indicator-upcoming-color: var(--govtw-color-text-secondary);
+  --govtw-step-indicator-gap: var(--govtw-spacing-2);
+  --govtw-step-indicator-step-gap: var(--govtw-spacing-4);
+  --govtw-step-indicator-marker-size: 2rem;
+  --govtw-step-indicator-marker-border-width: 2px;
+  --govtw-step-indicator-marker-font-size: var(--govtw-font-size-sm);
+  --govtw-step-indicator-done-bg: var(--govtw-color-brand-primary);
+  --govtw-step-indicator-done-color: var(--govtw-color-text-on-primary);
+  --govtw-step-indicator-current-border-color: var(--govtw-color-brand-primary);
+  --govtw-step-indicator-current-font-weight: var(--govtw-font-weight-bold);
+  --govtw-step-indicator-upcoming-border-color: var(--govtw-color-text-secondary);
+  --govtw-step-indicator-bg: var(--govtw-color-bg-canvas);
+  --govtw-step-indicator-summary-font-weight: var(--govtw-font-weight-bold);
 }
 
 /* ==========================================================================

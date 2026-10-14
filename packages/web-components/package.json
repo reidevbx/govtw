@@ -189,6 +189,11 @@
       "source": "./src/govtw-captcha.ts",
       "types": "./dist/govtw-captcha.d.ts",
       "import": "./dist/govtw-captcha.js"
+    },
+    "./govtw-step-indicator": {
+      "source": "./src/govtw-step-indicator.ts",
+      "types": "./dist/govtw-step-indicator.d.ts",
+      "import": "./dist/govtw-step-indicator.js"
     }
   },
   "files": [
