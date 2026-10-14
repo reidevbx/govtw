@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>多步驟表單 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <form novalidate onsubmit="event.preventDefault()">
+      <govtw-stack space="6">
+        <govtw-back-link href="#"></govtw-back-link>
+        <h1>送出前，請確認你的答案</h1>
+        <h2>申請人</h2>
+        <govtw-summary-list>
+          <dl>
+            <div>
+              <dt>姓名</dt>
+              <dd>王小明</dd>
+              <dd><govtw-link href="#">變更<span class="govtw-visually-hidden">姓名</span></govtw-link></dd>
+            </div>
+            <div>
+              <dt>身分證統一編號</dt>
+              <dd>A123456789</dd>
+              <dd><govtw-link href="#">變更<span class="govtw-visually-hidden">身分證統一編號</span></govtw-link></dd>
+            </div>
+          </dl>
+        </govtw-summary-list>
+        <h2>申請內容</h2>
+        <govtw-summary-list>
+          <dl>
+            <div>
+              <dt>謄本種類</dt>
+              <dd>現戶全部</dd>
+              <dd><govtw-link href="#">變更<span class="govtw-visually-hidden">謄本種類</span></govtw-link></dd>
+            </div>
+            <div>
+              <dt>份數</dt>
+              <dd>1 份</dd>
+              <dd><govtw-link href="#">變更<span class="govtw-visually-hidden">份數</span></govtw-link></dd>
+            </div>
+          </dl>
+        </govtw-summary-list>
+        <h2>送出申請</h2>
+        <p>送出後，即表示你確認以上資料就你所知均為正確。</p>
+        <div><govtw-button type="submit">確認並送出</govtw-button></div>
+      </govtw-stack>
+    </form>
+  </div>
+</body>
+</html>

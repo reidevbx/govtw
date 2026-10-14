@@ -228,6 +228,13 @@ export default defineConfig({
               { text: '登入', link: '/patterns/sign-in' },
             ],
           },
+          {
+            text: '頁面',
+            collapsed: false,
+            items: [
+              { text: '多步驟表單', link: '/patterns/multi-step-form' },
+            ],
+          },
         ],
       },
       {

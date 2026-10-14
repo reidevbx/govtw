@@ -113,9 +113,13 @@ import '@gov-tw/web-components/govtw-step-indicator';
 
 ## 設計指引
 
+::: warning 先試著不用步驟條
+GOV.UK 不建議同時列出所有步驟的進度條：使用者常沒注意到它、佔空間，在小螢幕上也不好用。建議先不用進度指示，必要時再用「第 3 題，共 9 題」文字。詳見[多步驟表單](/patterns/multi-step-form)模式。
+:::
+
 ### 何時使用
 
-- 4 步以上的申辦流程，使用者需要知道還剩多少
+- 4 步以上、步驟固定且各有明確名稱的申辦流程，而且使用者研究顯示有幫助
 
 ### 何時不使用
 
@@ -127,6 +131,10 @@ import '@gov-tw/web-components/govtw-step-indicator';
 - **步驟名稱簡短**：4 到 6 個字，如「填寫資料」「上傳文件」
 - **步驟數控制在 6 步以內**：太多步會在寬螢幕換行
 - **最後一步是確認頁**：讓使用者送出前檢查所有內容，可搭配[摘要清單](/components/summary-list)
+
+### 相關模式
+
+- [多步驟表單](/patterns/multi-step-form)
 
 ### 相關元件
 
