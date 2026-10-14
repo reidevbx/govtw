@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Stack 垂直堆疊 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="8">
+      <govtw-stack space="2">
+        <div style="padding: 12px; background: var(--govtw-color-bg-surface); border: 1px solid var(--govtw-color-border-subtle); border-radius: var(--govtw-radius-sm);">區塊一：項目 1</div>
+        <div style="padding: 12px; background: var(--govtw-color-bg-surface); border: 1px solid var(--govtw-color-border-subtle); border-radius: var(--govtw-radius-sm);">區塊一：項目 2</div>
+      </govtw-stack>
+      <govtw-stack space="2">
+        <div style="padding: 12px; background: var(--govtw-color-bg-surface); border: 1px solid var(--govtw-color-border-subtle); border-radius: var(--govtw-radius-sm);">區塊二：項目 1</div>
+        <div style="padding: 12px; background: var(--govtw-color-bg-surface); border: 1px solid var(--govtw-color-border-subtle); border-radius: var(--govtw-radius-sm);">區塊二：項目 2</div>
+      </govtw-stack>
+    </govtw-stack>
+  </div>
+</body>
+</html>

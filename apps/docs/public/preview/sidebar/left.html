@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Sidebar 側邊欄佈局 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-sidebar side="left" side-width="200px" content-min="50" space="4">
+      <div style="padding: 16px; background: var(--govtw-color-bg-surface); border: 1px solid var(--govtw-color-border-subtle); border-radius: var(--govtw-radius-sm);">
+        <strong>側邊欄</strong><br>寬度 200px。
+      </div>
+      <div style="padding: 16px; background: var(--govtw-color-bg-surface); border: 1px solid var(--govtw-color-border-subtle); border-radius: var(--govtw-radius-sm);">
+        <strong>主內容</strong><br>佔滿剩餘寬度。
+      </div>
+    </govtw-sidebar>
+  </div>
+</body>
+</html>

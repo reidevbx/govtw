@@ -134,6 +134,16 @@ export default defineConfig({
         ],
       },
       {
+        text: '佈局元件',
+        collapsed: false,
+        items: [
+          { text: '頁面容器 Container', link: '/components/container' },
+          { text: '垂直堆疊 Stack', link: '/components/stack' },
+          { text: '側邊欄佈局 Sidebar', link: '/components/sidebar' },
+          { text: '水平排列 Cluster', link: '/components/cluster' },
+        ],
+      },
+      {
         text: '模式',
         collapsed: false,
         items: [
