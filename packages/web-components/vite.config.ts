@@ -41,6 +41,7 @@ export default defineConfig({
         'govtw-table': resolve(__dirname, 'src/govtw-table.ts'),
         'govtw-error-summary': resolve(__dirname, 'src/govtw-error-summary.ts'),
         'govtw-date-input': resolve(__dirname, 'src/govtw-date-input.ts'),
+        'govtw-tabs': resolve(__dirname, 'src/govtw-tabs.ts'),
       },
       formats: ['es'],
     },

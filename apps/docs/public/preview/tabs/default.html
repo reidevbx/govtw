@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>頁籤 Tabs — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-tabs label="戶籍謄本申請說明">
+      <section data-label="申請資格">
+        <h3>申請資格</h3>
+        <p>本人、戶長、利害關係人或受委託人可申請。</p>
+      </section>
+      <section data-label="應備文件">
+        <h3>應備文件</h3>
+        <p>國民身分證正本；委託他人申請須另附委託書及受託人身分證。</p>
+      </section>
+      <section data-label="規費">
+        <h3>規費</h3>
+        <p>每張新臺幣 15 元。</p>
+      </section>
+    </govtw-tabs>
+  </div>
+</body>
+</html>

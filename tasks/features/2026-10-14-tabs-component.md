@@ -45,13 +45,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component tabs --type=basic --zh-name=頁籤`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-tabs-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-tabs.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/tabs.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component tabs --type=basic --zh-name=頁籤`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-tabs-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-tabs.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/tabs.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -61,3 +61,23 @@
 ## 相關任務
 
 - `accordion`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) C3、G1–G3
+- ✅ `govtw-tabs`：light DOM；作者寫 `<section data-label>`，元件在前面產生 `role="tablist"` 與 `<button role="tab">`，id 全在同一個 DOM 範圍，`aria-controls`／`aria-labelledby` 可互相參照
+- ✅ 鍵盤：左右方向鍵切換（自動啟用）、Home／End；roving tabindex
+- ✅ 網址 `#id` 對應 section 時預設選中
+- ✅ 容器寬度 < 640px（40rem）時以 ResizeObserver 切到 `mode="list"`：不渲染 tablist、移除 tab 相關 role、全部展開
+- ✅ docs 頁（`default`、`narrow` 兩個 preview），設計指引寫明「篩選不要用頁籤」
+
+### 實作說明
+
+- G3 用 JavaScript 切換模式，而不是只用 CSS 隱藏。只用 CSS 時，窄螢幕會留下沒有對應頁籤的 `role="tabpanel"`
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（32 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測：鍵盤操作、窄寬度切換、hash 預選

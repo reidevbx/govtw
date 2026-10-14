@@ -457,6 +457,8 @@
   --govtw-tabs-color: var(--govtw-color-text-primary);
   --govtw-tabs-link-color: var(--govtw-color-link-default);
   --govtw-tabs-border-color: var(--govtw-color-border-subtle);
+  --govtw-tabs-border-width: 1px;
+  --govtw-tabs-underline-offset: 0.25em;
   --govtw-tabs-selected-bg: var(--govtw-color-bg-canvas);
   --govtw-tabs-unselected-bg: var(--govtw-color-bg-surface);
   --govtw-tabs-tab-padding-y: var(--govtw-spacing-2);

@@ -164,6 +164,11 @@
       "source": "./src/govtw-date-input.ts",
       "types": "./dist/govtw-date-input.d.ts",
       "import": "./dist/govtw-date-input.js"
+    },
+    "./govtw-tabs": {
+      "source": "./src/govtw-tabs.ts",
+      "types": "./dist/govtw-tabs.d.ts",
+      "import": "./dist/govtw-tabs.js"
     }
   },
   "files": [
