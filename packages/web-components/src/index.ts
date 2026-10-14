@@ -39,3 +39,4 @@ export { GovtwAttachment, GovtwAttachmentFile } from './govtw-attachment.js';
 export { GovtwDocumentList, GovtwDocumentListItem } from './govtw-document-list.js';
 export { GovtwCard } from './govtw-card.js';
 export { GovtwSideNavigation } from './govtw-side-navigation.js';
+export { GovtwPageTools } from './govtw-page-tools.js';

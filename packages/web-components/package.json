@@ -214,6 +214,11 @@
       "source": "./src/govtw-side-navigation.ts",
       "types": "./dist/govtw-side-navigation.d.ts",
       "import": "./dist/govtw-side-navigation.js"
+    },
+    "./govtw-page-tools": {
+      "source": "./src/govtw-page-tools.ts",
+      "types": "./dist/govtw-page-tools.d.ts",
+      "import": "./dist/govtw-page-tools.js"
     }
   },
   "files": [

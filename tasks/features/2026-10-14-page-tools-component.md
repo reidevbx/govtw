@@ -41,13 +41,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component page-tools --type=basic --zh-name=頁面工具列`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-page-tools-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-page-tools.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/page-tools.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component page-tools --type=basic --zh-name=頁面工具列`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-page-tools-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-page-tools.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/page-tools.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -57,3 +57,30 @@
 ## 相關任務
 
 - `link`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) PT1–PT3 完成，PT4 實作時改變。
+
+### 完成項目
+
+- `platforms` 預設 `line facebook email`，可加 `x`（PT1）
+- 支援 `navigator.share` 時改成單一「分享」按鈕；`no-native-share` 可關閉（PT2）
+- 分享網址與標題預設 `location.href`、`document.title`，可用 `url`、`share-title` 覆寫（PT3）
+- 列印是 `<button>`；列印時工具列隱藏；`no-print` 可不顯示列印
+
+### 與決定表不同
+
+- **PT4 改為同一分頁開啟**，不另開新視窗，因此不加「（另開新視窗）」。理由：工具列上每個連結加可見提示會讓整列過長；分享完按上一頁即可回來
+- 分享連結用原生 `<a>`，未沿用 link 元件，避免元件互相依賴
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-page-tools.ts`（新）
+- `packages/tokens/tokens.json`：`page-tools` 9 個 token
+- `apps/docs/components/page-tools.md`（新）
+- scaffolder 更新的 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 各平台分享網址格式（LINE、X）未實測，需在瀏覽器確認仍有效

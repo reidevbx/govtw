@@ -157,6 +157,7 @@ export default defineConfig({
           { text: '文件列表 Document List', link: '/components/document-list' },
           { text: '卡片 Card', link: '/components/card' },
           { text: '側邊選單 Side Navigation', link: '/components/side-navigation' },
+          { text: '頁面工具列 Page Tools', link: '/components/page-tools' },
           // <components-end>
         ],
       },
