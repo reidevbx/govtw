@@ -54,7 +54,7 @@ export class GovtwSelect extends LitElement {
      * - 明確的 label + 可選的 hint / error
      * - 2px 邊框，focus 時黃色 ring + 黑色粗邊框
      * - error 時左側紅色邊線 + 紅色邊框
-     * - 原生 <select>，依靠瀏覽器/作業系統的下拉 UI
+     * - 原生 <select>，依靠瀏覽器/作業系統的下拉 UI；箭頭自己畫（原生箭頭不受 padding 控制，會貼齊右邊框）
      */
 
     .form-group {
@@ -96,7 +96,33 @@ export class GovtwSelect extends LitElement {
     }
 
     /* ===== Select ===== */
+    .select-wrapper {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    /* 向下箭頭：用文字色的邊框畫，深色主題跟著變色；強制色彩模式下邊框會改用系統色 */
+    .select-wrapper::after {
+      content: '';
+      position: absolute;
+      inset-inline-end: var(--govtw-spacing-3);
+      top: 50%;
+      inline-size: 0.45em;
+      block-size: 0.45em;
+      border-block-end: 2px solid var(--govtw-select-color);
+      border-inline-end: 2px solid var(--govtw-select-color);
+      transform: translateY(-75%) rotate(45deg);
+      pointer-events: none;
+    }
+
+    .select-wrapper--disabled::after {
+      opacity: 0.5;
+    }
+
     .select {
+      -webkit-appearance: none;
+      appearance: none;
       font-family: var(--govtw-select-font-family);
       font-size: var(--govtw-select-font-size);
       line-height: 1.5;
@@ -105,6 +131,8 @@ export class GovtwSelect extends LitElement {
       border: 2px solid var(--govtw-select-border-color);
       border-radius: var(--govtw-select-border-radius);
       padding: var(--govtw-spacing-2);
+      /* 右側留出箭頭空間，選項文字不會壓到箭頭 */
+      padding-inline-end: calc(var(--govtw-spacing-3) * 2 + 0.45em);
       max-width: 100%;
       box-sizing: border-box;
       margin: 0;
@@ -203,7 +231,7 @@ export class GovtwSelect extends LitElement {
         ${hasError
           ? html`<span class="error-message" id=${errorId}>${this.error}</span>`
           : nothing}
-        <select
+        <span class="select-wrapper ${this.disabled ? 'select-wrapper--disabled' : ''}"><select
           class="select ${hasError ? 'select--error' : ''}"
           id=${selectId}
           name=${this.name || nothing}
@@ -212,7 +240,7 @@ export class GovtwSelect extends LitElement {
           aria-invalid=${hasError ? 'true' : nothing}
           aria-describedby=${describedBy || nothing}
           @change=${this._handleChange}
-        ></select>
+        ></select></span>
         <slot @slotchange=${this._handleSlotChange}></slot>
       </div>
     `;
