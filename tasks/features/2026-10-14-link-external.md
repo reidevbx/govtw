@@ -12,7 +12,7 @@
 ## 需求定義
 
 - `target="_blank"` 時自動加可見文字「（另開新視窗）」，或至少加視覺隱藏文字
-- 自動補 `rel="noopener noreferrer"`
+- `rel="noopener noreferrer"` 已自動補上（`govtw-link.ts:93`），不用再做
 - 文案統一為「（另開新視窗）」
 
 ### 待確認（動手前需決定）

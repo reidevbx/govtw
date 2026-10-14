@@ -50,8 +50,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component date-input --type=form --zh-name=日期輸入`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「日期輸入 Date Input」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-date-input-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-date-input.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/date-input.md`，DemoBlock 加 `variant`

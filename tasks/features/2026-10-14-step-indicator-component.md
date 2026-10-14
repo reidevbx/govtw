@@ -44,8 +44,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component step-indicator --type=basic --zh-name=步驟指示`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「步驟指示 Step Indicator」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-step-indicator-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-step-indicator.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/step-indicator.md`，DemoBlock 加 `variant`

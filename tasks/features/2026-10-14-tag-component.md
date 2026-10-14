@@ -40,7 +40,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component tag --type=basic --zh-name=標籤`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-tag-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-tag.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/tag.md`，DemoBlock 加 `variant`

@@ -47,8 +47,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component service-navigation --type=basic --zh-name=主選單`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「主選單 Service Navigation」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-service-navigation-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-service-navigation.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/service-navigation.md`，DemoBlock 加 `variant`

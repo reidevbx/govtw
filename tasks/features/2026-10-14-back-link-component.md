@@ -42,8 +42,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component back-link --type=basic --zh-name=返回連結`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「返回連結 Back Link」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-back-link-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-back-link.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/back-link.md`，DemoBlock 加 `variant`

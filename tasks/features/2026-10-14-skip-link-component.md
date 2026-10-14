@@ -45,8 +45,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component skip-link --type=basic --zh-name=跳至主要內容`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「跳至主要內容 Skip Link」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-skip-link-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-skip-link.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/skip-link.md`，DemoBlock 加 `variant`

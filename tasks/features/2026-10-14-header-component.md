@@ -49,7 +49,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component header --type=layout --zh-name=頁首`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-header-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-header.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/header.md`，DemoBlock 加 `variant`

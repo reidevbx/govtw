@@ -47,7 +47,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component search --type=form --zh-name=搜尋框`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-search-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-search.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/search.md`，DemoBlock 加 `variant`

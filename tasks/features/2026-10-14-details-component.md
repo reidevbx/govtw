@@ -37,7 +37,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component details --type=basic --zh-name=可展開說明`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-details-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-details.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/details.md`，DemoBlock 加 `variant`

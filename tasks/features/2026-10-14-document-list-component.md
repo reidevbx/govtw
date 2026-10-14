@@ -43,8 +43,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component document-list --type=basic --zh-name=文件列表`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「文件列表 Document List」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-document-list-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-document-list.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/document-list.md`，DemoBlock 加 `variant`

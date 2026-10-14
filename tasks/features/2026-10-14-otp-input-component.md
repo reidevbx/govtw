@@ -34,8 +34,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component otp-input --type=form --zh-name=簡訊驗證碼`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「簡訊驗證碼 OTP Input」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-otp-input-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-otp-input.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/otp-input.md`，DemoBlock 加 `variant`

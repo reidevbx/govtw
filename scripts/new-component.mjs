@@ -8,12 +8,13 @@
  * 產生：
  *   - packages/web-components/src/govtw-<name>.ts
  *   - apps/docs/components/<name>.md
- *   - apps/docs/public/preview/<name>/default.html
+ *   （preview HTML 由 pnpm build:previews 從 md 自動生成，這裡不產）
  *
  * 更新：
  *   - packages/web-components/src/index.ts （append export）
  *   - packages/web-components/package.json （add exports entry）
- *   - apps/docs/.vitepress/config.mts （透過 marker 註解插入 sidebar）
+ *   - packages/web-components/vite.config.ts （add build.lib.entry）
+ *   - apps/docs/.vitepress/config.mts （透過 marker 註解插入 sidebar；layout 進「佈局元件」群組）
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -24,11 +25,12 @@ import { P, rel } from './paths.mjs';
 /* ========== CLI ========== */
 
 function usage() {
-  return `Usage: pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名]
+  return `Usage: pnpm new:component <name> [--type=basic|form|layout] [--zh-name=中文名] [--en-name="English Name"]
 
   name        kebab-case 名稱，例如 "select" 或 "radio-group"（最少 2 字元）
   --type      basic（預設）| form | layout
   --zh-name   中文名稱，供 sidebar 使用。省略時使用 name。
+  --en-name   英文名稱，供 sidebar 使用。省略時由 name 推導（"date-input" → "Date Input"）。
 
 範例:
   pnpm new:component select --zh-name="下拉選單"
@@ -48,6 +50,7 @@ function parseOptions(argv) {
     options: {
       type: { type: 'string', default: 'basic' },
       'zh-name': { type: 'string', default: '' },
+      'en-name': { type: 'string', default: '' },
     },
     allowPositionals: true,
   });
@@ -73,17 +76,24 @@ function parseOptions(argv) {
     process.exit(1);
   }
 
-  return { name, type: values.type, zhName: values['zh-name'] || name };
-}
-
-function deriveIdentifiers({ name, zhName }) {
-  const pascalName = name.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join('');
   return {
     name,
+    type: values.type,
+    zhName: values['zh-name'] || name,
+    enName: values['en-name'],
+  };
+}
+
+function deriveIdentifiers({ name, type, zhName, enName }) {
+  const words = name.split('-').map(w => w[0].toUpperCase() + w.slice(1));
+  return {
+    name,
+    type,
     zhName,
+    // sidebar 用 Title Case 加空格（"Text Input"），與既有項目一致
+    enName: enName || words.join(' '),
     tag: `govtw-${name}`,
-    className: `Govtw${pascalName}`,
-    pascalName,
+    className: `Govtw${words.join('')}`,
   };
 }
 
@@ -91,7 +101,6 @@ function resolvePaths({ name, tag }) {
   return {
     source: `${P.wc.src}/${tag}.ts`,
     docs: `${P.docs.components}/${name}.md`,
-    preview: `${P.docs.preview}/${name}/default.html`,
   };
 }
 
@@ -287,19 +296,23 @@ declare global {
 `;
 }
 
-function docsTemplate({ tag, name, zhName }) {
+function docsTemplate({ tag, zhName }) {
   return `# ${zhName}
 
 TODO: 一句話描述此元件的用途。
 
 ## 互動範例
 
-<DemoBlock preview="/preview/${name}/default.html">
+<DemoBlock variant="default">
+  <${tag}>示範內容</${tag}>
+
+  <template #code>
 
 \`\`\`html
 <${tag}>示範內容</${tag}>
 \`\`\`
 
+  </template>
 </DemoBlock>
 
 ## 狀態展示
@@ -347,33 +360,6 @@ import '@gov-tw/web-components/${tag}';
 `;
 }
 
-function previewTemplate({ tag }) {
-  return `<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>${tag} — default</title>
-  <link rel="stylesheet" href="/tokens.css">
-  <script src="/gov-tw.iife.js"></script>
-  <style>
-    body {
-      font-family: var(--govtw-font-sans);
-      color: var(--govtw-color-text-primary);
-      background: var(--govtw-color-bg-canvas);
-      margin: 0;
-      padding: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <${tag}>示範內容</${tag}>
-</body>
-</html>
-`;
-}
-
 const COMPONENT_TEMPLATES = {
   basic: basicTemplate,
   form: formTemplate,
@@ -399,7 +385,6 @@ function writeFile(path, content) {
 function writeNewFiles(ids, type, paths) {
   writeFile(paths.source, COMPONENT_TEMPLATES[type](ids));
   writeFile(paths.docs, docsTemplate(ids));
-  writeFile(paths.preview, previewTemplate(ids));
 }
 
 function updateIndex({ tag, className }) {
@@ -425,35 +410,55 @@ function updatePackageJson({ tag }) {
 }
 
 /**
- * 透過 marker 註解在 VitePress sidebar 元件區段中插入新項目。
- * config.mts 必須含：
- *   // <components-start>
- *   { text: '...', link: '/components/...' },
- *   ...
- *   // <components-end>
- * 新項目將插入 <components-end> 之前。
+ * 在 vite.config.ts 的 build.lib.entry 加入新元件，讓 build 產出 dist/govtw-<name>.js。
+ * 以「最後一個 'govtw-*': resolve(...)」那行為錨點，在其後插入同縮排的新行。
  */
-function updateSidebar({ name, zhName, pascalName }) {
-  const vpContent = readFileSync(P.docs.vpConfig, 'utf-8');
-  const endMarker = '// <components-end>';
-  const endIdx = vpContent.indexOf(endMarker);
+function updateViteConfig({ tag }) {
+  const content = readFileSync(P.wc.viteConfig, 'utf-8');
+  if (content.includes(`'${tag}':`)) return;
 
-  if (endIdx === -1) {
+  const entryLines = [...content.matchAll(/^([ \t]*)'govtw-[a-z0-9-]+': resolve\(.*\),[ \t]*$/gm)];
+  if (entryLines.length === 0) {
     console.log(
-      `  ⚠️  ${rel(P.docs.vpConfig)} 未找到 ${endMarker} marker，請手動加入 sidebar 項目：\n` +
-      `      { text: '${zhName} ${pascalName}', link: '/components/${name}' },`
+      `  ⚠️  ${rel(P.wc.viteConfig)} 找不到既有的 govtw-* entry，請手動加入：\n` +
+      `      '${tag}': resolve(__dirname, 'src/${tag}.ts'),`
     );
     return;
   }
 
-  if (vpContent.includes(`/components/${name}`)) return;
+  const last = entryLines.at(-1);
+  const insertAt = last.index + last[0].length;
+  const newLine = `\n${last[1]}'${tag}': resolve(__dirname, 'src/${tag}.ts'),`;
+  writeFileSync(P.wc.viteConfig, content.slice(0, insertAt) + newLine + content.slice(insertAt));
+  console.log(`  ✓ ${rel(P.wc.viteConfig)}`);
+}
+
+/**
+ * 透過 marker 註解在 VitePress sidebar 插入新項目。
+ * config.mts 必須含兩組 marker，新項目插在 end marker 之前：
+ *   // <components-start> … // <components-end>   一般元件
+ *   // <layout-start> … // <layout-end>           佈局元件（--type=layout）
+ */
+function updateSidebar({ name, type, zhName, enName }) {
+  const vpContent = readFileSync(P.docs.vpConfig, 'utf-8');
+  const endMarker = type === 'layout' ? '// <layout-end>' : '// <components-end>';
+  const endIdx = vpContent.indexOf(endMarker);
+  const item = `{ text: '${zhName} ${enName}', link: '/components/${name}' },`;
+
+  if (endIdx === -1) {
+    console.log(
+      `  ⚠️  ${rel(P.docs.vpConfig)} 未找到 ${endMarker} marker，請手動加入 sidebar 項目：\n` +
+      `      ${item}`
+    );
+    return;
+  }
+
+  if (vpContent.includes(`/components/${name}'`)) return;
 
   // 取 marker 所在行的縮排
   const lineStart = vpContent.lastIndexOf('\n', endIdx) + 1;
   const indent = vpContent.slice(lineStart, endIdx);
-  const newLine = `${indent}{ text: '${zhName} ${pascalName}', link: '/components/${name}' },\n`;
-
-  const updated = vpContent.slice(0, lineStart) + newLine + vpContent.slice(lineStart);
+  const updated = vpContent.slice(0, lineStart) + `${indent}${item}\n` + vpContent.slice(lineStart);
   writeFileSync(P.docs.vpConfig, updated);
   console.log(`  ✓ ${rel(P.docs.vpConfig)}`);
 }
@@ -472,16 +477,17 @@ function main() {
   writeNewFiles(ids, opts.type, paths);
   updateIndex(ids);
   updatePackageJson(ids);
+  updateViteConfig(ids);
   updateSidebar(ids);
 
   console.log(`
 ✅ 完成。後續步驟：
 
-1. 填寫 ${rel(paths.source)} 中的 TODO 區塊
-2. 補上 ${rel(paths.docs)} 的屬性表與無障礙說明
-3. 調整 ${rel(paths.preview)} 的示範內容
-4. 執行 pnpm build 驗證
-5. 執行 pnpm sync:public 同步 dist 到 apps/docs/public
+1. 在 packages/tokens/tokens.json 新增 --govtw-${ids.name}-* component token，執行 pnpm build:tokens
+2. 填寫 ${rel(paths.source)} 中的 TODO 區塊
+3. 補上 ${rel(paths.docs)} 的屬性表、無障礙說明，並在 <DemoBlock variant> 內寫示範
+4. 執行 pnpm build（會自動生成 preview HTML）
+5. 執行 pnpm check:components 與 pnpm lint
 `);
 }
 

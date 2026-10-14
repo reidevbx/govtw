@@ -43,8 +43,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component page-tools --type=basic --zh-name=頁面工具列`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「頁面工具列 Page Tools」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-page-tools-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-page-tools.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/page-tools.md`，DemoBlock 加 `variant`

@@ -46,8 +46,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component font-size-switcher --type=basic --zh-name=字級切換`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「字級切換 Font Size Switcher」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-font-size-switcher-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-font-size-switcher.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/font-size-switcher.md`，DemoBlock 加 `variant`

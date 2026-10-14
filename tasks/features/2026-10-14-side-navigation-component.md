@@ -43,8 +43,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component side-navigation --type=basic --zh-name=側邊選單`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「側邊選單 Side Navigation」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-side-navigation-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-side-navigation.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/side-navigation.md`，DemoBlock 加 `variant`

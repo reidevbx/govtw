@@ -12,6 +12,7 @@ export const P = {
     src: resolve(ROOT, 'packages/web-components/src'),
     index: resolve(ROOT, 'packages/web-components/src/index.ts'),
     pkg: resolve(ROOT, 'packages/web-components/package.json'),
+    viteConfig: resolve(ROOT, 'packages/web-components/vite.config.ts'),
     iife: resolve(ROOT, 'packages/web-components/dist/gov-tw.iife.js'),
   },
   docs: {

@@ -34,8 +34,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component contents-list --type=basic --zh-name=頁內目錄`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「頁內目錄 Contents List」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-contents-list-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-contents-list.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/contents-list.md`，DemoBlock 加 `variant`

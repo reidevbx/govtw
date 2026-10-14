@@ -49,7 +49,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component footer --type=layout --zh-name=頁尾`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-footer-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-footer.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/footer.md`，DemoBlock 加 `variant`

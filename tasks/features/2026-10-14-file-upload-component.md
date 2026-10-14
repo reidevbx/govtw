@@ -40,8 +40,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component file-upload --type=form --zh-name=檔案上傳`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「檔案上傳 File Upload」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-file-upload-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-file-upload.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/file-upload.md`，DemoBlock 加 `variant`

@@ -44,8 +44,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component error-summary --type=basic --zh-name=錯誤摘要`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「錯誤摘要 Error Summary」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-error-summary-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-error-summary.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/error-summary.md`，DemoBlock 加 `variant`

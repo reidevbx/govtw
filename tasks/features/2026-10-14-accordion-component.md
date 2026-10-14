@@ -46,7 +46,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component accordion --type=basic --zh-name=手風琴`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-accordion-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-accordion.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/accordion.md`，DemoBlock 加 `variant`

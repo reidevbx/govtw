@@ -47,7 +47,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component table --type=basic --zh-name=表格`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-table-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-table.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/table.md`，DemoBlock 加 `variant`

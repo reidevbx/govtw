@@ -47,8 +47,6 @@
 
 - [ ] 決定「待確認」各項
 - [ ] `pnpm new:component notification-banner --type=basic --zh-name=通知橫幅`
-- [ ] 補 `packages/web-components/vite.config.ts` entry（scaffolder 已知缺漏）
-- [ ] 修 sidebar 英文名空格：「通知橫幅 Notification Banner」（scaffolder 已知缺漏）
 - [ ] `packages/tokens/tokens.json` 新增 `--govtw-notification-banner-*` component token → `pnpm build:tokens`
 - [ ] 實作 `govtw-notification-banner.ts`：屬性、樣式、render
 - [ ] 寫 `apps/docs/components/notification-banner.md`，DemoBlock 加 `variant`
