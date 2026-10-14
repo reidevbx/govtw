@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>登入 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <form novalidate onsubmit="event.preventDefault()">
+      <govtw-stack space="6">
+        <h1>登入</h1>
+        <govtw-text-input name="username" label="帳號" autocomplete="username"></govtw-text-input>
+        <govtw-password-input name="password" label="密碼"></govtw-password-input>
+        <div><govtw-button type="submit">登入</govtw-button></div>
+        <p><govtw-link href="#">忘記密碼</govtw-link></p>
+      </govtw-stack>
+    </form>
+  </div>
+</body>
+</html>

@@ -16,7 +16,7 @@
 <!-- <help-start> -->
 - [表單錯誤處理](/patterns/validation)：使用者送出表單後，告訴他哪裡填錯、怎麼修正
 - [確認手機號碼](/patterns/confirm-phone-number)：傳送一次性驗證碼，確認使用者擁有這支手機
-- 登入（撰寫中）：帳號、密碼，以及圖形驗證碼的替代方式
+- [登入](/patterns/sign-in)：帳號、密碼，以及圖形驗證碼的替代方式
 <!-- <help-end> -->
 
 ## 頁面

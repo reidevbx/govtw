@@ -116,6 +116,8 @@ import '@gov-tw/web-components/govtw-captcha';
 
 各機關登入流程的實際做法我們沒有逐一查證，這裡只寫規範要求。
 
+登入頁的完整做法見[登入](/patterns/sign-in)模式。
+
 ## 設計指引
 
 ### 何時使用

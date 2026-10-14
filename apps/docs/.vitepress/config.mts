@@ -225,6 +225,7 @@ export default defineConfig({
             items: [
               { text: '表單錯誤處理', link: '/patterns/validation' },
               { text: '確認手機號碼', link: '/patterns/confirm-phone-number' },
+              { text: '登入', link: '/patterns/sign-in' },
             ],
           },
         ],
