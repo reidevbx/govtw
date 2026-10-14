@@ -149,6 +149,7 @@ export default defineConfig({
           { text: '日期輸入 Date Input', link: '/components/date-input' },
           { text: '頁籤 Tabs', link: '/components/tabs' },
           { text: '手風琴 Accordion', link: '/components/accordion' },
+          { text: '密碼輸入 Password Input', link: '/components/password-input' },
           // <components-end>
         ],
       },

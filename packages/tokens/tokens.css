@@ -482,6 +482,26 @@
   --govtw-accordion-focus-bg: var(--govtw-focus-color);
   --govtw-accordion-focus-color: var(--govtw-focus-text);
   --govtw-accordion-focus-width: var(--govtw-focus-width);
+  --govtw-password-input-font-family: var(--govtw-font-sans);
+  --govtw-password-input-font-size: var(--govtw-font-size-base);
+  --govtw-password-input-color: var(--govtw-color-text-primary);
+  --govtw-password-input-bg: var(--govtw-color-bg-canvas);
+  --govtw-password-input-border-color: var(--govtw-color-text-primary);
+  --govtw-password-input-border-radius: var(--govtw-radius-sm);
+  --govtw-password-input-padding: var(--govtw-spacing-2);
+  --govtw-password-input-label-font-weight: var(--govtw-font-weight-bold);
+  --govtw-password-input-hint-color: var(--govtw-color-text-secondary);
+  --govtw-password-input-error-color: var(--govtw-color-feedback-error);
+  --govtw-password-input-stack-gap: var(--govtw-spacing-2);
+  --govtw-password-input-toggle-gap: var(--govtw-spacing-2);
+  --govtw-password-input-toggle-padding-x: var(--govtw-spacing-3);
+  --govtw-password-input-toggle-bg: var(--govtw-color-bg-surface);
+  --govtw-password-input-toggle-color: var(--govtw-color-text-primary);
+  --govtw-password-input-toggle-border-color: var(--govtw-color-border-default);
+  --govtw-password-input-disabled-bg: var(--govtw-color-bg-surface);
+  --govtw-password-input-focus-color: var(--govtw-focus-color);
+  --govtw-password-input-focus-width: var(--govtw-focus-width);
+  --govtw-password-input-focus-text: var(--govtw-focus-text);
 }
 
 /* ==========================================================================

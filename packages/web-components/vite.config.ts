@@ -43,6 +43,7 @@ export default defineConfig({
         'govtw-date-input': resolve(__dirname, 'src/govtw-date-input.ts'),
         'govtw-tabs': resolve(__dirname, 'src/govtw-tabs.ts'),
         'govtw-accordion': resolve(__dirname, 'src/govtw-accordion.ts'),
+        'govtw-password-input': resolve(__dirname, 'src/govtw-password-input.ts'),
       },
       formats: ['es'],
     },
