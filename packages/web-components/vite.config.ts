@@ -31,6 +31,7 @@ export default defineConfig({
         'govtw-service-navigation': resolve(__dirname, 'src/govtw-service-navigation.ts'),
         'govtw-header': resolve(__dirname, 'src/govtw-header.ts'),
         'govtw-footer': resolve(__dirname, 'src/govtw-footer.ts'),
+        'govtw-tag': resolve(__dirname, 'src/govtw-tag.ts'),
       },
       formats: ['es'],
     },

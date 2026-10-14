@@ -195,6 +195,8 @@
   --govtw-button-disabled-opacity: 0.5;
   --govtw-button-focus-color: var(--govtw-focus-color);
   --govtw-button-focus-width: var(--govtw-focus-width);
+  --govtw-button-start-font-size: var(--govtw-font-size-lg);
+  --govtw-button-start-icon-size: 1.25em;
   --govtw-text-input-font-family: var(--govtw-font-sans);
   --govtw-text-input-font-size: var(--govtw-font-size-base);
   --govtw-text-input-color: var(--govtw-color-text-primary);
@@ -345,6 +347,131 @@
   --govtw-footer-divider-color: var(--govtw-color-border-default);
   --govtw-footer-divider-width: 1px;
   --govtw-footer-info-min-width: 20rem;
+  --govtw-tag-font-size: var(--govtw-font-size-sm);
+  --govtw-tag-font-weight: var(--govtw-font-weight-medium);
+  --govtw-tag-padding-y: 2px;
+  --govtw-tag-padding-x: var(--govtw-spacing-2);
+  --govtw-tag-border-radius: var(--govtw-radius-sm);
+  --govtw-tag-grey-bg: var(--govtw-primitive-color-neutral-3);
+  --govtw-tag-grey-color: var(--govtw-primitive-color-neutral-11);
+  --govtw-tag-blue-bg: var(--govtw-primitive-color-blue-2);
+  --govtw-tag-blue-color: var(--govtw-primitive-color-blue-11);
+  --govtw-tag-green-bg: var(--govtw-primitive-color-green-2);
+  --govtw-tag-green-color: var(--govtw-primitive-color-green-11);
+  --govtw-tag-yellow-bg: var(--govtw-primitive-color-yellow-3);
+  --govtw-tag-yellow-color: var(--govtw-primitive-color-yellow-12);
+  --govtw-tag-red-bg: var(--govtw-primitive-color-red-2);
+  --govtw-tag-red-color: var(--govtw-primitive-color-red-11);
+  --govtw-warning-text-font-size: var(--govtw-font-size-base);
+  --govtw-warning-text-font-weight: var(--govtw-font-weight-bold);
+  --govtw-warning-text-color: var(--govtw-color-text-primary);
+  --govtw-warning-text-gap: var(--govtw-spacing-4);
+  --govtw-warning-text-icon-size: 2.25rem;
+  --govtw-warning-text-icon-font-size: 1.5rem;
+  --govtw-warning-text-icon-bg: var(--govtw-color-text-primary);
+  --govtw-warning-text-icon-color: var(--govtw-color-bg-canvas);
+  --govtw-details-summary-color: var(--govtw-color-link-default);
+  --govtw-details-underline-thickness: 1px;
+  --govtw-details-hover-underline-thickness: 3px;
+  --govtw-details-underline-offset: 0.25em;
+  --govtw-details-content-border-color: var(--govtw-color-border-default);
+  --govtw-details-content-border-width: 5px;
+  --govtw-details-content-padding: var(--govtw-spacing-4);
+  --govtw-details-gap: var(--govtw-spacing-2);
+  --govtw-details-focus-bg: var(--govtw-focus-color);
+  --govtw-details-focus-color: var(--govtw-focus-text);
+  --govtw-details-focus-width: var(--govtw-focus-width);
+  --govtw-back-link-font-size: var(--govtw-font-size-sm);
+  --govtw-back-link-color: var(--govtw-color-text-primary);
+  --govtw-back-link-gap: var(--govtw-spacing-2);
+  --govtw-back-link-chevron-size: 0.4em;
+  --govtw-back-link-underline-thickness: 1px;
+  --govtw-back-link-underline-offset: 0.25em;
+  --govtw-back-link-focus-bg: var(--govtw-focus-color);
+  --govtw-back-link-focus-color: var(--govtw-focus-text);
+  --govtw-back-link-focus-width: var(--govtw-focus-width);
+  --govtw-panel-bg: var(--govtw-color-feedback-success);
+  --govtw-panel-color: var(--govtw-color-text-on-primary);
+  --govtw-panel-padding: var(--govtw-spacing-8);
+  --govtw-panel-gap: var(--govtw-spacing-4);
+  --govtw-panel-font-size: var(--govtw-font-size-xl);
+  --govtw-notification-banner-info-color: var(--govtw-color-brand-primary);
+  --govtw-notification-banner-success-color: var(--govtw-color-feedback-success);
+  --govtw-notification-banner-border-width: 5px;
+  --govtw-notification-banner-header-color: var(--govtw-color-text-on-primary);
+  --govtw-notification-banner-header-padding-y: var(--govtw-spacing-2);
+  --govtw-notification-banner-header-padding-x: var(--govtw-spacing-4);
+  --govtw-notification-banner-header-font-weight: var(--govtw-font-weight-bold);
+  --govtw-notification-banner-body-bg: var(--govtw-color-bg-canvas);
+  --govtw-notification-banner-body-color: var(--govtw-color-text-primary);
+  --govtw-notification-banner-body-padding: var(--govtw-spacing-6);
+  --govtw-notification-banner-dismiss-size: 44px;
+  --govtw-notification-banner-focus-color: var(--govtw-focus-color);
+  --govtw-notification-banner-focus-width: var(--govtw-focus-width);
+  --govtw-summary-list-border-color: var(--govtw-color-border-subtle);
+  --govtw-summary-list-key-font-weight: var(--govtw-font-weight-bold);
+  --govtw-summary-list-key-width: 30%;
+  --govtw-summary-list-row-padding-y: var(--govtw-spacing-3);
+  --govtw-summary-list-gap: var(--govtw-spacing-4);
+  --govtw-table-font-size: var(--govtw-font-size-base);
+  --govtw-table-color: var(--govtw-color-text-primary);
+  --govtw-table-border-color: var(--govtw-color-border-subtle);
+  --govtw-table-header-font-weight: var(--govtw-font-weight-bold);
+  --govtw-table-caption-font-size: var(--govtw-font-size-lg);
+  --govtw-table-caption-font-weight: var(--govtw-font-weight-bold);
+  --govtw-table-cell-padding-y: var(--govtw-spacing-3);
+  --govtw-table-cell-padding-x: var(--govtw-spacing-4);
+  --govtw-table-focus-color: var(--govtw-focus-color);
+  --govtw-table-focus-width: var(--govtw-focus-width);
+  --govtw-error-summary-border-color: var(--govtw-color-feedback-error);
+  --govtw-error-summary-border-width: 5px;
+  --govtw-error-summary-padding: var(--govtw-spacing-6);
+  --govtw-error-summary-gap: var(--govtw-spacing-4);
+  --govtw-error-summary-heading-font-size: var(--govtw-font-size-xl);
+  --govtw-error-summary-heading-font-weight: var(--govtw-font-weight-bold);
+  --govtw-error-summary-link-color: var(--govtw-color-feedback-error);
+  --govtw-error-summary-focus-color: var(--govtw-focus-color);
+  --govtw-error-summary-focus-width: var(--govtw-focus-width);
+  --govtw-error-summary-focus-text: var(--govtw-focus-text);
+  --govtw-date-input-font-family: var(--govtw-font-sans);
+  --govtw-date-input-font-size: var(--govtw-font-size-base);
+  --govtw-date-input-color: var(--govtw-color-text-primary);
+  --govtw-date-input-bg: var(--govtw-color-bg-canvas);
+  --govtw-date-input-border-color: var(--govtw-color-text-primary);
+  --govtw-date-input-border-radius: var(--govtw-radius-sm);
+  --govtw-date-input-padding: var(--govtw-spacing-2);
+  --govtw-date-input-legend-font-size: var(--govtw-font-size-lg);
+  --govtw-date-input-legend-font-weight: var(--govtw-font-weight-bold);
+  --govtw-date-input-hint-color: var(--govtw-color-text-secondary);
+  --govtw-date-input-error-color: var(--govtw-color-feedback-error);
+  --govtw-date-input-field-gap: var(--govtw-spacing-4);
+  --govtw-date-input-label-gap: var(--govtw-spacing-1);
+  --govtw-date-input-stack-gap: var(--govtw-spacing-2);
+  --govtw-date-input-focus-color: var(--govtw-focus-color);
+  --govtw-date-input-focus-width: var(--govtw-focus-width);
+  --govtw-tabs-color: var(--govtw-color-text-primary);
+  --govtw-tabs-link-color: var(--govtw-color-link-default);
+  --govtw-tabs-border-color: var(--govtw-color-border-subtle);
+  --govtw-tabs-selected-bg: var(--govtw-color-bg-canvas);
+  --govtw-tabs-unselected-bg: var(--govtw-color-bg-surface);
+  --govtw-tabs-tab-padding-y: var(--govtw-spacing-2);
+  --govtw-tabs-tab-padding-x: var(--govtw-spacing-4);
+  --govtw-tabs-panel-padding: var(--govtw-spacing-6);
+  --govtw-tabs-gap: var(--govtw-spacing-1);
+  --govtw-tabs-focus-bg: var(--govtw-focus-color);
+  --govtw-tabs-focus-color: var(--govtw-focus-text);
+  --govtw-tabs-focus-width: var(--govtw-focus-width);
+  --govtw-accordion-color: var(--govtw-color-text-primary);
+  --govtw-accordion-toggle-color: var(--govtw-color-link-default);
+  --govtw-accordion-border-color: var(--govtw-color-border-subtle);
+  --govtw-accordion-heading-font-size: var(--govtw-font-size-lg);
+  --govtw-accordion-heading-font-weight: var(--govtw-font-weight-bold);
+  --govtw-accordion-padding-y: var(--govtw-spacing-4);
+  --govtw-accordion-content-padding-bottom: var(--govtw-spacing-6);
+  --govtw-accordion-gap: var(--govtw-spacing-4);
+  --govtw-accordion-focus-bg: var(--govtw-focus-color);
+  --govtw-accordion-focus-color: var(--govtw-focus-text);
+  --govtw-accordion-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================
@@ -451,4 +578,31 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: var(--govtw-spacing-4);
+}
+
+/* ==========================================================================
+ * Utilities — 通用 class
+ * ========================================================================== */
+.govtw-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.govtw-visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }

@@ -38,13 +38,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component tag --type=basic --zh-name=標籤`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-tag-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-tag.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/tag.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component tag --type=basic --zh-name=標籤`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-tag-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-tag.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/tag.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -55,3 +55,22 @@
 
 - `document-list`
 - `search`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) T1：`grey`（預設）、`blue`、`green`、`yellow`、`red`
+- ✅ `govtw-tag`：Shadow DOM，純顯示；Windows 高對比模式保留透明 outline
+- ✅ docs 頁（`default`、`colors` 兩個 preview）
+
+### 驗證
+
+- 對比度依 OKLCH 值換算 sRGB 計算：grey 14.52、blue 14.15、green 14.12、yellow 14.43、red 14.80（皆為 :1，遠高於 4.5:1）
+- `pnpm build`、`pnpm check:components`（22 個）、`pnpm lint`、`tsc --noEmit` 通過
+
+### 同一個 commit 的共用變更
+
+- `packages/tokens/build.js`：抽出 `selectorRules()`，新增 Utilities 區段
+- `tokens.json`：新增 `.govtw-visually-hidden`、`.govtw-visually-hidden-focusable`（決定 C1），以及 P1 全部 component token
+- 修正：`notification-banner.header-padding` 原本一個值含兩個 token 引用，會產生壞掉的 CSS 變數，已拆成 `-y`、`-x`

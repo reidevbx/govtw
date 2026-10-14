@@ -114,6 +114,11 @@
       "source": "./src/govtw-footer.ts",
       "types": "./dist/govtw-footer.d.ts",
       "import": "./dist/govtw-footer.js"
+    },
+    "./govtw-tag": {
+      "source": "./src/govtw-tag.ts",
+      "types": "./dist/govtw-tag.d.ts",
+      "import": "./dist/govtw-tag.js"
     }
   },
   "files": [

@@ -139,23 +139,30 @@ ${themeCss}
   }
 }
 
+/** 把 { selector: { prop: value } } 轉成 CSS 規則（value 可含 token 引用） */
+function selectorRules(map) {
+  return Object.entries(map).map(([selector, props]) => {
+    const propLines = Object.entries(props).map(([prop, value]) => `  ${prop}: ${refToCssVar(value)};`);
+    return `${selector} {\n${propLines.join('\n')}\n}`;
+  }).join('\n\n');
+}
+
 // 5. Typography — base element styles
 if (tokens.typography?.elements) {
-  const typoLines = [];
-
-  for (const [selector, props] of Object.entries(tokens.typography.elements)) {
-    const propLines = [];
-    for (const [prop, value] of Object.entries(props)) {
-      propLines.push(`  ${prop}: ${refToCssVar(value)};`);
-    }
-    typoLines.push(`${selector} {\n${propLines.join('\n')}\n}`);
-  }
-
   sections.push(`
 /* ==========================================================================
  * Typography — 基礎排版樣式（引用 Semantic token）
  * ========================================================================== */
-${typoLines.join('\n\n')}`);
+${selectorRules(tokens.typography.elements)}`);
+}
+
+// 6. Utilities — 通用 class（如視覺隱藏）
+if (tokens.utilities) {
+  sections.push(`
+/* ==========================================================================
+ * Utilities — 通用 class
+ * ========================================================================== */
+${selectorRules(tokens.utilities)}`);
 }
 
 const css = sections.join('\n') + '\n';
