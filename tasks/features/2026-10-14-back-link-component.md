@@ -40,13 +40,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component back-link --type=basic --zh-name=返回連結`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-back-link-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-back-link.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/back-link.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component back-link --type=basic --zh-name=返回連結`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-back-link-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-back-link.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/back-link.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -57,3 +57,16 @@
 
 - `breadcrumbs`
 - `pagination`
+
+## 總結
+
+### 完成項目
+
+- ✅ 依 [P1 決定表](./2026-10-14-p1-decisions.md) K1、K2：上一則／下一則改用 pagination block 變體；缺 `href` 時不渲染並警告，不提供 `history.back()`
+- ✅ `govtw-back-link`：Shadow DOM，CSS 左箭頭，預設文字「返回」
+- ✅ docs 頁（`default`、`custom-text` 兩個 preview）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（25 個）、`pnpm lint`、`tsc --noEmit` 通過
+- 未在瀏覽器實測

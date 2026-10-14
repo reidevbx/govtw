@@ -140,6 +140,7 @@ export default defineConfig({
           { text: '標籤 Tag', link: '/components/tag' },
           { text: '警告文字 Warning Text', link: '/components/warning-text' },
           { text: '可展開說明 Details', link: '/components/details' },
+          { text: '返回連結 Back Link', link: '/components/back-link' },
           // <components-end>
         ],
       },

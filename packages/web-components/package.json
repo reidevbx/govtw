@@ -129,6 +129,11 @@
       "source": "./src/govtw-details.ts",
       "types": "./dist/govtw-details.d.ts",
       "import": "./dist/govtw-details.js"
+    },
+    "./govtw-back-link": {
+      "source": "./src/govtw-back-link.ts",
+      "types": "./dist/govtw-back-link.d.ts",
+      "import": "./dist/govtw-back-link.js"
     }
   },
   "files": [
