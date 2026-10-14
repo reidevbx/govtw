@@ -179,6 +179,11 @@
       "source": "./src/govtw-password-input.ts",
       "types": "./dist/govtw-password-input.d.ts",
       "import": "./dist/govtw-password-input.js"
+    },
+    "./govtw-file-upload": {
+      "source": "./src/govtw-file-upload.ts",
+      "types": "./dist/govtw-file-upload.d.ts",
+      "import": "./dist/govtw-file-upload.js"
     }
   },
   "files": [

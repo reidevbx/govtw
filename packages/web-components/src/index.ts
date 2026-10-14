@@ -32,3 +32,4 @@ export { GovtwDateInput } from './govtw-date-input.js';
 export { GovtwTabs } from './govtw-tabs.js';
 export { GovtwAccordion, GovtwAccordionSection } from './govtw-accordion.js';
 export { GovtwPasswordInput } from './govtw-password-input.js';
+export { GovtwFileUpload } from './govtw-file-upload.js';

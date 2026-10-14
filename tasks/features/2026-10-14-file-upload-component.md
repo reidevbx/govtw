@@ -38,13 +38,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component file-upload --type=form --zh-name=檔案上傳`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-file-upload-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-file-upload.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/file-upload.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component file-upload --type=form --zh-name=檔案上傳`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-file-upload-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-file-upload.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/file-upload.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -54,3 +54,25 @@
 ## 相關任務
 
 - `attachment`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) FU1–FU3 完成。
+
+### 完成項目
+
+- 包住原生 `<input type="file">`，用 `::file-selector-button` 加按鈕樣式；不做拖放區（FU1）
+- 不檢查大小與格式，`accept` 交給瀏覽器（FU2）
+- 以 `FormData` 送出所有選取的檔案；`files` getter 供 JS 讀取（FU3）
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-file-upload.ts`（新）
+- `packages/tokens/tokens.json`：`file-upload` 17 個 token
+- `apps/docs/components/file-upload.md`（新）
+- scaffolder 更新的 `index.ts`、`package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 查證 GOV.UK 新版拖放區設計，另開任務評估
+- 在瀏覽器確認：表單送出時伺服器收到檔案；Safari 的 `::file-selector-button` 樣式

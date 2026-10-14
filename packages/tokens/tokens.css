@@ -502,6 +502,23 @@
   --govtw-password-input-focus-color: var(--govtw-focus-color);
   --govtw-password-input-focus-width: var(--govtw-focus-width);
   --govtw-password-input-focus-text: var(--govtw-focus-text);
+  --govtw-file-upload-font-family: var(--govtw-font-sans);
+  --govtw-file-upload-font-size: var(--govtw-font-size-base);
+  --govtw-file-upload-color: var(--govtw-color-text-primary);
+  --govtw-file-upload-label-font-weight: var(--govtw-font-weight-bold);
+  --govtw-file-upload-hint-color: var(--govtw-color-text-secondary);
+  --govtw-file-upload-error-color: var(--govtw-color-feedback-error);
+  --govtw-file-upload-stack-gap: var(--govtw-spacing-2);
+  --govtw-file-upload-error-padding: var(--govtw-spacing-3);
+  --govtw-file-upload-button-bg: var(--govtw-color-bg-surface);
+  --govtw-file-upload-button-color: var(--govtw-color-text-primary);
+  --govtw-file-upload-button-border-color: var(--govtw-color-border-default);
+  --govtw-file-upload-button-border-radius: var(--govtw-radius-md);
+  --govtw-file-upload-button-padding-x: var(--govtw-spacing-3);
+  --govtw-file-upload-button-gap: var(--govtw-spacing-3);
+  --govtw-file-upload-focus-color: var(--govtw-focus-color);
+  --govtw-file-upload-focus-text: var(--govtw-focus-text);
+  --govtw-file-upload-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================

@@ -44,6 +44,7 @@ export default defineConfig({
         'govtw-tabs': resolve(__dirname, 'src/govtw-tabs.ts'),
         'govtw-accordion': resolve(__dirname, 'src/govtw-accordion.ts'),
         'govtw-password-input': resolve(__dirname, 'src/govtw-password-input.ts'),
+        'govtw-file-upload': resolve(__dirname, 'src/govtw-file-upload.ts'),
       },
       formats: ['es'],
     },

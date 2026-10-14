@@ -150,6 +150,7 @@ export default defineConfig({
           { text: '頁籤 Tabs', link: '/components/tabs' },
           { text: '手風琴 Accordion', link: '/components/accordion' },
           { text: '密碼輸入 Password Input', link: '/components/password-input' },
+          { text: '檔案上傳 File Upload', link: '/components/file-upload' },
           // <components-end>
         ],
       },
