@@ -24,6 +24,8 @@ export default defineConfig({
         'govtw-pagination': resolve(__dirname, 'src/govtw-pagination.ts'),
         'govtw-inset-text': resolve(__dirname, 'src/govtw-inset-text.ts'),
         'govtw-select': resolve(__dirname, 'src/govtw-select.ts'),
+        'govtw-skip-link': resolve(__dirname, 'src/govtw-skip-link.ts'),
+        'govtw-accesskey': resolve(__dirname, 'src/govtw-accesskey.ts'),
       },
       formats: ['es'],
     },

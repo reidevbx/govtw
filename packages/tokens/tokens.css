@@ -268,6 +268,19 @@
   --govtw-select-disabled-bg: var(--govtw-color-bg-surface);
   --govtw-select-focus-color: var(--govtw-focus-color);
   --govtw-select-focus-width: var(--govtw-focus-width);
+  --govtw-skip-link-padding-y: var(--govtw-spacing-2);
+  --govtw-skip-link-padding-x: var(--govtw-spacing-4);
+  --govtw-skip-link-font-size: var(--govtw-font-size-base);
+  --govtw-skip-link-color: var(--govtw-focus-text);
+  --govtw-skip-link-bg: var(--govtw-focus-color);
+  --govtw-skip-link-underline-thickness: 2px;
+  --govtw-skip-link-underline-offset: 0.25em;
+  --govtw-skip-link-focus-width: var(--govtw-focus-width);
+  --govtw-accesskey-color: var(--govtw-color-text-secondary);
+  --govtw-accesskey-font-size: var(--govtw-font-size-base);
+  --govtw-accesskey-focus-color: var(--govtw-focus-text);
+  --govtw-accesskey-focus-bg: var(--govtw-focus-color);
+  --govtw-accesskey-focus-width: var(--govtw-focus-width);
 }
 
 /* ==========================================================================

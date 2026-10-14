@@ -79,6 +79,16 @@
       "source": "./src/govtw-select.ts",
       "types": "./dist/govtw-select.d.ts",
       "import": "./dist/govtw-select.js"
+    },
+    "./govtw-skip-link": {
+      "source": "./src/govtw-skip-link.ts",
+      "types": "./dist/govtw-skip-link.d.ts",
+      "import": "./dist/govtw-skip-link.js"
+    },
+    "./govtw-accesskey": {
+      "source": "./src/govtw-accesskey.ts",
+      "types": "./dist/govtw-accesskey.d.ts",
+      "import": "./dist/govtw-accesskey.js"
     }
   },
   "files": [

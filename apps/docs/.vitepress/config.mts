@@ -130,6 +130,8 @@ export default defineConfig({
           { text: '分頁 Pagination', link: '/components/pagination' },
           { text: '補充說明 Inset Text', link: '/components/inset-text' },
           { text: '選擇清單 Select', link: '/components/select' },
+          { text: '跳至主要內容 Skip Link', link: '/components/skip-link' },
+          { text: '導盲磚 Accesskey', link: '/components/accesskey' },
           // <components-end>
         ],
       },

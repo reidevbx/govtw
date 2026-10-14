@@ -12,3 +12,5 @@ export { GovtwRadio } from './govtw-radio.js';
 export { GovtwPagination } from './govtw-pagination.js';
 export { GovtwInsetText } from './govtw-inset-text.js';
 export { GovtwSelect } from './govtw-select.js';
+export { GovtwSkipLink } from './govtw-skip-link.js';
+export { GovtwAccesskey } from './govtw-accesskey.js';

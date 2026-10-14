@@ -35,6 +35,13 @@
 
 1. 與「導盲磚」是否合併成同一個元件，或分開兩個元件（建議分開）
 
+### 決定（2026-10-14）
+
+- skip-link 與導盲磚**分開**成兩個元件：前者是 WCAG 2.4.1 的標準做法，後者是台灣慣例
+- 使用 Shadow DOM（`delegatesFocus`），內部渲染原生 `<a>`
+- 點擊時把焦點移到目標元素；目標不可聚焦時暫時加 `tabindex="-1"`，失焦後移除（同 GOV.UK 做法）
+- 目標查找先用元件所在的 root（`getRootNode()`），找不到再用 `document`，讓 DemoBlock 的 Shadow DOM 內也能運作
+
 ### 驗收標準
 
 - `pnpm check:components` 全部通過
@@ -43,13 +50,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component skip-link --type=basic --zh-name=跳至主要內容`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-skip-link-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-skip-link.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/skip-link.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項（見「決定」段）
+- [x] `pnpm new:component skip-link --type=basic --zh-name=跳至主要內容`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-skip-link-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-skip-link.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/skip-link.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -60,3 +67,29 @@
 
 - `accesskey`
 - `header`
+
+## 總結
+
+### 完成項目
+
+- ✅ `govtw-skip-link`：Shadow DOM + `delegatesFocus`，未聚焦時以 `clip-path` 視覺隱藏
+- ✅ 點擊後把焦點移到目標；目標不可聚焦時暫時加 `tabindex="-1"`，失焦後移除
+- ✅ 目標查找先用 `getRootNode()` 再退回 `document`，DemoBlock 內可運作
+- ✅ 預設文字「跳至主要內容」，可用 default slot 改寫
+- ✅ docs 頁與 preview（`variant="default"`）
+
+### 驗證
+
+- `pnpm build`、`pnpm check:components`（16 個全部完整）、`pnpm lint`、`tsc --noEmit` 通過
+- **未在瀏覽器實測**：聚焦顯示、焦點移動、高對比模式，交由使用者確認
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-skip-link.ts` — 新增
+- `apps/docs/components/skip-link.md`、`apps/docs/public/preview/skip-link/default.html` — 新增
+- `packages/tokens/tokens.json` — 新增 `skip-link` component token
+- `index.ts`、`package.json`、`vite.config.ts`、`config.mts` — scaffolder 自動更新
+
+### 後續建議
+
+- `foundations/layout.md` 的「視覺隱藏」段落引用 `govtw-visually-hidden-focusable` class，但 `tokens.css` 沒有這個 class。建議改成引用本元件
