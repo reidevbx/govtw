@@ -41,13 +41,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component document-list --type=basic --zh-name=文件列表`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-document-list-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-document-list.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/document-list.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component document-list --type=basic --zh-name=文件列表`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-document-list-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-document-list.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/document-list.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -59,3 +59,28 @@
 - `tag`
 - `attachment`
 - `pagination`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) DL1–DL4 完成。
+
+### 完成項目
+
+- 與 table 的分工寫在兩頁的設計指引（DL1）
+- `<govtw-document-list>` 內放 `<govtw-document-list-item heading href date unit>`，標籤用 `slot="tags"`（DL2）
+- 容器 `role="list"`、每項 `role="listitem"`
+- `<time datetime>` 輸出 ISO；畫面預設民國年「115 年 10 月 14 日」，`calendar="gregorian"` 顯示西元年（DL3）
+- table.md 的「規劃中」改成實際連結（DL4）
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-document-list.ts`（新，含 `GovtwDocumentListItem`）
+- `packages/web-components/src/index.ts`：手動加上 `GovtwDocumentListItem` export
+- `packages/tokens/tokens.json`：`document-list` 16 個 token
+- `apps/docs/components/document-list.md`（新）
+- `apps/docs/components/table.md`
+- scaffolder 更新的 `package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 在瀏覽器確認：螢幕閱讀器念出「清單，3 個項目」（`role="list"` 跨 slot 的支援度依瀏覽器而定）

@@ -48,6 +48,7 @@ export default defineConfig({
         'govtw-captcha': resolve(__dirname, 'src/govtw-captcha.ts'),
         'govtw-step-indicator': resolve(__dirname, 'src/govtw-step-indicator.ts'),
         'govtw-attachment': resolve(__dirname, 'src/govtw-attachment.ts'),
+        'govtw-document-list': resolve(__dirname, 'src/govtw-document-list.ts'),
       },
       formats: ['es'],
     },

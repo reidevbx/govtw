@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>文件列表 Document List — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-document-list>
+      <govtw-document-list-item
+        heading="115 年度數位服務創新補助計畫開始受理申請"
+        href="#"
+        date="2026-10-14"
+        unit="數位產業署"
+      >
+        <govtw-tag slot="tags" color="blue">公告</govtw-tag>
+      </govtw-document-list-item>
+      <govtw-document-list-item
+        heading="政府網站無障礙檢測作業說明會報名資訊"
+        href="#"
+        date="2026-10-08"
+        unit="資訊處"
+      >
+        <govtw-tag slot="tags" color="green">活動</govtw-tag>
+      </govtw-document-list-item>
+      <govtw-document-list-item
+        heading="個人資料保護法施行細則部分條文修正草案預告"
+        href="#"
+        date="2026-09-30"
+        unit="法制處"
+      ></govtw-document-list-item>
+    </govtw-document-list>
+  </div>
+</body>
+</html>

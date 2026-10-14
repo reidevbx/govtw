@@ -154,6 +154,7 @@ export default defineConfig({
           { text: '圖形驗證碼 Captcha', link: '/components/captcha' },
           { text: '步驟指示 Step Indicator', link: '/components/step-indicator' },
           { text: '附件下載 Attachment', link: '/components/attachment' },
+          { text: '文件列表 Document List', link: '/components/document-list' },
           // <components-end>
         ],
       },

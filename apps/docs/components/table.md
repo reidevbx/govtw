@@ -139,7 +139,7 @@ import '@gov-tw/web-components/govtw-table';
 
 - 排版 → 用 [垂直堆疊 Stack](/components/stack)、[側邊欄佈局 Sidebar](/components/sidebar)
 - 只有「標題：內容」兩欄 → 用 [摘要清單 Summary List](/components/summary-list)
-- 新聞公告列表 → 用文件列表 Document List（規劃中）
+- 新聞公告列表 → 用[文件列表 Document List](/components/document-list)
 
 ### 設計建議
 

@@ -199,6 +199,11 @@
       "source": "./src/govtw-attachment.ts",
       "types": "./dist/govtw-attachment.d.ts",
       "import": "./dist/govtw-attachment.js"
+    },
+    "./govtw-document-list": {
+      "source": "./src/govtw-document-list.ts",
+      "types": "./dist/govtw-document-list.d.ts",
+      "import": "./dist/govtw-document-list.js"
     }
   },
   "files": [
