@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>確認手機號碼 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <form novalidate onsubmit="event.preventDefault()">
+      <govtw-stack space="6">
+        <h1>輸入簡訊驗證碼</h1>
+        <p>我們已傳送 6 位數驗證碼到 0912-345-678。驗證碼 10 分鐘內有效。</p>
+        <govtw-otp-input name="otp"></govtw-otp-input>
+        <govtw-details summary="號碼填錯了？">
+          <p><govtw-link href="#">修改手機號碼</govtw-link></p>
+        </govtw-details>
+        <div><govtw-button type="submit">繼續</govtw-button></div>
+      </govtw-stack>
+    </form>
+  </div>
+</body>
+</html>

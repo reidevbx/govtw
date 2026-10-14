@@ -8,25 +8,33 @@
 
 ## 互動範例
 
-### 簡訊驗證碼
+### 註冊時確認手機號碼
+
+註冊時，提示寫出使用者剛填的手機號碼，並提供「修改手機號碼」連結，填錯號碼的使用者才不會卡住。
 
 <DemoBlock variant="default" direction="column">
   <govtw-otp-input
     name="otp"
-    hint="驗證碼已傳送到 0912-xxx-678，10 分鐘內有效"
+    hint="驗證碼已傳送到 0912-345-678，10 分鐘內有效"
   ></govtw-otp-input>
+  <govtw-link href="#">修改手機號碼</govtw-link>
 
   <template #code>
 
 ```html
 <govtw-otp-input
   name="otp"
-  hint="驗證碼已傳送到 0912-xxx-678，10 分鐘內有效">
+  hint="驗證碼已傳送到 0912-345-678，10 分鐘內有效">
 </govtw-otp-input>
+<govtw-link href="/register/phone">修改手機號碼</govtw-link>
 ```
 
   </template>
 </DemoBlock>
+
+::: warning 登入時不要顯示手機號碼
+登入時顯示號碼，等於讓知道帳號的人看到使用者的手機號碼。登入的寫法見[確認手機號碼](/patterns/confirm-phone-number)模式。
+:::
 
 ### 處理重新傳送
 
@@ -36,7 +44,7 @@
   <govtw-otp-input
     name="otp"
     resend-delay="10"
-    hint="驗證碼已傳送到 0912-xxx-678"
+    hint="驗證碼 10 分鐘內有效"
   ></govtw-otp-input>
 
   <template #code>
@@ -46,7 +54,7 @@
   id="otp"
   name="otp"
   resend-delay="10"
-  hint="驗證碼已傳送到 0912-xxx-678">
+  hint="驗證碼 10 分鐘內有效">
 </govtw-otp-input>
 
 <script>
@@ -120,10 +128,14 @@ import '@gov-tw/web-components/govtw-otp-input';
 ### 設計建議
 
 - **用一個輸入框**：不要拆成 6 個格子。拆格會干擾貼上與自動填入，螢幕閱讀器使用者也要逐格輸入
-- **寫明傳送到哪裡**：在提示寫出遮蔽後的手機號碼或信箱，使用者才知道去哪裡找
+- **註冊時寫明傳送到哪裡**：提示寫出手機號碼並提供修改連結；登入時不顯示號碼
 - **有效期限寫在提示**：例如「10 分鐘內有效」，不要在畫面上倒數有效期限
 - **伺服器去除空格**：使用者可能貼上「123 456」，比對前先去除空格與連字號
 - **錯誤訊息具體**：區分「驗證碼錯誤」與「驗證碼已過期，請重新傳送」
+
+### 相關模式
+
+- [確認手機號碼](/patterns/confirm-phone-number)
 
 ### 相關元件
 

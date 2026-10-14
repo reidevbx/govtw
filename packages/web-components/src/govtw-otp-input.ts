@@ -14,7 +14,7 @@ import { customElement, property, state } from 'lit/decorators.js';
  * - 按下重新傳送只發出 `govtw-resend` 事件並重新倒數，實際寄送由作者處理
  *
  * @example
- * <govtw-otp-input name="otp" hint="已傳送到 0912-xxx-678"></govtw-otp-input>
+ * <govtw-otp-input name="otp" hint="驗證碼 10 分鐘內有效"></govtw-otp-input>
  */
 @customElement('govtw-otp-input')
 export class GovtwOtpInput extends LitElement {
