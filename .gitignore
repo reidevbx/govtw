@@ -32,3 +32,6 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Vite 載入設定檔時的暫存檔（dev server 重載 config 時可能殘留）
+*.timestamp-*.mjs
