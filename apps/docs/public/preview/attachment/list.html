@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>附件下載 Attachment — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="6">
+      <govtw-attachment heading="115 年度預算書">
+        <govtw-attachment-file href="#" format="PDF" size="3.2 MB"></govtw-attachment-file>
+        <govtw-attachment-file href="#" format="ODS" size="410 KB"></govtw-attachment-file>
+      </govtw-attachment>
+      <govtw-attachment heading="申請表">
+        <govtw-attachment-file href="#" format="PDF" size="120 KB"></govtw-attachment-file>
+        <govtw-attachment-file href="#" format="ODT" size="24 KB"></govtw-attachment-file>
+      </govtw-attachment>
+    </govtw-stack>
+  </div>
+</body>
+</html>

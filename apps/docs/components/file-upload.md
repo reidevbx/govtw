@@ -147,4 +147,4 @@ import '@gov-tw/web-components/govtw-file-upload';
 ### 相關元件
 
 - [錯誤摘要 Error Summary](/components/error-summary)
-- 附件下載 Attachment（規劃中）
+- [附件下載 Attachment](/components/attachment)

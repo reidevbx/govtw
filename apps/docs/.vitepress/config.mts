@@ -153,6 +153,7 @@ export default defineConfig({
           { text: '檔案上傳 File Upload', link: '/components/file-upload' },
           { text: '圖形驗證碼 Captcha', link: '/components/captcha' },
           { text: '步驟指示 Step Indicator', link: '/components/step-indicator' },
+          { text: '附件下載 Attachment', link: '/components/attachment' },
           // <components-end>
         ],
       },

@@ -194,6 +194,11 @@
       "source": "./src/govtw-step-indicator.ts",
       "types": "./dist/govtw-step-indicator.d.ts",
       "import": "./dist/govtw-step-indicator.js"
+    },
+    "./govtw-attachment": {
+      "source": "./src/govtw-attachment.ts",
+      "types": "./dist/govtw-attachment.d.ts",
+      "import": "./dist/govtw-attachment.js"
     }
   },
   "files": [

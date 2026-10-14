@@ -42,13 +42,13 @@
 
 ## 實作計劃
 
-- [ ] 決定「待確認」各項
-- [ ] `pnpm new:component attachment --type=basic --zh-name=附件下載`
-- [ ] `packages/tokens/tokens.json` 新增 `--govtw-attachment-*` component token → `pnpm build:tokens`
-- [ ] 實作 `govtw-attachment.ts`：屬性、樣式、render
-- [ ] 寫 `apps/docs/components/attachment.md`，DemoBlock 加 `variant`
-- [ ] `pnpm build` → `pnpm check:components` → `pnpm lint`
-- [ ] 追加「## 總結」
+- [x] 決定「待確認」各項
+- [x] `pnpm new:component attachment --type=basic --zh-name=附件下載`
+- [x] `packages/tokens/tokens.json` 新增 `--govtw-attachment-*` component token → `pnpm build:tokens`
+- [x] 實作 `govtw-attachment.ts`：屬性、樣式、render
+- [x] 寫 `apps/docs/components/attachment.md`，DemoBlock 加 `variant`
+- [x] `pnpm build` → `pnpm check:components` → `pnpm lint`
+- [x] 追加「## 總結」
 
 ## 影響範圍
 
@@ -59,3 +59,27 @@
 
 - `document-list`
 - `file-upload`
+
+## 總結
+
+依 [P2 決定表](./2026-10-14-p2-decisions.md) AT1–AT4 完成。
+
+### 完成項目
+
+- 不顯示下載次數（AT1）
+- `<govtw-attachment heading>` 內放多個 `<govtw-attachment-file href format size>`（AT2）
+- 連結可見文字「PDF（245 KB）」，前面加視覺隱藏的標題（AT3）
+- 格式用加框文字標示，不用圖示（AT4）
+
+### 變更檔案
+
+- `packages/web-components/src/govtw-attachment.ts`（新，含 `GovtwAttachmentFile`）
+- `packages/web-components/src/index.ts`：手動加上 `GovtwAttachmentFile` export
+- `packages/tokens/tokens.json`：`attachment` 14 個 token
+- `apps/docs/components/attachment.md`（新）
+- `apps/docs/components/file-upload.md`：相關元件改為實際連結
+- scaffolder 更新的 `package.json`、`vite.config.ts`、`config.mts`
+
+### 後續建議
+
+- 在瀏覽器確認：螢幕閱讀器的連結清單念出標題加格式
