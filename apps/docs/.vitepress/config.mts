@@ -234,6 +234,7 @@ export default defineConfig({
             items: [
               { text: '多步驟表單', link: '/patterns/multi-step-form' },
               { text: '完成頁', link: '/patterns/confirmation-page' },
+              { text: '搜尋結果頁', link: '/patterns/search-results' },
             ],
           },
         ],

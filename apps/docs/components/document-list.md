@@ -158,6 +158,10 @@ import '@gov-tw/web-components/govtw-document-list';
 - **同一服務只用一種曆法**：調查發現有機關的列表用西元年、內文用民國年
 - **標籤只放一到兩個**：標籤太多時使用者不容易掃讀
 
+### 相關模式
+
+- [搜尋結果頁](/patterns/search-results)
+
 ### 相關元件
 
 - [表格 Table](/components/table)

@@ -84,48 +84,7 @@
 
 ### 結果筆數與每頁筆數
 
-需要顯示結果筆數或讓使用者選每頁筆數時，**不要放進分頁元件**，用一般段落與[下拉選單](/components/select)組合。每頁筆數改變時，回到第 1 頁。
-
-<DemoBlock variant="page-size" direction="column">
-  <form action="#" method="get">
-    <govtw-stack space="4">
-      <p>共 128 筆，第 2 / 13 頁</p>
-      <govtw-cluster space="3" vertical-align="end">
-        <govtw-select name="per-page" label="每頁筆數" value="10">
-          <option value="10">10 筆</option>
-          <option value="20">20 筆</option>
-          <option value="50">50 筆</option>
-        </govtw-select>
-        <govtw-button type="submit" variant="secondary">套用</govtw-button>
-      </govtw-cluster>
-      <govtw-pagination total="13" current="2" href-template="?page={n}&per-page=10"></govtw-pagination>
-    </govtw-stack>
-  </form>
-
-  <template #code>
-
-```html
-<form action="/news" method="get">
-  <govtw-stack space="4">
-    <p>共 128 筆，第 2 / 13 頁</p>
-    <govtw-cluster space="3" vertical-align="end">
-      <govtw-select name="per-page" label="每頁筆數" value="10">
-        <option value="10">10 筆</option>
-        <option value="20">20 筆</option>
-        <option value="50">50 筆</option>
-      </govtw-select>
-      <govtw-button type="submit" variant="secondary">套用</govtw-button>
-    </govtw-cluster>
-    <govtw-pagination total="13" current="2" href-template="?page={n}&per-page=10"></govtw-pagination>
-  </govtw-stack>
-</form>
-```
-
-  </template>
-</DemoBlock>
-
-- **用送出按鈕**：選了每頁筆數不要自動重新載入頁面。選項改變就跳頁，鍵盤使用者用方向鍵瀏覽選項時會被打斷（WCAG 3.2.2）
-- **筆數寫在分頁上方**：使用者先知道結果有多少，再決定要不要翻頁
+需要顯示結果筆數或讓使用者選每頁筆數時，**不要放進分頁元件**，用一般段落與[選擇清單](/components/select)組合。範例與做法見[搜尋結果頁](/patterns/search-results)模式。
 
 ## 使用方式
 
@@ -197,6 +156,10 @@ import '@gov-tw/web-components/govtw-pagination';
 - 避免無限滾動，分頁更利於可分享 URL 與書籤
 - 篩選/排序變更時應重設回第 1 頁
 - 更新瀏覽器 `<title>` 加入頁碼（如「搜尋結果（第 3 頁）」），方便輔助科技與分頁書籤辨識
+
+### 相關模式
+
+- [搜尋結果頁](/patterns/search-results)
 
 ### 相關元件
 

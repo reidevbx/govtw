@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>搜尋結果頁 — gov.tw Design System</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <script src="/gov-tw.iife.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: var(--govtw-font-sans, system-ui, -apple-system, sans-serif);
+      color: var(--govtw-color-text-primary);
+      background-color: var(--govtw-color-bg-canvas);
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .demo-layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-layout">
+    <govtw-stack space="6">
+      <h1>搜尋結果</h1>
+      <govtw-search label="搜尋本網站" value="補助"></govtw-search>
+      <form novalidate onsubmit="event.preventDefault()">
+        <govtw-stack space="4">
+          <p>共 128 筆符合「補助」的結果，第 2 / 13 頁</p>
+          <input type="hidden" name="q" value="補助">
+          <govtw-cluster space="3" vertical-align="end">
+            <govtw-select name="per-page" label="每頁筆數" value="10">
+              <option value="10">10 筆</option>
+              <option value="20">20 筆</option>
+              <option value="50">50 筆</option>
+            </govtw-select>
+            <govtw-button type="submit" variant="secondary">套用</govtw-button>
+          </govtw-cluster>
+        </govtw-stack>
+      </form>
+      <govtw-document-list>
+        <govtw-document-list-item heading="115 年度數位服務創新補助計畫開始受理申請" href="#" date="2026-10-14" unit="數位產業署">
+          <govtw-tag slot="tags" color="blue">公告</govtw-tag>
+        </govtw-document-list-item>
+        <govtw-document-list-item heading="中小企業數位轉型補助申請須知" href="#" date="2026-09-30" unit="中小及新創企業署">
+          <govtw-tag slot="tags" color="green">申辦須知</govtw-tag>
+        </govtw-document-list-item>
+      </govtw-document-list>
+      <govtw-pagination total="13" current="2" href-template="?q=補助&page={n}&per-page=10"></govtw-pagination>
+    </govtw-stack>
+  </div>
+</body>
+</html>

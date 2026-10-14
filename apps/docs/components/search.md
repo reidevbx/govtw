@@ -140,6 +140,10 @@ import '@gov-tw/web-components/govtw-search';
 - **熱門關鍵字最多 8 個**：調查中有網站每頁放約 100 個關鍵字，鍵盤使用者要按非常多次 Tab 才能離開
 - **不要導到 Google 進階搜尋**：站外搜尋頁的版面與無障礙品質無法控制
 
+### 相關模式
+
+- [搜尋結果頁](/patterns/search-results)
+
 ### 相關元件
 
 - [文字輸入 Text Input](/components/text-input)
