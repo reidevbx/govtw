@@ -220,10 +220,24 @@ onMounted(() => {
 |------|------|--------|------|
 | `variant` | `'primary' \| 'secondary' \| 'danger' \| 'start'` | `'primary'` | 按鈕樣式 |
 | `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | 按鈕大小 |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | 按鈕類型。`submit` 送出所屬的 `<form>`，`reset` 重設表單 |
 | `disabled` | `boolean` | `false` | 是否停用 |
 | `href` | `string` | `''` | 連結網址，有值時渲染為 `<a>` |
 | `target` | `string` | `''` | 連結目標（如 `_blank`） |
 | `rel` | `string` | `''` | 連結關係（如 `noreferrer noopener`） |
+
+### 在表單中使用
+
+`type="submit"` 會送出按鈕所在的 `<form>`，並觸發 `submit` 事件，與原生按鈕相同。
+
+```html
+<form method="post" novalidate>
+  <govtw-text-input name="name" label="姓名"></govtw-text-input>
+  <govtw-button type="submit">繼續</govtw-button>
+</form>
+```
+
+限制：按鈕本身不會帶 `name`／`value` 一起送出。一個表單有多個送出按鈕、需要分辨按了哪一個時，用不同的 `action` 或隱藏欄位。
 
 ## 樣式變體
 

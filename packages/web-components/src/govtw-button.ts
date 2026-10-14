@@ -8,6 +8,19 @@ export class GovtwButton extends LitElement {
     delegatesFocus: true,
   };
 
+  /**
+   * 參與外層 `<form>`：Shadow DOM 內的原生按鈕不屬於 light DOM 的表單，
+   * `type="submit"`／`"reset"` 要由元件自己呼叫表單。
+   */
+  static formAssociated = true;
+
+  private _internals: ElementInternals;
+
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+  }
+
   @property({ type: String, reflect: true }) variant: 'primary' | 'secondary' | 'danger' | 'start' = 'primary';
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: String, reflect: true }) size: 'sm' | 'md' | 'lg' = 'md';
@@ -165,6 +178,17 @@ export class GovtwButton extends LitElement {
     }
   `;
 
+  /**
+   * 送出或重設所屬表單。requestSubmit() 會跑表單驗證並觸發 submit 事件，與原生按鈕一致；
+   * 不傳 submitter，因為它只接受原生送出按鈕，傳自訂元素會丟出 TypeError。
+   */
+  private _handleClick() {
+    const form = this._internals.form;
+    if (!form) return;
+    if (this.type === 'submit') form.requestSubmit();
+    else if (this.type === 'reset') form.reset();
+  }
+
   private _handleLinkKeydown(e: KeyboardEvent) {
     if (e.key === ' ') {
       e.preventDefault();
@@ -208,6 +232,7 @@ export class GovtwButton extends LitElement {
         type=${this.type}
         ?disabled=${this.disabled}
         aria-disabled=${this.disabled ? 'true' : 'false'}
+        @click=${this._handleClick}
       >
         <slot></slot>${this.renderExtras()}
       </button>
