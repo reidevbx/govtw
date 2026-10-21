@@ -113,12 +113,12 @@
 
 ### Active（按壓）
 
-按下按鈕時，底部 inset shadow 消失，視覺上按鈕「扁下去」。這是**不依賴色彩**的物理回饋。
+按下按鈕時，背景色比 hover 更深。
 
 <DemoBlock no-code>
-  <span class="demo-state-label">預設（有底部陰影）</span>
+  <span class="demo-state-label">預設</span>
   <govtw-button variant="primary">送出</govtw-button>
-  <span class="demo-state-label">→ Active（陰影消失）</span>
+  <span class="demo-state-label">→ Active</span>
   <govtw-button variant="primary" id="demo-active">送出</govtw-button>
 </DemoBlock>
 
@@ -192,11 +192,10 @@ onMounted(() => {
 
   applyStyle('demo-active', (btn) => {
     btn.style.background = 'color-mix(in srgb, var(--govtw-button-primary-bg) 65%, black)'
-    btn.style.boxShadow = 'none'
   })
 
   applyStyle('demo-focus', (btn) => {
-    btn.style.boxShadow = 'inset 0 -3px 0 color-mix(in srgb, var(--govtw-button-primary-bg) 60%, black), 0 0 0 var(--govtw-button-focus-width) var(--govtw-button-focus-color)'
+    btn.style.boxShadow = '0 0 0 var(--govtw-button-focus-width) var(--govtw-button-focus-color)'
   })
 })
 </script>
@@ -274,7 +273,7 @@ onMounted(() => {
 - 無 `href` 時使用語意化的 `<button>` 元素；有 `href` 時渲染為 `<a role="button">`
 - 確保鍵盤可操作（Enter 和 Space 皆可觸發）
 - 焦點狀態以黃色 focus ring 清晰標示，支援鍵盤導航
-- 互動回饋透過 inset shadow 消失傳達按壓感，不僅依靠色彩
+- hover / active 以背景明暗變化回饋，不只靠色相
 - 停用狀態使用 `aria-disabled` 而非移除元素
 - 連結按鈕停用時移除 `href` 並設定 `tabindex="-1"` 防止聚焦
 - 連結按鈕設 `target="_blank"` 時，自動加上視覺隱藏的「（另開新視窗）」，螢幕閱讀器會念出

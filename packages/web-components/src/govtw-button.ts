@@ -37,9 +37,7 @@ export class GovtwButton extends LitElement {
 
     /*
      * GOV.UK-inspired button technique:
-     * - inset box-shadow 底部深色，營造立體感
-     * - hover 時背景加深，提供明暗回饋
-     * - active 時 inset shadow 消失，模擬按壓
+     * - hover / active 時背景加深，提供明暗回饋
      * - focus 使用黃色外框 ring，貼合圓角
      * - transparent border 確保 Windows 高對比模式下邊界可見
      * - 有 href 時渲染 <a role="button">，無 href 時渲染 <button>
@@ -57,7 +55,6 @@ export class GovtwButton extends LitElement {
       justify-content: center;
       gap: var(--govtw-spacing-2);
       line-height: 1.5;
-      box-shadow: inset 0 -3px 0 var(--_shadow-color);
       text-decoration: none;
       -webkit-appearance: none;
     }
@@ -82,7 +79,6 @@ export class GovtwButton extends LitElement {
     /* ===== Primary ===== */
     :host(:is([variant="primary"], [variant="start"])) :is(button, a) {
       --_bg: var(--govtw-button-primary-bg);
-      --_shadow-color: color-mix(in srgb, var(--_bg) 60%, black);
       background: var(--_bg);
       color: var(--govtw-button-primary-color);
     }
@@ -118,7 +114,6 @@ export class GovtwButton extends LitElement {
     /* ===== Secondary ===== */
     :host([variant="secondary"]) :is(button, a) {
       --_bg: var(--govtw-button-secondary-bg);
-      --_shadow-color: color-mix(in srgb, var(--_bg) 40%, black);
       background: var(--_bg);
       color: var(--govtw-button-secondary-color);
       border-color: var(--govtw-button-secondary-border-color);
@@ -133,7 +128,6 @@ export class GovtwButton extends LitElement {
     /* ===== Danger ===== */
     :host([variant="danger"]) :is(button, a) {
       --_bg: var(--govtw-button-danger-bg);
-      --_shadow-color: color-mix(in srgb, var(--_bg) 60%, black);
       background: var(--_bg);
       color: var(--govtw-button-danger-color);
     }
@@ -144,17 +138,10 @@ export class GovtwButton extends LitElement {
       background: color-mix(in srgb, var(--_bg) 65%, black);
     }
 
-    /* ===== Active / Pressed ===== */
-    :is(button, a):active:not(:disabled):not([aria-disabled="true"]) {
-      box-shadow: none;
-    }
-
     /* ===== Focus — 黃色 focus ring，貼合圓角 ===== */
     :is(button, a):focus-visible {
       outline: none;
-      box-shadow:
-        inset 0 -3px 0 var(--_shadow-color),
-        0 0 0 var(--govtw-button-focus-width) var(--govtw-button-focus-color);
+      box-shadow: 0 0 0 var(--govtw-button-focus-width) var(--govtw-button-focus-color);
     }
 
     :host(:focus-within) {
@@ -165,9 +152,6 @@ export class GovtwButton extends LitElement {
     button:disabled {
       opacity: var(--govtw-button-disabled-opacity);
       cursor: not-allowed;
-    }
-    button:disabled:active {
-      box-shadow: inset 0 -3px 0 var(--_shadow-color);
     }
 
     /* ===== Disabled — <a> (aria-disabled) ===== */
