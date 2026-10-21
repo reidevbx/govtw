@@ -6,7 +6,7 @@
 
 為台灣政府數位服務打造的設計系統，提供跨部會一致的使用者體驗。
 
-參考 [GOV.UK Design System](https://design-system.service.gov.uk/) 的設計方法論，結合台灣在地需求，以 Web Components 實作框架無關的 UI 元件庫。
+參考 [GOV.UK Design System](https://design-system.service.gov.uk/)、[U.S. Web Design System](https://designsystem.digital.gov/)、[New York State Design System](https://designsystem.ny.gov/) 與 [Web Awesome](https://webawesome.com/)，結合台灣在地需求，以 Web Components 實作框架無關的 UI 元件庫。
 
 ## 特色
 

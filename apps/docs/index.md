@@ -31,3 +31,13 @@ features:
     details: 系統演進與貢獻機制
     link: /governance/
 ---
+
+## 參考
+
+本設計系統參考其他國家的政府設計系統，以及以 Web Components 實作的元件庫。詳見[參考](/resources/references)。
+
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [U.S. Web Design System](https://designsystem.digital.gov/)
+- [New York State Design System](https://designsystem.ny.gov/)
+- [Web Awesome](https://webawesome.com/)
+

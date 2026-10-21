@@ -238,6 +238,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '部會 Logo', link: '/resources/ministry-logos' },
+          { text: '參考', link: '/resources/references' },
         ],
       },
       {
