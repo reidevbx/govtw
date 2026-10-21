@@ -219,6 +219,13 @@ Primitive（原始色票）→ Semantic（語意用途）→ Component（元件�
       <span class="color-swatch__desc">區塊背景</span>
     </div>
   </div>
+  <div class="color-swatch" style="--c: var(--govtw-color-bg-neutral)">
+    <div class="color-swatch__preview"></div>
+    <div class="color-swatch__info">
+      <code>--govtw-color-bg-neutral</code>
+      <span class="color-swatch__desc">中性灰背景（如次要按鈕）</span>
+    </div>
+  </div>
 </DemoBlock>
 
 ### 邊框色
@@ -229,6 +236,13 @@ Primitive（原始色票）→ Semantic（語意用途）→ Component（元件�
     <div class="color-swatch__info">
       <code>--govtw-color-border-default</code>
       <span class="color-swatch__desc">預設邊框</span>
+    </div>
+  </div>
+  <div class="color-swatch" style="--c: var(--govtw-color-border-neutral)">
+    <div class="color-swatch__preview"></div>
+    <div class="color-swatch__info">
+      <code>--govtw-color-border-neutral</code>
+      <span class="color-swatch__desc">中性灰邊框（如次要按鈕）</span>
     </div>
   </div>
 </DemoBlock>

@@ -22,6 +22,14 @@
   --vp-c-text-1: var(--govtw-color-text-primary);
   --vp-c-text-2: var(--govtw-color-text-secondary);
   --vp-c-divider: var(--govtw-color-border-subtle);
+
+  /* 首頁 hero brand 按鈕：與 govtw-button primary 同色、同 hover/active 加深比例 */
+  --vp-button-brand-bg: var(--govtw-button-primary-bg);
+  --vp-button-brand-text: var(--govtw-button-primary-color);
+  --vp-button-brand-hover-bg: color-mix(in srgb, var(--govtw-button-primary-bg) 85%, black);
+  --vp-button-brand-hover-text: var(--govtw-button-primary-color);
+  --vp-button-brand-active-bg: color-mix(in srgb, var(--govtw-button-primary-bg) 65%, black);
+  --vp-button-brand-active-text: var(--govtw-button-primary-color);
 }
 
 /* tokens.css 的裸標籤排版（body / h1-h6 / p）會污染 VitePress chrome —
@@ -139,6 +147,16 @@ p {
 @media (max-width: 768px) {
   .VPNavBarTitle .logo {
     height: 42px;
+  }
+}
+
+/* 內頁（有 sidebar）logo 被 .title 寬度（sidebar-width − 左右 padding 64px）與
+ * base.css 的 img max-width: 100% 夾住，實際只有 208px 寬。首頁沒有這個限制會較大，
+ * 這裡讓所有頁面都用同一個寬度，首頁與內頁 logo 大小一致。 */
+@media (min-width: 960px) {
+  .VPNavBarTitle .logo {
+    width: calc(var(--vp-sidebar-width) - 64px);
+    height: auto;
   }
 }
 

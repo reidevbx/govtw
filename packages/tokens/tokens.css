@@ -127,8 +127,10 @@
   --govtw-color-text-on-primary: var(--govtw-primitive-color-neutral-1);
   --govtw-color-bg-canvas: var(--govtw-primitive-color-neutral-1);
   --govtw-color-bg-surface: var(--govtw-primitive-color-blue-2);
+  --govtw-color-bg-neutral: var(--govtw-primitive-color-neutral-3);
   --govtw-color-border-default: var(--govtw-primitive-color-blue-4);
   --govtw-color-border-subtle: var(--govtw-primitive-color-neutral-3);
+  --govtw-color-border-neutral: var(--govtw-primitive-color-neutral-5);
   --govtw-color-feedback-error: var(--govtw-primitive-color-red-8);
   --govtw-color-feedback-success: var(--govtw-primitive-color-green-8);
   --govtw-color-feedback-warning: var(--govtw-primitive-color-yellow-8);
@@ -186,10 +188,10 @@
   --govtw-button-font-weight: var(--govtw-primitive-font-weight-medium);
   --govtw-button-border-radius: var(--govtw-radius-md);
   --govtw-button-primary-bg: var(--govtw-primitive-color-blue-8);
-  --govtw-button-primary-color: var(--govtw-color-text-on-primary);
-  --govtw-button-secondary-bg: var(--govtw-color-bg-surface);
+  --govtw-button-primary-color: var(--govtw-primitive-color-neutral-1);
+  --govtw-button-secondary-bg: var(--govtw-color-bg-neutral);
   --govtw-button-secondary-color: var(--govtw-color-text-primary);
-  --govtw-button-secondary-border-color: var(--govtw-color-border-default);
+  --govtw-button-secondary-border-color: var(--govtw-color-border-neutral);
   --govtw-button-danger-bg: var(--govtw-color-feedback-error);
   --govtw-button-danger-color: var(--govtw-color-text-on-primary);
   --govtw-button-disabled-opacity: 0.5;
@@ -305,7 +307,7 @@
   --govtw-search-padding: var(--govtw-spacing-2);
   --govtw-search-min-height: 44px;
   --govtw-search-button-bg: var(--govtw-primitive-color-blue-8);
-  --govtw-search-button-color: var(--govtw-color-text-on-primary);
+  --govtw-search-button-color: var(--govtw-primitive-color-neutral-1);
   --govtw-search-button-padding-x: var(--govtw-spacing-4);
   --govtw-search-button-font-weight: var(--govtw-font-weight-medium);
   --govtw-search-focus-color: var(--govtw-focus-color);
@@ -686,8 +688,10 @@
   --govtw-color-text-on-primary: var(--govtw-primitive-color-neutral-12);
   --govtw-color-bg-canvas: var(--govtw-primitive-color-neutral-12);
   --govtw-color-bg-surface: var(--govtw-primitive-color-neutral-11);
+  --govtw-color-bg-neutral: var(--govtw-primitive-color-neutral-11);
   --govtw-color-border-default: var(--govtw-primitive-color-neutral-9);
   --govtw-color-border-subtle: var(--govtw-primitive-color-neutral-10);
+  --govtw-color-border-neutral: var(--govtw-primitive-color-neutral-9);
   --govtw-color-feedback-error: var(--govtw-primitive-color-red-5);
   --govtw-color-feedback-success: var(--govtw-primitive-color-green-5);
   --govtw-color-feedback-warning: var(--govtw-primitive-color-yellow-5);
@@ -708,8 +712,10 @@
   --govtw-color-text-on-primary: var(--govtw-primitive-color-neutral-12);
   --govtw-color-bg-canvas: var(--govtw-primitive-color-neutral-12);
   --govtw-color-bg-surface: var(--govtw-primitive-color-neutral-11);
+  --govtw-color-bg-neutral: var(--govtw-primitive-color-neutral-11);
   --govtw-color-border-default: var(--govtw-primitive-color-neutral-9);
   --govtw-color-border-subtle: var(--govtw-primitive-color-neutral-10);
+  --govtw-color-border-neutral: var(--govtw-primitive-color-neutral-9);
   --govtw-color-feedback-error: var(--govtw-primitive-color-red-5);
   --govtw-color-feedback-success: var(--govtw-primitive-color-green-5);
   --govtw-color-feedback-warning: var(--govtw-primitive-color-yellow-5);

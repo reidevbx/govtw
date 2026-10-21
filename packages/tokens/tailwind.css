@@ -12,8 +12,10 @@
   --color-govtw-text-on-primary: var(--govtw-color-text-on-primary);
   --color-govtw-bg-canvas: var(--govtw-color-bg-canvas);
   --color-govtw-bg-surface: var(--govtw-color-bg-surface);
+  --color-govtw-bg-neutral: var(--govtw-color-bg-neutral);
   --color-govtw-border-default: var(--govtw-color-border-default);
   --color-govtw-border-subtle: var(--govtw-color-border-subtle);
+  --color-govtw-border-neutral: var(--govtw-color-border-neutral);
   --color-govtw-feedback-error: var(--govtw-color-feedback-error);
   --color-govtw-feedback-success: var(--govtw-color-feedback-success);
   --color-govtw-feedback-warning: var(--govtw-color-feedback-warning);

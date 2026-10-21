@@ -95,7 +95,7 @@ pnpm new:component   # 建立新元件（見「新增元件步驟」）
 **三層結構**：
 1. **Primitive（原始層）** — 原始設計數值，前綴 `--govtw-primitive-`（如 `--govtw-primitive-color-blue-500`）
 2. **Semantic（語意層）** — 以用途命名，引用 Primitive 層，前綴 `--govtw-`（如 `--govtw-color-brand-primary`）
-3. **Component（元件層）** — 每個元件可覆寫的 token，引用 Semantic 層，前綴 `--govtw-<component>-`（如 `--govtw-button-primary-bg`）
+3. **Component（元件層）** — 每個元件可覆寫的 token，引用 Semantic 或 Primitive 層，前綴 `--govtw-<component>-`（如 `--govtw-button-primary-bg`）
 
 **主題系統**：
 - 主題定義在 `tokens.json` 的 `themes` 區塊，目前有 `dark`
@@ -104,8 +104,10 @@ pnpm new:component   # 建立新元件（見「新增元件步驟」）
 
 **引用規則**：
 - 元件 CSS 中只使用 Component token，**不加 fallback**（如 `var(--govtw-button-primary-bg)`），方便除錯
-- Component token 引用 Semantic token，Semantic 引用 Primitive
-- dark 主題只覆寫 Semantic 層，Component 層透過 CSS 變數繼承自動生效
+- **Primitive 不可直接使用**：CSS（元件、docs 站 `custom.css`）不得出現 `var(--govtw-primitive-*)`，必須經過 Semantic 或 Component token
+- Semantic 用於通用用途：排版、文字、背景、邊框等
+- Component token 可引用 Semantic，也可直接引用 Primitive（元件特有、不需隨主題變的值，如按鈕藍底白字、tag 色）
+- dark 主題只覆寫 Semantic 層：引用 Semantic 的 Component token 會跟著換；引用 Primitive 的不會，配對的底色與字色要一起引用 Primitive，避免暗色模式對比錯亂
 
 **產出檔案**：
 - `tokens.css` — 五段式：Primitive `:root` → Semantic `:root` → Component `:root` → Themes → Typography（裸標籤）。單檔可用，多數消費者直接 import 即可
@@ -134,8 +136,12 @@ pnpm new:component   # 建立新元件（見「新增元件步驟」）
 
 **選擇性 token 綁定**
 - `tokens.css` 在 `theme/index.ts` 載入到站台根層，讓 chrome 也能用 `--govtw-*`
-- `custom.css` 只把 **品牌色** 變數 (`--vp-c-brand-1/2/3/soft`、`--vp-c-indigo-*`) 別名到 `var(--govtw-color-brand-primary)` + `color-mix()`
-- 文字 / 背景 / divider / prose / code block 保留 VitePress 預設（針對長閱讀調過對比，接 token 反而不利可讀性）
+- `custom.css` 把以下 VitePress 變數別名到 govtw token：
+  - 品牌色 `--vp-c-brand-1/2/3/soft`、`--vp-c-indigo-*` → `--govtw-color-brand-primary` + `color-mix()`
+  - 中性色 `--vp-c-bg/bg-soft/text-1/text-2/divider` → `--govtw-color-bg-*`、`--govtw-color-text-*`、`--govtw-color-border-subtle`
+  - 首頁 brand 按鈕 `--vp-button-brand-*` → `--govtw-button-primary-bg/color`（hover/active 加深比例同元件）
+  - 內文連結 → `--govtw-color-link-default`
+- prose / code block 保留 VitePress 預設
 - dark mode 由 `tokens.css` 的 `.dark` 選擇器自動覆寫；`custom.css` 不重複寫 dark 規則
 - 想改 chrome 配色：改 `tokens.json` 的 `color.brand.primary` → `pnpm build:tokens` → 站台連動
 

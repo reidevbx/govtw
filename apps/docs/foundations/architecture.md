@@ -40,7 +40,7 @@ Primitive（原始層）→ Semantic（語意層）→ Component（元件層）
 
 #### 1. Primitive（原始層）
 
-原始設計數值，前綴 `--govtw-primitive-`，不直接在元件中使用。
+原始設計數值，前綴 `--govtw-primitive-`。**不可直接使用**，必須經過 Semantic 或 Component token。
 
 | 類別 | 範例 | 說明 |
 |------|------|------|
@@ -51,7 +51,7 @@ Primitive（原始層）→ Semantic（語意層）→ Component（元件層）
 
 #### 2. Semantic（語意層）
 
-以用途命名，引用 Primitive 層，前綴 `--govtw-`。這是主題切換的操作層。
+以用途命名，引用 Primitive 層，前綴 `--govtw-`。用於排版、文字、背景、邊框等通用用途，也是主題切換的操作層。
 
 | 類別 | 範例 | 說明 |
 |------|------|------|
@@ -64,7 +64,7 @@ Primitive（原始層）→ Semantic（語意層）→ Component（元件層）
 
 #### 3. Component（元件層）
 
-每個元件可單獨覆寫的 token，引用 Semantic 層，前綴 `--govtw-{元件名}-`。
+每個元件可單獨覆寫的 token，引用 Semantic 或 Primitive 層，前綴 `--govtw-{元件名}-`。需要隨主題切換的值引用 Semantic；元件特有、各主題固定的值（如按鈕藍底白字）可直接引用 Primitive。
 
 | 元件 | 範例 | 說明 |
 |------|------|------|
@@ -82,8 +82,11 @@ Primitive（原始層）→ Semantic（語意層）→ Component（元件層）
 /* Semantic → 引用 Primitive */
 --govtw-color-brand-primary: var(--govtw-primitive-color-blue-500);
 
-/* Component → 引用 Semantic */
---govtw-button-primary-bg: var(--govtw-color-brand-primary);
+/* Component → 引用 Semantic（隨主題切換） */
+--govtw-button-secondary-bg: var(--govtw-color-bg-neutral);
+
+/* Component → 引用 Primitive（各主題固定） */
+--govtw-button-primary-bg: var(--govtw-primitive-color-blue-8);
 ```
 
 ### 主題系統
@@ -176,8 +179,8 @@ button {
 
 這代表：
 1. 元件只依賴 Component token，不直接引用 Semantic 或 Primitive 層
-2. Component token 引用 Semantic token → Semantic 引用 Primitive，形成完整的引用鏈
-3. 主題切換時，只需覆寫 Semantic 層，所有元件透過 CSS 變數繼承自動生效
+2. Component token 引用 Semantic 或 Primitive；Primitive 不會在 CSS 中被直接使用
+3. 主題切換時，只需覆寫 Semantic 層，引用 Semantic 的 Component token 透過 CSS 變數繼承自動生效
 4. 各機關覆寫 Semantic 層即可客製品牌色，不需修改元件程式碼
 5. 需要細粒度調整時，可直接覆寫特定 Component token（如只改按鈕圓角）
 
