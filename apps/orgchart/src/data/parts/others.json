@@ -1,0 +1,170 @@
+{
+  "units": [
+    {
+      "id": "dgbas",
+      "name": "行政院主計總處",
+      "parent": "ey",
+      "group": "其他機關",
+      "url": "https://www.dgbas.gov.tw/",
+      "members": [
+        {
+          "id": "dgbas-head",
+          "name": "陳淑姿",
+          "title": "主計長",
+          "photo": "photos/dgbas-head.jpg",
+          "photoSource": "https://ws.dgbas.gov.tw/001/Upload/461/relpic/10305/2402/434975bb-707a-456b-8692-fe1cf3e35f7d.jpg",
+          "source": "https://www.dgbas.gov.tw/cp.aspx?n=3669"
+        },
+        {
+          "id": "dgbas-deputy-1",
+          "name": "蔡鴻坤",
+          "title": "政務副主計長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.dgbas.gov.tw/cp.aspx?n=1128"
+        },
+        {
+          "id": "dgbas-deputy-2",
+          "name": "陳慧娟",
+          "title": "常務副主計長",
+          "photo": "photos/dgbas-deputy-2.jpg",
+          "photoSource": "https://ws.dgbas.gov.tw/001/Upload/461/relpic/10305/31/62ee5f41-1f5a-4b3f-90be-2d3adce0ff09.png",
+          "source": "https://www.dgbas.gov.tw/cp.aspx?n=1129"
+        }
+      ]
+    },
+    {
+      "id": "dgpa",
+      "name": "行政院人事行政總處",
+      "parent": "ey",
+      "group": "其他機關",
+      "url": "https://www.dgpa.gov.tw/",
+      "members": [
+        {
+          "id": "dgpa-head",
+          "name": "蘇俊榮",
+          "title": "人事長",
+          "photo": "photos/dgpa-head.jpg",
+          "photoSource": "https://www.dgpa.gov.tw/uploads/dgpa/images/original/S__3ceo2.jpg",
+          "source": "https://www.dgpa.gov.tw/archive?uid=139"
+        },
+        {
+          "id": "dgpa-deputy-1",
+          "name": "張秋元",
+          "title": "政務副人事長",
+          "photo": "photos/dgpa-deputy-1.jpg",
+          "photoSource": "https://www.dgpa.gov.tw/uploads/dgpa/images/original/%E9%99%B3%E5%89%AF%E4%BA%BA%E4%BA%8B%E9%95%B7.jpg",
+          "source": "https://www.dgpa.gov.tw/archive?uid=140"
+        },
+        {
+          "id": "dgpa-deputy-2",
+          "name": "沈德蘭",
+          "title": "常務副人事長",
+          "photo": "photos/dgpa-deputy-2.jpg",
+          "photoSource": "https://www.dgpa.gov.tw/uploads/dgpa/files/202506/4397a035-e766-480d-b259-b9071bc1e920.jpg",
+          "source": "https://www.dgpa.gov.tw/archive?uid=140"
+        }
+      ]
+    },
+    {
+      "id": "cbc",
+      "name": "中央銀行",
+      "parent": "ey",
+      "group": "其他機關",
+      "url": "https://www.cbc.gov.tw/tw/",
+      "members": [
+        {
+          "id": "cbc-head",
+          "name": "楊金龍",
+          "title": "總裁",
+          "photo": "photos/cbc-head.jpg",
+          "photoSource": "https://www.cbc.gov.tw/Public/Images/201907/1271907221550016af.png",
+          "source": "https://www.cbc.gov.tw/tw/cp-326-27196-EF74B-1.html"
+        },
+        {
+          "id": "cbc-deputy-1",
+          "name": "嚴宗大",
+          "title": "副總裁",
+          "photo": "photos/cbc-deputy-1.jpg",
+          "photoSource": "https://www.cbc.gov.tw/Public/Images/201907/28419072215512d802.jpg",
+          "source": "https://www.cbc.gov.tw/tw/cp-326-40142-FDD44-1.html"
+        },
+        {
+          "id": "cbc-deputy-2",
+          "name": "朱美麗",
+          "title": "副總裁",
+          "photo": "photos/cbc-deputy-2.jpg",
+          "photoSource": "https://www.cbc.gov.tw/Public/Images/202303/3132303131045702ad.JPG",
+          "source": "https://www.cbc.gov.tw/tw/cp-326-157550-5c4ed-1.html"
+        }
+      ]
+    },
+    {
+      "id": "npm",
+      "name": "國立故宮博物院",
+      "parent": "ey",
+      "group": "其他機關",
+      "url": "https://www.npm.gov.tw/",
+      "members": [
+        {
+          "id": "npm-head",
+          "name": "蕭宗煌",
+          "title": "院長",
+          "photo": "photos/npm-head.jpg",
+          "photoSource": "https://www.ey.gov.tw/File/F8B2F77AB7E79D44?S=M",
+          "source": "https://www.npm.gov.tw/Articles.aspx?sno=03013246&l=1"
+        },
+        {
+          "id": "npm-deputy-1",
+          "name": "黃永泰",
+          "title": "政務副院長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.npm.gov.tw/Articles.aspx?sNo=03009564&l=1"
+        }
+      ]
+    },
+    {
+      "id": "cec",
+      "name": "中央選舉委員會",
+      "parent": "ey",
+      "group": "獨立機關",
+      "url": "https://web.cec.gov.tw/",
+      "members": [
+        {
+          "id": "cec-head",
+          "name": "游盈隆",
+          "title": "主任委員",
+          "photo": "photos/cec-head.jpg",
+          "photoSource": "https://web.cec.gov.tw/api/file/0cd73c56-dcc7-4555-a61a-e8767f7b4b26",
+          "source": "https://web.cec.gov.tw/central/article/62301"
+        }
+      ]
+    },
+    {
+      "id": "ftc",
+      "name": "公平交易委員會",
+      "parent": "ey",
+      "group": "獨立機關",
+      "url": "https://www.ftc.gov.tw/",
+      "members": [
+        {
+          "id": "ftc-head",
+          "name": "陳志民",
+          "title": "代理主任委員",
+          "photo": "photos/ftc-head.jpg",
+          "photoSource": "https://www.ftc.gov.tw/upload/b79c34c6-c73f-40be-a6f0-242fed26a0c8.jpg",
+          "source": "https://www.ftc.gov.tw/internet/main/doc/docList.aspx?uid=1948&mid=1948"
+        }
+      ]
+    },
+    {
+      "id": "ncc",
+      "name": "國家通訊傳播委員會",
+      "parent": "ey",
+      "group": "獨立機關",
+      "url": "https://www.ncc.gov.tw/",
+      "members": []
+    }
+  ]
+}

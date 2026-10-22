@@ -39,6 +39,25 @@ importers:
         specifier: ^1.6.3
         version: 1.6.4(@algolia/client-search@5.49.0)(lightningcss@1.33.0)(postcss@8.5.31)(search-insights@2.17.3)(typescript@5.9.3)
 
+  apps/orgchart:
+    dependencies:
+      '@gov-tw/tokens':
+        specifier: workspace:*
+        version: link:../../packages/tokens
+      '@gov-tw/web-components':
+        specifier: workspace:*
+        version: link:../../packages/web-components
+      konva:
+        specifier: ^10.9.0
+        version: 10.9.0
+    devDependencies:
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      vite:
+        specifier: ^8.3.5
+        version: 8.3.5(yaml@2.9.1)
+
   apps/showcase:
     dependencies:
       '@gov-tw/tokens':
@@ -2042,6 +2061,17 @@ packages:
 
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
+
+  konva@10.9.0:
+    resolution: {integrity: sha512-3NOOlcbimFDp4+/DfXGTBkfn3cn3VP1BESPySQ6ayCzgMA9JSMGJNNxeIKw5jpHL6SAl6gHsrv10DUEjNRL0Qg==}
+    peerDependencies:
+      canvas: ^3.0.0
+      skia-canvas: ^3.0.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
+      skia-canvas:
+        optional: true
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -4883,6 +4913,8 @@ snapshots:
       json-buffer: 3.0.1
 
   kolorist@1.8.0: {}
+
+  konva@10.9.0: {}
 
   levn@0.4.1:
     dependencies:

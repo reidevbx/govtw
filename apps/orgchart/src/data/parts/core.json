@@ -1,0 +1,130 @@
+{
+  "asOf": "2026-10-23",
+  "units": [
+    {
+      "id": "president-office",
+      "name": "總統府",
+      "parent": null,
+      "group": null,
+      "url": "https://www.president.gov.tw/",
+      "members": [
+        {
+          "id": "president",
+          "name": "賴清德",
+          "title": "總統",
+          "photo": "photos/president.jpg",
+          "photoSource": "https://www.president.gov.tw/img/Page/c9cdb96a-f8a4-411d-b7b7-c1ca40468c80.jpg",
+          "source": "https://www.president.gov.tw/Page/694"
+        },
+        {
+          "id": "vice-president",
+          "name": "蕭美琴",
+          "title": "副總統",
+          "photo": "photos/vice-president.jpg",
+          "photoSource": "https://www.president.gov.tw/img/Page/510223ed-c538-45fa-9442-a48f78646995.jpg",
+          "source": "https://www.president.gov.tw/Page/695"
+        }
+      ]
+    },
+    {
+      "id": "ey",
+      "name": "行政院",
+      "parent": "president-office",
+      "group": null,
+      "url": "https://www.ey.gov.tw/",
+      "members": [
+        {
+          "id": "ey-premier",
+          "name": "卓榮泰",
+          "title": "院長",
+          "photo": "photos/ey-premier.jpg",
+          "photoSource": "https://www.ey.gov.tw/File/3DA8809C6AE671B0?S=L",
+          "source": "https://www.ey.gov.tw/Page/3C927BC7FA83C969"
+        },
+        {
+          "id": "ey-vice-premier",
+          "name": "鄭麗君",
+          "title": "副院長",
+          "photo": "photos/ey-vice-premier.jpg",
+          "photoSource": "https://www.ey.gov.tw/File/A67E036B3169DF0B?S=L",
+          "source": "https://www.ey.gov.tw/Page/4E333C98644BB79B"
+        }
+      ]
+    },
+    {
+      "id": "ly",
+      "name": "立法院",
+      "parent": "president-office",
+      "group": null,
+      "url": "https://www.ly.gov.tw/",
+      "members": [
+        {
+          "id": "ly-speaker",
+          "name": "韓國瑜",
+          "title": "院長",
+          "photo": "photos/ly-speaker.jpg",
+          "photoSource": "https://www.ly.gov.tw/Images/Legislators/110106.jpg",
+          "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=120"
+        },
+        {
+          "id": "ly-deputy-speaker",
+          "name": "江啟臣",
+          "title": "副院長",
+          "photo": "photos/ly-deputy-speaker.jpg",
+          "photoSource": "https://www.ly.gov.tw/Images/Legislators/110009.jpg",
+          "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=121"
+        }
+      ]
+    },
+    {
+      "id": "jy",
+      "name": "司法院",
+      "parent": "president-office",
+      "group": null,
+      "url": "https://www.judicial.gov.tw/",
+      "members": [
+        {
+          "id": "jy-president",
+          "name": "謝銘洋",
+          "title": "代理院長",
+          "photo": "photos/jy-president.jpg",
+          "photoSource": "https://www.judicial.gov.tw/Public/Images/202411/90924110117556f19c.jpg",
+          "source": "https://www.judicial.gov.tw/tw/np-23-1.html"
+        }
+      ]
+    },
+    {
+      "id": "exam",
+      "name": "考試院",
+      "parent": "president-office",
+      "group": null,
+      "url": "https://www.exam.gov.tw/",
+      "members": [
+        {
+          "id": "exam-president",
+          "name": "周弘憲",
+          "title": "院長",
+          "photo": "photos/exam-president.jpg",
+          "photoSource": "https://ws.exam.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9ja2ZpbGUvNmYxY2Q4YzUtOTQ1OS00NGUzLTljZDMtZDljNDcxNGRmODMyLmpwZw%3d%3d&n=5Ymv6Zmi6ZW3IOWRqOW8mOaGsi5qcGc%3d&icon=.jpg",
+          "source": "https://www.exam.gov.tw/cp.aspx?n=3749&s=1131"
+        },
+        {
+          "id": "exam-vice-president",
+          "name": "許舒翔",
+          "title": "副院長",
+          "photo": "photos/exam-vice-president.jpg",
+          "photoSource": "https://ws.exam.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9ja2ZpbGUvNGZhMGMwN2UtMmY3NC00OWY1LTg4ZDAtN2VlMjE5ODQwYTg4LmpwZw%3d%3d&n=QTExMeWJr%2bmZoumVt%2bioseiIkue%2flC5qcGc%3d&icon=.jpg",
+          "source": "https://www.exam.gov.tw/cp.aspx?n=3749&s=1143"
+        }
+      ]
+    },
+    {
+      "id": "cy",
+      "name": "監察院",
+      "parent": "president-office",
+      "group": null,
+      "url": "https://www.cy.gov.tw/",
+      "members": []
+    }
+  ]
+}

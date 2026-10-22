@@ -1,0 +1,275 @@
+{
+  "units": [
+    {
+      "id": "moi",
+      "name": "內政部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.moi.gov.tw/",
+      "members": [
+        {
+          "id": "moi-head",
+          "name": "劉世芳",
+          "title": "部長",
+          "photo": "photos/moi-head.jpg",
+          "photoSource": "https://ws.moi.gov.tw/001/Upload/400/relpic/8999/5154/d5cdeab0-0a3a-48b5-82f6-935e37351ee1.jpg",
+          "source": "https://www.moi.gov.tw/cp.aspx?n=27"
+        },
+        {
+          "id": "moi-deputy-1",
+          "name": "馬士元",
+          "title": "政務次長",
+          "photo": "photos/moi-deputy-1.jpg",
+          "photoSource": "https://ws.moi.gov.tw/001/Upload/400/relpic/11266/315893/5f007c01-d761-46ff-8d85-ebc6c5dbfbbc.jpg",
+          "source": "https://www.moi.gov.tw/Occupation_Content.aspx?n=12260&_CSN=1759"
+        },
+        {
+          "id": "moi-deputy-2",
+          "name": "董建宏",
+          "title": "政務次長",
+          "photo": "photos/moi-deputy-2.jpg",
+          "photoSource": "https://ws.moi.gov.tw/001/Upload/400/relpic/11266/315895/19669d55-775d-4a7d-b19e-0559802acdde.jpg",
+          "source": "https://www.moi.gov.tw/Occupation_Content.aspx?n=12260&_CSN=1760"
+        },
+        {
+          "id": "moi-deputy-3",
+          "name": "吳堂安",
+          "title": "常務次長",
+          "photo": "photos/moi-deputy-3.jpg",
+          "photoSource": "https://ws.moi.gov.tw/001/Upload/400/relpic/11266/116504/8db025cd-29bc-47e2-b074-942e5ab97716.jpg",
+          "source": "https://www.moi.gov.tw/Occupation_Content.aspx?n=12260&_CSN=1761"
+        }
+      ]
+    },
+    {
+      "id": "mofa",
+      "name": "外交部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.mofa.gov.tw/",
+      "members": [
+        {
+          "id": "mofa-head",
+          "name": "林佳龍",
+          "title": "部長",
+          "photo": "photos/mofa-head.jpg",
+          "photoSource": "https://ws.mofa.gov.tw/001/Upload/customfile/sites/urllink/2564c96d-8ea7-4ded-a464-d5f0b9733d25.jpg",
+          "source": "https://www.mofa.gov.tw/MofaLeader_Content.aspx?n=102&s=138"
+        },
+        {
+          "id": "mofa-deputy-1",
+          "name": "吳志中",
+          "title": "政務次長",
+          "photo": "photos/mofa-deputy-1.jpg",
+          "photoSource": "https://ws.mofa.gov.tw/001/Upload/customfile/sites/urllink/cf1b4fde-3bc2-43b8-9fb7-182ffb3199bd.jpg",
+          "source": "https://www.mofa.gov.tw/MofaLeader_Content.aspx?n=103&sms=&mls=134"
+        },
+        {
+          "id": "mofa-deputy-2",
+          "name": "陳明祺",
+          "title": "政務次長",
+          "photo": "photos/mofa-deputy-2.jpg",
+          "photoSource": "https://ws.mofa.gov.tw/001/Upload/customfile/sites/urllink/236bfff2-1bab-4da5-a33d-f04a90dd06d6.jpg",
+          "source": "https://www.mofa.gov.tw/MofaLeader_Content.aspx?n=104&sms=43&mls=145"
+        },
+        {
+          "id": "mofa-deputy-3",
+          "name": "葛葆萱",
+          "title": "常務次長",
+          "photo": "photos/mofa-deputy-3.jpg",
+          "photoSource": "https://ws.mofa.gov.tw/001/Upload/customfile/sites/urllink/b891554c-5a96-470a-b1ca-2e88beb869fb.jpg",
+          "source": "https://www.mofa.gov.tw/MofaLeader_Content.aspx?n=105&sms=&mls=158"
+        }
+      ]
+    },
+    {
+      "id": "mnd",
+      "name": "國防部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.mnd.gov.tw/",
+      "members": [
+        {
+          "id": "mnd-head",
+          "name": "顧立雄",
+          "title": "部長",
+          "photo": "photos/mnd-head.jpg",
+          "photoSource": "https://www.mnd.gov.tw/img/leader_1.jpg",
+          "source": "https://www.mnd.gov.tw/About/Minister"
+        },
+        {
+          "id": "mnd-deputy-1",
+          "name": "徐斯儉",
+          "title": "副部長",
+          "photo": "photos/mnd-deputy-1.jpg",
+          "photoSource": "https://www.mnd.gov.tw/img/officer/%E5%BE%90%E6%96%AF%E5%84%89.png",
+          "source": "https://www.mnd.gov.tw/About/Minister/2"
+        },
+        {
+          "id": "mnd-deputy-2",
+          "name": "鍾樹明",
+          "title": "副部長",
+          "photo": "photos/mnd-deputy-2.jpg",
+          "photoSource": "https://www.mnd.gov.tw/img/officer/%E9%8D%BE%E6%A8%B9%E6%98%8E%E4%B8%8A%E5%B0%87.png",
+          "source": "https://www.mnd.gov.tw/About/Minister/3"
+        }
+      ]
+    },
+    {
+      "id": "mof",
+      "name": "財政部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.mof.gov.tw/",
+      "members": [
+        {
+          "id": "mof-head",
+          "name": "莊翠雲",
+          "title": "部長",
+          "photo": "photos/mof-head.jpg",
+          "photoSource": "https://www.mof.gov.tw/getCKEditorImage?localFileName=/upload/content/image/ed1c97b8f4d04424b031f859e076b378/1698468008604_4104659202631715.jpg&portalUuid=89407691a61e484a84a83c78c693fd78",
+          "source": "https://www.mof.gov.tw/multiplehtml/121"
+        },
+        {
+          "id": "mof-deputy-1",
+          "name": "阮清華",
+          "title": "政務次長",
+          "photo": "photos/mof-deputy-1.jpg",
+          "photoSource": "https://www.mof.gov.tw/getCKEditorImage?localFileName=/upload/content/image/ed1c97b8f4d04424b031f859e076b378/1698468026460_9723809572118041.jpg&portalUuid=89407691a61e484a84a83c78c693fd78",
+          "source": "https://www.mof.gov.tw/multiplehtml/121"
+        },
+        {
+          "id": "mof-deputy-2",
+          "name": "陳勇勝",
+          "title": "政務次長",
+          "photo": "photos/mof-deputy-2.jpg",
+          "photoSource": "https://www.mof.gov.tw/getCKEditorImage?localFileName=/upload/content/image/ed1c97b8f4d04424b031f859e076b378/1772763924326_6900131711436900.jpg&portalUuid=89407691a61e484a84a83c78c693fd78",
+          "source": "https://www.mof.gov.tw/multiplehtml/121"
+        },
+        {
+          "id": "mof-deputy-3",
+          "name": "謝鈴媛",
+          "title": "常務次長",
+          "photo": "photos/mof-deputy-3.jpg",
+          "photoSource": "https://www.mof.gov.tw/getCKEditorImage?localFileName=/upload/content/image/ed1c97b8f4d04424b031f859e076b378/1698468048495_5301099543750466.jpg&portalUuid=89407691a61e484a84a83c78c693fd78",
+          "source": "https://www.mof.gov.tw/multiplehtml/121"
+        }
+      ]
+    },
+    {
+      "id": "moe",
+      "name": "教育部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.edu.tw/",
+      "members": [
+        {
+          "id": "moe-head",
+          "name": "鄭英耀",
+          "title": "部長",
+          "photo": "photos/moe-head.jpg",
+          "photoSource": "https://ws.moe.edu.tw/001/Upload/1/relpic/6043/1871/b58c0199-462f-423f-b61b-d50d45aa4ab0.png",
+          "source": "https://www.edu.tw/cp.aspx?n=583DE2B2364F19DF&s=B7C121049B631A78"
+        },
+        {
+          "id": "moe-deputy-1",
+          "name": "劉國偉",
+          "title": "政務次長",
+          "photo": "photos/moe-deputy-1.jpg",
+          "photoSource": "https://ws.moe.edu.tw/001/Upload/1/relpic/6043/1873/8b5fd792-5b9c-4956-bbdc-2ef180744504.jpg",
+          "source": "https://www.edu.tw/cp.aspx?n=1651E228E175FB7D&s=C7BFF7B3ABFE1465"
+        },
+        {
+          "id": "moe-deputy-2",
+          "name": "張廖萬堅",
+          "title": "政務次長",
+          "photo": "photos/moe-deputy-2.jpg",
+          "photoSource": "https://ws.moe.edu.tw/001/Upload/1/relpic/6043/1872/f9beda74-ca9d-4aea-a815-8eab5bd6dabd.jpg",
+          "source": "https://www.edu.tw/cp.aspx?n=846C92191EDD5C4C&s=9382655DEF2D21C9"
+        },
+        {
+          "id": "moe-deputy-3",
+          "name": "朱俊彰",
+          "title": "常務次長",
+          "photo": "photos/moe-deputy-3.jpg",
+          "photoSource": "https://ws.moe.edu.tw/001/Upload/1/relpic/6043/265/b5ee9ac4-31e4-477c-afe1-7e488054d1bb.jpg",
+          "source": "https://www.edu.tw/cp.aspx?n=4F80950EF52341B3&s=8C5F83E8BF3FAB1A"
+        }
+      ]
+    },
+    {
+      "id": "moj",
+      "name": "法務部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-head",
+          "name": "鄭銘謙",
+          "title": "部長",
+          "photo": "photos/moj-head.jpg",
+          "photoSource": "https://www.moj.gov.tw/media/28928/1130508%E9%84%AD%E9%8A%98%E8%AC%99%E6%AA%A2%E5%AF%9F%E9%95%B7%E8%AD%89%E4%BB%B6%E7%85%A7.jpg",
+          "source": "https://www.moj.gov.tw/2204/2205/2212/2214/2215/206946/post"
+        },
+        {
+          "id": "moj-deputy-1",
+          "name": "黃謀信",
+          "title": "政務次長",
+          "photo": "photos/moj-deputy-1.jpg",
+          "photoSource": "https://www.moj.gov.tw/media/34419/1150213%E9%BB%83%E6%94%BF%E5%8B%99%E6%AC%A1%E9%95%B7%E8%AC%80%E4%BF%A1.jpg",
+          "source": "https://www.moj.gov.tw/2204/2205/2212/2214/2216/206982/post"
+        },
+        {
+          "id": "moj-deputy-2",
+          "name": "馮成",
+          "title": "常務次長",
+          "photo": "photos/moj-deputy-2.jpg",
+          "photoSource": "https://www.moj.gov.tw/media/34422/%E9%A6%AE%E6%AC%A1%E9%95%B7%E8%AD%98%E5%88%A5%E8%AD%89%E8%AD%89%E4%BB%B6%E7%85%A7.png",
+          "source": "https://www.moj.gov.tw/2204/2205/2212/2214/270335/270339/post"
+        }
+      ]
+    },
+    {
+      "id": "moea",
+      "name": "經濟部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.moea.gov.tw/",
+      "members": [
+        {
+          "id": "moea-head",
+          "name": "龔明鑫",
+          "title": "部長",
+          "photo": "photos/moea-head.jpg",
+          "photoSource": "https://www.ey.gov.tw/File/78A37967758DBBF?S=M",
+          "source": "https://www.ey.gov.tw/Page/7AC6136EBB87A125"
+        },
+        {
+          "id": "moea-deputy-1",
+          "name": "何晉滄",
+          "title": "政務次長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.moea.gov.tw/Mns/populace/EconomicChief/EconomicChief.aspx?code=C&work=Y&menu_id=32765"
+        },
+        {
+          "id": "moea-deputy-2",
+          "name": "江文若",
+          "title": "政務次長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.moea.gov.tw/Mns/populace/EconomicChief/EconomicChief.aspx?code=C&work=Y&menu_id=32765"
+        },
+        {
+          "id": "moea-deputy-3",
+          "name": "賴建信",
+          "title": "常務次長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.moea.gov.tw/Mns/populace/EconomicChief/EconomicChief.aspx?code=C&work=Y&menu_id=32765"
+        }
+      ]
+    }
+  ]
+}

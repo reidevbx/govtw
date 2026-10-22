@@ -1,0 +1,332 @@
+{
+  "units": [
+    {
+      "id": "motc",
+      "name": "交通部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.motc.gov.tw/ch/index",
+      "members": [
+        {
+          "id": "motc-head",
+          "name": "陳世凱",
+          "title": "部長",
+          "photo": "photos/motc-head.jpg",
+          "photoSource": "https://www.motc.gov.tw/userfiles/image/%E9%99%B3%E4%B8%96%E5%87%B1(1).jpg",
+          "source": "https://www.motc.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=10053&serno=null"
+        },
+        {
+          "id": "motc-deputy-1",
+          "name": "陳彥伯",
+          "title": "政務次長",
+          "photo": "photos/motc-deputy-1.jpg",
+          "photoSource": "https://www.motc.gov.tw/fckdowndoc?file=/chenyenbo.png&flag=pic",
+          "source": "https://www.motc.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=10053&serno=null"
+        },
+        {
+          "id": "motc-deputy-2",
+          "name": "伍勝園",
+          "title": "政務次長",
+          "photo": "photos/motc-deputy-2.jpg",
+          "photoSource": "https://www.motc.gov.tw/userfiles/image/motcsd.jpg",
+          "source": "https://www.motc.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=10053&serno=null"
+        },
+        {
+          "id": "motc-deputy-3",
+          "name": "林國顯",
+          "title": "常務次長",
+          "photo": "photos/motc-deputy-3.jpg",
+          "photoSource": "https://www.motc.gov.tw/userfiles/image/0115.jpg",
+          "source": "https://www.motc.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=10053&serno=null"
+        }
+      ]
+    },
+    {
+      "id": "mol",
+      "name": "勞動部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.mol.gov.tw/",
+      "members": [
+        {
+          "id": "mol-head",
+          "name": "洪申翰",
+          "title": "部長",
+          "photo": "photos/mol-head.jpg",
+          "photoSource": "https://www.mol.gov.tw/media/moxh1a34/%E9%83%A8%E9%95%B7%E7%85%A7%E7%89%87.png",
+          "source": "https://www.mol.gov.tw/1607/1608/80563/80572/post"
+        },
+        {
+          "id": "mol-deputy-1",
+          "name": "李健鴻",
+          "title": "政務次長",
+          "photo": "photos/mol-deputy-1.jpg",
+          "photoSource": "https://www.mol.gov.tw/media/5hslg3kr/%E5%8B%9E%E5%8B%95%E9%83%A8-%E6%9D%8E%E5%81%A5%E9%B4%BB%E6%AC%A1%E9%95%B7.jpg",
+          "source": "https://www.mol.gov.tw/1607/1608/80563/80591/post"
+        },
+        {
+          "id": "mol-deputy-2",
+          "name": "黃玲娜",
+          "title": "政務次長",
+          "photo": "photos/mol-deputy-2.jpg",
+          "photoSource": "https://www.mol.gov.tw/media/2rvjvcy0/%E9%BB%83%E7%8E%B2%E5%A8%9C.jpg",
+          "source": "https://www.mol.gov.tw/1607/1608/80563/80595/post"
+        },
+        {
+          "id": "mol-deputy-3",
+          "name": "陳明仁",
+          "title": "常務次長",
+          "photo": "photos/mol-deputy-3.jpg",
+          "photoSource": "https://www.mol.gov.tw/media/wdlp531p/aaf342dadcc0357e802b4b5c1237525f0cff65cb.jpg",
+          "source": "https://www.mol.gov.tw/1607/1608/80563/80599/post"
+        }
+      ]
+    },
+    {
+      "id": "moa",
+      "name": "農業部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.moa.gov.tw/",
+      "members": [
+        {
+          "id": "moa-head",
+          "name": "陳駿季",
+          "title": "部長",
+          "photo": "photos/moa-head.jpg",
+          "photoSource": "https://www.moa.gov.tw/upload/images/web_structure/2514759/%E9%83%A8%E9%95%B7%E7%85%A7%E7%89%87(1130520%E6%9B%B4%E6%8F%9B%EF%BC%89.jpeg",
+          "source": "https://www.moa.gov.tw/ws.php?id=2514759"
+        },
+        {
+          "id": "moa-deputy-1",
+          "name": "胡忠一",
+          "title": "政務次長",
+          "photo": "photos/moa-deputy-1.jpg",
+          "photoSource": "https://www.moa.gov.tw/upload/images/web_structure/2515423/%E8%83%A1%E6%AC%A1%E9%95%B7%E5%BF%A0%E4%B8%80%E7%85%A7%E7%89%87.jpg",
+          "source": "https://www.moa.gov.tw/ws.php?id=2515423"
+        },
+        {
+          "id": "moa-deputy-2",
+          "name": "黃昭欽",
+          "title": "政務次長",
+          "photo": "photos/moa-deputy-2.jpg",
+          "photoSource": "https://www.moa.gov.tw/upload/images/web_structure/2515424/%E9%BB%83%E6%AC%A1%E9%95%B7%E6%98%AD%E6%AC%BD%E7%85%A7%E7%89%87.jpeg",
+          "source": "https://www.moa.gov.tw/ws.php?id=2515424"
+        },
+        {
+          "id": "moa-deputy-3",
+          "name": "杜文珍",
+          "title": "常務次長",
+          "photo": "photos/moa-deputy-3.jpg",
+          "photoSource": "https://www.moa.gov.tw/upload/images/web_structure/2514393/%E8%BE%B2%E6%A5%AD%E9%83%A8%E5%AE%98%E7%B6%B2(%E6%9D%9C%E5%89%AF%E4%B8%BB%E5%A7%94%E6%96%87%E7%8F%8D)%20(1).jpg",
+          "source": "https://www.moa.gov.tw/ws.php?id=2514393"
+        }
+      ]
+    },
+    {
+      "id": "mohw",
+      "name": "衛生福利部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.mohw.gov.tw/",
+      "members": [
+        {
+          "id": "mohw-head",
+          "name": "石崇良",
+          "title": "部長",
+          "photo": "photos/mohw-head.jpg",
+          "photoSource": "https://www.mohw.gov.tw/Public/Images/202511/4912511181458e3ae3.jpg",
+          "source": "https://www.mohw.gov.tw/np-4-1.html"
+        },
+        {
+          "id": "mohw-deputy-1",
+          "name": "林靜儀",
+          "title": "政務次長",
+          "photo": "photos/mohw-deputy-1.jpg",
+          "photoSource": "https://www.mohw.gov.tw/Public/Images/202405/7182405081049cc3bd.jpg",
+          "source": "https://www.mohw.gov.tw/cp-5-78673-1.html"
+        },
+        {
+          "id": "mohw-deputy-2",
+          "name": "呂建德",
+          "title": "政務次長",
+          "photo": "photos/mohw-deputy-2.jpg",
+          "photoSource": "https://www.mohw.gov.tw/Public/Images/202405/18924051308524256f.png",
+          "source": "https://www.mohw.gov.tw/cp-5-78709-1.html"
+        },
+        {
+          "id": "mohw-deputy-3",
+          "name": "莊人祥",
+          "title": "常務次長",
+          "photo": "photos/mohw-deputy-3.jpg",
+          "photoSource": "https://www.mohw.gov.tw/Public/Images/202509/740250908112898a6f.jpg",
+          "source": "https://www.mohw.gov.tw/cp-5-83731-1.html"
+        }
+      ]
+    },
+    {
+      "id": "moenv",
+      "name": "環境部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.moenv.gov.tw/",
+      "members": [
+        {
+          "id": "moenv-head",
+          "name": "彭啓明",
+          "title": "部長",
+          "photo": "photos/moenv-head.jpg",
+          "photoSource": "https://www.moenv.gov.tw/img/MOENV/2024/1f62df4c-2de8-4e15-b0fd-3ea5badffd5f.jpg",
+          "source": "https://www.moenv.gov.tw/aboutus/principal-officers/f4be273/610.html"
+        },
+        {
+          "id": "moenv-deputy-1",
+          "name": "葉俊宏",
+          "title": "政務次長",
+          "photo": "photos/moenv-deputy-1.jpg",
+          "photoSource": "https://www.moenv.gov.tw/img/MOENV/2023/f2926e40-3cce-472c-b70e-8c6c61020e52.jpg",
+          "source": "https://www.moenv.gov.tw/aboutus/principal-officers/deputy-minister-jiunn-horng-yeh/1756.html"
+        },
+        {
+          "id": "moenv-deputy-2",
+          "name": "謝燕儒",
+          "title": "政務次長",
+          "photo": "photos/moenv-deputy-2.jpg",
+          "photoSource": "https://www.moenv.gov.tw/img/MOENV/rbugl022.bb5.jpg",
+          "source": "https://www.moenv.gov.tw/aboutus/principal-officers/deputy-minister-yein-rui-hsieh/3677.html"
+        },
+        {
+          "id": "moenv-deputy-3",
+          "name": "沈志修",
+          "title": "常務次長",
+          "photo": "photos/moenv-deputy-3.jpg",
+          "photoSource": "https://www.moenv.gov.tw/img/MOENV/2023/1a364adc-70ef-40cd-a36d-09a7d5207776.jpg",
+          "source": "https://www.moenv.gov.tw/aboutus/principal-officers/deputy-minister-chih-hsiu-shen/1729.html"
+        }
+      ]
+    },
+    {
+      "id": "moc",
+      "name": "文化部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.moc.gov.tw/",
+      "members": [
+        {
+          "id": "moc-head",
+          "name": "李遠",
+          "title": "部長",
+          "photo": "photos/moc-head.jpg",
+          "photoSource": "https://file.moc.gov.tw/001/Upload/470/relpic/10329/5/78ebbb10-b0da-4827-b86e-868f8e219782.png",
+          "source": "https://www.moc.gov.tw/cp.aspx?n=99"
+        },
+        {
+          "id": "moc-deputy-1",
+          "name": "李靜慧",
+          "title": "政務次長",
+          "photo": "photos/moc-deputy-1.jpg",
+          "photoSource": "https://file.moc.gov.tw/001/Upload/470/relpic/10329/5/0183b161-7c0a-4040-a0c2-8b3f8fcf695f.png",
+          "source": "https://www.moc.gov.tw/cp.aspx?n=99"
+        },
+        {
+          "id": "moc-deputy-2",
+          "name": "王時思",
+          "title": "政務次長",
+          "photo": "photos/moc-deputy-2.jpg",
+          "photoSource": "https://file.moc.gov.tw/001/Upload/OldFiles/AdminUploads/files/202301/da5af8ee-47f7-45db-82f5-c4c662a65967.jpg",
+          "source": "https://www.moc.gov.tw/cp.aspx?n=99"
+        },
+        {
+          "id": "moc-deputy-3",
+          "name": "徐宜君",
+          "title": "常務次長",
+          "photo": "photos/moc-deputy-3.jpg",
+          "photoSource": "https://file.moc.gov.tw/001/Upload/470/relpic/10329/5/d47bf690-852d-46c7-b68b-a380c113e1d3.png",
+          "source": "https://www.moc.gov.tw/cp.aspx?n=99"
+        }
+      ]
+    },
+    {
+      "id": "moda",
+      "name": "數位發展部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://moda.gov.tw/",
+      "members": [
+        {
+          "id": "moda-head",
+          "name": "林宜敬",
+          "title": "部長",
+          "photo": "photos/moda-head.jpg",
+          "photoSource": "https://moda.gov.tw/copyright/MODA/xmfugmmk.qxi.png",
+          "source": "https://moda.gov.tw/aboutus/principal-officers/deputy-minister-lin/1525"
+        },
+        {
+          "id": "moda-deputy-1",
+          "name": "侯宜秀",
+          "title": "政務次長",
+          "photo": "photos/moda-deputy-1.jpg",
+          "photoSource": "https://moda.gov.tw/copyright/MODA/ikpm3u35.2fd.jpeg",
+          "source": "https://moda.gov.tw/aboutus/principal-officers/deputy-minister-hou/1735"
+        },
+        {
+          "id": "moda-deputy-2",
+          "name": "楊佳玲",
+          "title": "政務次長",
+          "photo": "photos/moda-deputy-2.jpg",
+          "photoSource": "https://moda.gov.tw/copyright/MODA/kjyxexvr.1ov.jpg",
+          "source": "https://moda.gov.tw/aboutus/principal-officers/deputy-minister-yang/1761"
+        },
+        {
+          "id": "moda-deputy-3",
+          "name": "葉寧",
+          "title": "常務次長",
+          "photo": "photos/moda-deputy-3.jpg",
+          "photoSource": "https://moda.gov.tw/copyright/MODA/snwk4l4m.ack.jpg",
+          "source": "https://moda.gov.tw/aboutus/principal-officers/deputy-minister-yeh/999"
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "運動部",
+      "parent": "ey",
+      "group": "部",
+      "url": "https://www.sports.gov.tw/",
+      "members": [
+        {
+          "id": "sports-head",
+          "name": "李洋",
+          "title": "部長",
+          "photo": "photos/sports-head.jpg",
+          "photoSource": "https://ws.sports.gov.tw/FS01/FilePath/1/relpic/25/5543/4078eaa8-ae0f-46d6-add3-952ca358277b.jpg",
+          "source": "https://www.sports.gov.tw/CP/4361/5543"
+        },
+        {
+          "id": "sports-deputy-1",
+          "name": "黃啟煌",
+          "title": "政務次長",
+          "photo": "photos/sports-deputy-1.jpg",
+          "photoSource": "https://ws.sports.gov.tw/FS01/FilePath/1/relpic/25/5571/f301f168-1906-40c1-8e91-ea1ef7273a76.jpg",
+          "source": "https://www.sports.gov.tw/CP/4361/5571"
+        },
+        {
+          "id": "sports-deputy-2",
+          "name": "楊啓文",
+          "title": "政務次長",
+          "photo": "photos/sports-deputy-2.jpg",
+          "photoSource": "https://ws.sports.gov.tw/FS01/FilePath/1/relpic/25/5853/374aeff1-631d-4a47-92dc-136c9ee68656.jpeg",
+          "source": "https://www.sports.gov.tw/CP/4361/5853"
+        },
+        {
+          "id": "sports-deputy-3",
+          "name": "洪志昌",
+          "title": "常務次長",
+          "photo": "photos/sports-deputy-3.jpg",
+          "photoSource": "https://ws.sports.gov.tw/FS01/FilePath/1/relpic/25/5561/2edf3c6d-d39b-4593-8f71-253d21c97d58.png",
+          "source": "https://www.sports.gov.tw/CP/4361/5561"
+        }
+      ]
+    }
+  ]
+}

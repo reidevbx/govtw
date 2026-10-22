@@ -1,0 +1,325 @@
+{
+  "units": [
+    {
+      "id": "ndc",
+      "name": "國家發展委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.ndc.gov.tw/",
+      "members": [
+        {
+          "id": "ndc-head",
+          "name": "葉俊顯",
+          "title": "主任委員",
+          "photo": "photos/ndc-head.jpg",
+          "photoSource": "https://ws.ndc.gov.tw/001/administrator/10/relpic/6886/39313/a71eb32f-7ccc-463e-b993-111e01366013.png",
+          "source": "https://www.ndc.gov.tw/News_Content6.aspx?n=4D4902F34A0ED5A3&sms=B3BD4DD43B21CAD5&s=0F2712AA8D5112B0"
+        },
+        {
+          "id": "ndc-deputy-1",
+          "name": "高仙桂",
+          "title": "副主任委員",
+          "photo": "photos/ndc-deputy-1.jpg",
+          "photoSource": "https://ws.ndc.gov.tw/001/administrator/10/relpic/6886/28601/5a96f7eb-16bb-4dca-9b40-2fce2bf20a89.jpg",
+          "source": "https://www.ndc.gov.tw/News_Content6.aspx?n=4D4902F34A0ED5A3&sms=B3BD4DD43B21CAD5&s=BE492A958FA45D17"
+        },
+        {
+          "id": "ndc-deputy-2",
+          "name": "彭立沛",
+          "title": "副主任委員",
+          "photo": "photos/ndc-deputy-2.jpg",
+          "photoSource": "https://ws.ndc.gov.tw/001/administrator/10/relpic/6886/38132/db3965ca-17c8-4b56-a575-43cd3c511324.jpg",
+          "source": "https://www.ndc.gov.tw/News_Content6.aspx?n=4D4902F34A0ED5A3&sms=B3BD4DD43B21CAD5&s=52F9D70113FD6C40"
+        },
+        {
+          "id": "ndc-deputy-3",
+          "name": "詹方冠",
+          "title": "副主任委員",
+          "photo": "photos/ndc-deputy-3.jpg",
+          "photoSource": "https://ws.ndc.gov.tw/001/administrator/10/relpic/6886/38197/13af3ee2-9cf6-4451-a9ee-da7accf0f664.jpg",
+          "source": "https://www.ndc.gov.tw/News_Content6.aspx?n=4D4902F34A0ED5A3&sms=B3BD4DD43B21CAD5&s=FEC6824CD07BA679"
+        }
+      ]
+    },
+    {
+      "id": "nstc",
+      "name": "國家科學及技術委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.nstc.gov.tw/",
+      "members": [
+        {
+          "id": "nstc-head",
+          "name": "吳誠文",
+          "title": "主任委員",
+          "photo": "photos/nstc-head.jpg",
+          "photoSource": "https://www.nstc.gov.tw/nstc/attachments/5f03217e-7eb1-4809-b7b1-5084d765e580",
+          "source": "https://www.nstc.gov.tw/folksonomy/detail/41b65785-106f-48b4-af2d-59a5eed36008?l=ch"
+        },
+        {
+          "id": "nstc-deputy-1",
+          "name": "陳炳宇",
+          "title": "政務副主任委員",
+          "photo": "photos/nstc-deputy-1.jpg",
+          "photoSource": "https://www.nstc.gov.tw/nstc/attachments/ec03ff2b-94fc-4b7f-9fe1-0d54560f0f7f",
+          "source": "https://www.nstc.gov.tw/folksonomy/detail/f17bb1c5-826d-4e27-84ac-8216c259c863?l=ch"
+        },
+        {
+          "id": "nstc-deputy-2",
+          "name": "張振豪",
+          "title": "政務副主任委員",
+          "photo": "photos/nstc-deputy-2.jpg",
+          "photoSource": "https://www.nstc.gov.tw/nstc/attachments/542718e9-a3a6-4405-b584-4fc6136c717d",
+          "source": "https://www.nstc.gov.tw/folksonomy/detail/67459255-40f7-436e-b7aa-11ec2ec31897?l=ch"
+        },
+        {
+          "id": "nstc-deputy-3",
+          "name": "蘇振綱",
+          "title": "常務副主任委員",
+          "photo": "photos/nstc-deputy-3.jpg",
+          "photoSource": "https://www.nstc.gov.tw/nstc/attachments/1efe4916-50ab-4bfc-8ff7-0233aac32721",
+          "source": "https://www.nstc.gov.tw/folksonomy/detail/c3a0ca6f-787a-496b-b67f-7824b3269126?l=ch"
+        }
+      ]
+    },
+    {
+      "id": "mac",
+      "name": "大陸委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.mac.gov.tw/",
+      "members": [
+        {
+          "id": "mac-head",
+          "name": "邱垂正",
+          "title": "主任委員",
+          "photo": "photos/mac-head.jpg",
+          "photoSource": "https://ws.mac.gov.tw/001/Upload/295/relpic/7681/6727/805db2cb-9057-413d-9d5a-95eeea429af9.png",
+          "source": "https://www.mac.gov.tw/cp.aspx?n=D7B7F1B4196DD582"
+        },
+        {
+          "id": "mac-deputy-1",
+          "name": "梁文傑",
+          "title": "副主任委員",
+          "photo": "photos/mac-deputy-1.jpg",
+          "photoSource": "https://ws.mac.gov.tw/001/Upload/295/ckfile/cbf5b778-745b-43e2-95f5-3f8ff7ff72bb.jpg",
+          "source": "https://www.mac.gov.tw/cp.aspx?n=EFABC8295286B40B"
+        },
+        {
+          "id": "mac-deputy-2",
+          "name": "沈有忠",
+          "title": "副主任委員",
+          "photo": "photos/mac-deputy-2.jpg",
+          "photoSource": "https://ws.mac.gov.tw/001/Upload/295/relpic/7681/6742/95cb59f3-80e8-4ee8-b332-4e0d339e6b89.jpg",
+          "source": "https://www.mac.gov.tw/cp.aspx?n=EFABC8295286B40B"
+        },
+        {
+          "id": "mac-deputy-3",
+          "name": "李麗珍",
+          "title": "副主任委員",
+          "photo": "photos/mac-deputy-3.jpg",
+          "photoSource": "https://ws.mac.gov.tw/001/Upload/295/ckfile/ced57056-f339-4cd6-96f6-592819483450.jpg",
+          "source": "https://www.mac.gov.tw/cp.aspx?n=EFABC8295286B40B"
+        }
+      ]
+    },
+    {
+      "id": "fsc",
+      "name": "金融監督管理委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.fsc.gov.tw/",
+      "members": [
+        {
+          "id": "fsc-head",
+          "name": "彭金隆",
+          "title": "主任委員",
+          "photo": "photos/fsc-head.jpg",
+          "photoSource": "https://www.fsc.gov.tw/userfiles/image/Peng.jpg",
+          "source": "https://www.fsc.gov.tw/ch/home.jsp?id=1145&websitelink=artwebsite.jsp&parentpath=0,1,28"
+        },
+        {
+          "id": "fsc-deputy-1",
+          "name": "陳彥良",
+          "title": "副主任委員",
+          "photo": "photos/fsc-deputy-1.jpg",
+          "photoSource": "https://www.fsc.gov.tw/userfiles/image/chen.jpg",
+          "source": "https://www.fsc.gov.tw/ch/home.jsp?id=1146&websitelink=artwebsite.jsp&parentpath=0,1,28"
+        },
+        {
+          "id": "fsc-deputy-2",
+          "name": "莊琇媛",
+          "title": "副主任委員",
+          "photo": "photos/fsc-deputy-2.jpg",
+          "photoSource": "https://www.fsc.gov.tw/userfiles/image/chuang.jpg",
+          "source": "https://www.fsc.gov.tw/ch/home.jsp?id=1237&websitelink=artwebsite.jsp&parentpath=0,1,28"
+        }
+      ]
+    },
+    {
+      "id": "oac",
+      "name": "海洋委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.oac.gov.tw/",
+      "members": [
+        {
+          "id": "oac-head",
+          "name": "管碧玲",
+          "title": "主任委員",
+          "photo": "photos/oac-head.jpg",
+          "photoSource": "https://www.oac.gov.tw/userfiles/A47000000C/images/%E7%AE%A1%E4%B8%BB%E5%A7%94%E7%85%A7%E7%89%87.jpg",
+          "source": "https://www.oac.gov.tw/ch/home.jsp?id=435&parentpath=0,425,434"
+        },
+        {
+          "id": "oac-deputy-1",
+          "name": "張忠龍",
+          "title": "政務副主任委員",
+          "photo": "photos/oac-deputy-1.jpg",
+          "photoSource": "https://www.oac.gov.tw/userfiles/A47000000C/images/DeputyMinisterChangChung-Lung.jpg",
+          "source": "https://www.oac.gov.tw/ch/home.jsp?id=431&parentpath=0,425&mcustomize=onemessages_view.jsp&dataserno=202506250002"
+        },
+        {
+          "id": "oac-deputy-2",
+          "name": "宋承恩",
+          "title": "政務副主任委員",
+          "photo": "photos/oac-deputy-2.jpg",
+          "photoSource": "https://www.oac.gov.tw/userfiles/A47000000C/images/Sung%20Chen-En.jpg",
+          "source": "https://www.oac.gov.tw/ch/home.jsp?id=431&parentpath=0,425&mcustomize=onemessages_view.jsp&dataserno=202601300001"
+        },
+        {
+          "id": "oac-deputy-3",
+          "name": "吳欣修",
+          "title": "常務副主任委員",
+          "photo": "photos/oac-deputy-3.jpg",
+          "photoSource": "https://www.oac.gov.tw/userfiles/A47000000C/images/WU%20HSINHSOU-1.png",
+          "source": "https://www.oac.gov.tw/ch/home.jsp?id=431&parentpath=0,425&mcustomize=onemessages_view.jsp&dataserno=202601150001"
+        }
+      ]
+    },
+    {
+      "id": "ocac",
+      "name": "僑務委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.ocac.gov.tw/",
+      "members": [
+        {
+          "id": "ocac-head",
+          "name": "李姸慧",
+          "title": "代理委員長",
+          "photo": "photos/ocac-head.jpg",
+          "photoSource": "https://www.ocac.gov.tw/ocac/File/PageUpload/LEE-2025.jpg",
+          "source": "https://www.ocac.gov.tw/OCAC/Pages/Detail.aspx?nodeid=555&pid=78817233"
+        },
+        {
+          "id": "ocac-deputy-1",
+          "name": "賴麗瑩",
+          "title": "副委員長",
+          "photo": "photos/ocac-deputy-1.jpg",
+          "photoSource": "https://www.ocac.gov.tw/ocac/File/PageUpload/Lai-Li-Ying.jpg",
+          "source": "https://www.ocac.gov.tw/OCAC/Pages/Detail.aspx?nodeid=555&pid=88022150"
+        }
+      ]
+    },
+    {
+      "id": "vac",
+      "name": "國軍退除役官兵輔導委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.vac.gov.tw/",
+      "members": [
+        {
+          "id": "vac-head",
+          "name": "嚴德發",
+          "title": "主任委員",
+          "photo": "photos/vac-head.jpg",
+          "photoSource": "https://www.vac.gov.tw/Public/Images/202405/4132405231731d6dff.jpg",
+          "source": "https://www.vac.gov.tw/np-1781-1.html"
+        },
+        {
+          "id": "vac-deputy-1",
+          "name": "陳進廣",
+          "title": "副主任委員",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.vac.gov.tw/cp-1788-197489-1.html"
+        },
+        {
+          "id": "vac-deputy-2",
+          "name": "吳志揚",
+          "title": "副主任委員",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://udn.com/news/story/7324/9604056"
+        }
+      ]
+    },
+    {
+      "id": "cip",
+      "name": "原住民族委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.cip.gov.tw/",
+      "members": [
+        {
+          "id": "cip-head",
+          "name": "曾智勇",
+          "title": "主任委員",
+          "photo": "photos/cip-head.jpg",
+          "photoSource": "https://www.cip.gov.tw/data/site-menu/202601/T-24712872.jpg?s=8227EAF0ED245CB0&c=6778A139166614298CAE9F849139011B&t=in",
+          "source": "https://www.cip.gov.tw/zh-tw/menu/data-list/80A47B1EC7BF5A12-info.html?cumid=80A47B1EC7BF5A12"
+        },
+        {
+          "id": "cip-deputy-1",
+          "name": "谷縱‧喀勒芳安",
+          "title": "政務副主任委員",
+          "photo": "photos/cip-deputy-1.jpg",
+          "photoSource": "https://www.cip.gov.tw/data/site-menu/202306/T-33692885.jpg?s=0C3861ABC5B6EAD2&c=FDD7A99019E27D5057B6A5BF47B9A1B4&t=in",
+          "source": "https://www.cip.gov.tw/zh-tw/menu/data-list/6FBA1532FBD63C7E-info.html?cumid=6FBA1532FBD63C7E"
+        },
+        {
+          "id": "cip-deputy-2",
+          "name": "陳義信",
+          "title": "政務副主任委員",
+          "photo": "photos/cip-deputy-2.jpg",
+          "photoSource": "https://www.cip.gov.tw/data/site-menu/202509/T-51807964.jpg?s=0EAC80D6DE801FC1&c=27A0BEE80377C8D1BD9343358A6F3285&t=in",
+          "source": "https://www.cip.gov.tw/zh-tw/menu/data-list/B54B5C7E1E0F99401880DE686243BCC3-info.html?cumid=B54B5C7E1E0F99401880DE686243BCC3"
+        },
+        {
+          "id": "cip-deputy-3",
+          "name": "杜張梅莊",
+          "title": "常務副主任委員",
+          "photo": "photos/cip-deputy-3.jpg",
+          "photoSource": "https://www.cip.gov.tw/data/site-menu/202405/T-65575597.jpg?s=6B05357DDD3398E6&c=911CD6CEF9913E0CB3BDF0611320318E&t=in",
+          "source": "https://www.cip.gov.tw/zh-tw/menu/data-list/B54B5C7E1E0F9940F3B421BEA0E2D848-info.html?cumid=B54B5C7E1E0F9940F3B421BEA0E2D848"
+        }
+      ]
+    },
+    {
+      "id": "hakka",
+      "name": "客家委員會",
+      "parent": "ey",
+      "group": "委員會",
+      "url": "https://www.hakka.gov.tw/",
+      "members": [
+        {
+          "id": "hakka-head",
+          "name": "古秀妃",
+          "title": "主任委員",
+          "photo": "photos/hakka-head.jpg",
+          "photoSource": "https://www.hakka.gov.tw/userfiles/image/2024_07_09_0000001_1.jpg",
+          "source": "https://www.hakka.gov.tw/chhakka/app/artwebsite?module=artwebsite&id=54&serno=null"
+        },
+        {
+          "id": "hakka-deputy-1",
+          "name": "廖育珮",
+          "title": "常務副主任委員",
+          "photo": "photos/hakka-deputy-1.jpg",
+          "photoSource": "https://www.hakka.gov.tw/userfiles/image/%E5%9C%96%E7%89%871.jpg",
+          "source": "https://www.hakka.gov.tw/chhakka/app/artwebsite?module=artwebsite&id=351&serno=null"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "orgchart",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gov-tw/tokens": "workspace:*",
+    "@gov-tw/web-components": "workspace:*",
+    "konva": "^10.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5"
+  }
+}

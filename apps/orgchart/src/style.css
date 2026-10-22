@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background: var(--govtw-color-bg-canvas);
+  color: var(--govtw-color-text-primary);
+  font-family: var(--govtw-font-sans);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--govtw-spacing-3);
+  padding: var(--govtw-spacing-3) var(--govtw-spacing-4);
+  background: var(--govtw-color-bg-surface);
+  border-bottom: 1px solid var(--govtw-color-border-subtle);
+}
+
+.bar h1 {
+  margin: 0;
+  font-size: var(--govtw-font-size-lg);
+}
+
+.bar p {
+  margin: var(--govtw-spacing-1) 0 0;
+  font-size: var(--govtw-font-size-sm);
+  color: var(--govtw-color-text-secondary);
+}
+
+.bar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--govtw-spacing-2);
+}
+
+#chart {
+  height: calc(100dvh - 88px);
+  min-height: 420px;
+  /* 讓 canvas 接手觸控手勢（拖曳、雙指縮放） */
+  touch-action: none;
+  cursor: grab;
+}
+
+#chart:active {
+  cursor: grabbing;
+}
+
+.text-list,
+.note {
+  margin: 0;
+  padding: var(--govtw-spacing-4);
+  border-top: 1px solid var(--govtw-color-border-subtle);
+}
+
+.text-list summary {
+  cursor: pointer;
+  font-weight: var(--govtw-font-weight-bold);
+}
+
+.text-list a {
+  color: var(--govtw-color-link-default);
+}
+
+.note {
+  font-size: var(--govtw-font-size-sm);
+  color: var(--govtw-color-text-secondary);
+}

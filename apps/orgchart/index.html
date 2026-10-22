@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-TW" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>中央政府首長組織圖</title>
+  </head>
+  <body>
+    <header class="bar">
+      <div class="bar-title">
+        <h1>中央政府首長組織圖</h1>
+        <p>資料日期 <span id="as-of"></span>，共 <span id="count"></span> 人。點照片開啟官網介紹頁。</p>
+      </div>
+      <div class="bar-actions">
+        <govtw-button size="sm" variant="secondary" data-action="zoom-out" aria-label="縮小">－</govtw-button>
+        <govtw-button size="sm" variant="secondary" data-action="zoom-in" aria-label="放大">＋</govtw-button>
+        <govtw-button size="sm" variant="secondary" data-action="fit">全部顯示</govtw-button>
+        <govtw-button size="sm" data-action="download">下載圖片</govtw-button>
+      </div>
+    </header>
+
+    <main>
+      <div id="chart" role="img" aria-label="中央政府首長組織圖，文字版名單在下方"></div>
+
+      <details class="text-list">
+        <summary>文字版名單</summary>
+        <ul id="list"></ul>
+      </details>
+
+      <p class="note">
+        姓名、職稱與照片取自各機關官網首長介紹頁，可能未即時反映人事異動，以各機關官網為準。本頁為非官方示範。
+      </p>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
