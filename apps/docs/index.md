@@ -40,6 +40,12 @@ features:
 - [行政院](https://govtw-showcase.vercel.app/ey/)
 - [我的E政府](https://govtw-showcase.vercel.app/egov/)
 
+## 中央政府首長組織圖
+
+以 Canvas 繪製的中央政府組織圖，從總統府、五院列到行政院所屬三級機關，以及大法官、考試委員、立法委員，每位首長附照片與官網介紹頁連結。資料取自各機關官網（2026-10-23），為非官方示範，以各機關官網為準。
+
+- [前往組織圖](https://govtw-orgchart.rei-devbx.workers.dev/)
+
 ## 參考
 
 本設計系統參考其他國家的政府設計系統，以及以 Web Components 實作的元件庫。詳見[參考](/resources/references)。
