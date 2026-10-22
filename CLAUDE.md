@@ -38,11 +38,14 @@ pnpm workspace monorepo，分為 `apps/`（應用）與 `packages/`（共用套�
 - **`packages/tokens`** — 設計 Token 的單一來源（`tokens.json` → `tokens.css` / `tailwind.css`）
 - **`packages/web-components`** — Lit 3 Web Components，每個元件一個檔案
 - **`apps/docs`** — VitePress 文件站台，元件頁面含 live demo
+- **`apps/showcase`** — Astro 政府網站重構示範，每站一個資料夾（`src/sites/<站>/` + `src/pages/<站>/`），主題只在該站載入，不修改 `packages/`
 
 ## 指令
 
 ```bash
 pnpm dev             # 文件站台 dev server
+pnpm dev:showcase    # 網站重構示範 dev server
+pnpm build:showcase  # 建置網站重構示範
 pnpm build           # 建置所有套件 + 文件站台
 pnpm build:tokens    # 重建 token 產出檔
 pnpm build:previews  # 從 md 重生 preview HTML

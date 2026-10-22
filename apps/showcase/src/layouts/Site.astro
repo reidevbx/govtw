@@ -1,0 +1,44 @@
+---
+import Document from './Document.astro'
+import type { SiteConfig } from '../sites/types'
+
+interface Props {
+  site: SiteConfig
+  title: string
+  current?: string
+}
+
+const { site, title, current } = Astro.props
+---
+<Document title={`${title}｜${site.name}（設計示範）`}>
+  <govtw-skip-link href="#main-content"></govtw-skip-link>
+  <p class="site-demo-banner">設計示範，非{site.name}官方網站。內容皆為示範資料。<a href="/">回示範總覽</a></p>
+  <govtw-header>
+    <govtw-accesskey key="U" label="上方功能區塊"></govtw-accesskey>
+    <a slot="logo" href={`${site.base}/`}>{site.name}</a>
+    <span slot="service-name">{site.serviceName}</span>
+    <govtw-search slot="tools" action={site.searchAction} label="搜尋本網站" hide-label></govtw-search>
+    <govtw-service-navigation slot="navigation">
+      {site.nav.map((item) => (
+        <a href={item.href} aria-current={current === item.key ? 'page' : undefined}>{item.label}</a>
+      ))}
+    </govtw-service-navigation>
+  </govtw-header>
+
+  <slot name="hero" />
+
+  <main id="main-content">
+    <govtw-container>
+      <slot />
+    </govtw-container>
+  </main>
+
+  <govtw-footer>
+    <govtw-accesskey key="Z" label="下方功能區塊"></govtw-accesskey>
+    <address slot="contact">{site.footer.contact}</address>
+    <govtw-cluster slot="meta" space="4">
+      {site.footer.links.map((l) => <govtw-link href={l.href}>{l.label}</govtw-link>)}
+    </govtw-cluster>
+    <p slot="updated">更新日期：<time datetime={site.footer.updated}>{site.footer.updated}</time></p>
+  </govtw-footer>
+</Document>

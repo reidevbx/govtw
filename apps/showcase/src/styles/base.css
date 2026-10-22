@@ -1,0 +1,71 @@
+/* showcase 共用版面
+ *
+ * 所有示範網站共用。只用 Semantic / Component token 與 --site-* token，不直接用 Primitive。
+ * --site-* 的預設值在這裡定義，各站在 src/sites/<站>/theme.css 覆寫。
+ */
+
+:root {
+  --site-hero-bg: var(--govtw-color-brand-primary);
+  --site-hero-color: var(--govtw-color-text-on-primary);
+  --site-section-gap: var(--govtw-spacing-12);
+  --site-demo-banner-bg: var(--govtw-color-bg-neutral);
+}
+
+body {
+  margin: 0;
+  background: var(--govtw-color-bg-canvas);
+}
+
+main {
+  display: block;
+  padding-block: var(--govtw-spacing-8) var(--site-section-gap);
+}
+
+a {
+  color: var(--govtw-color-link-default);
+}
+
+.site-demo-banner {
+  margin: 0;
+  padding: var(--govtw-spacing-2) var(--govtw-spacing-4);
+  background: var(--site-demo-banner-bg);
+  color: var(--govtw-color-text-primary);
+  font-size: var(--govtw-font-size-sm);
+  text-align: center;
+}
+
+.site-hero {
+  background: var(--site-hero-bg);
+  color: var(--site-hero-color);
+  padding-block: var(--govtw-spacing-12);
+}
+.site-hero h1,
+.site-hero p {
+  color: inherit;
+}
+.site-hero p {
+  font-size: var(--govtw-font-size-lg);
+  margin-bottom: var(--govtw-spacing-6);
+}
+
+.site-section + .site-section {
+  margin-top: var(--site-section-gap);
+}
+
+.site-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--govtw-spacing-4);
+}
+
+.site-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--govtw-spacing-4);
+}
+
+.site-meta {
+  color: var(--govtw-color-text-secondary);
+  font-size: var(--govtw-font-size-sm);
+}

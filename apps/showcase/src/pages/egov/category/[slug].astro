@@ -1,0 +1,51 @@
+---
+import Layout from '../../../sites/egov/Layout.astro'
+import { categories, groups, type Category } from '../../../sites/egov/data/categories'
+import { services } from '../../../sites/egov/data/services'
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { slug: category.slug }, props: { category } }))
+}
+
+const { category } = Astro.props as { category: Category }
+const siblings = categories.filter((c) => c.group === category.group)
+const items = services.filter((s) => s.category === category.slug)
+---
+<Layout title={category.name} current={category.group}>
+  <govtw-stack space="6">
+    <govtw-breadcrumbs>
+      <a href="/egov/">首頁</a>
+      <a href={`/egov/category/${siblings[0].slug}/`}>{groups[category.group]}</a>
+      <span>{category.name}</span>
+    </govtw-breadcrumbs>
+    <govtw-sidebar side="left" side-width="14rem" space="8">
+      <govtw-side-navigation label={`${groups[category.group]}選單`}>
+        <ul>
+          {siblings.map((c) => (
+            <li><a href={`/egov/category/${c.slug}/`} aria-current={c.slug === category.slug ? 'page' : undefined}>{c.name}</a></li>
+          ))}
+        </ul>
+      </govtw-side-navigation>
+      <div>
+        <govtw-stack space="6">
+          <h1>{category.name}</h1>
+          <p>{category.description}</p>
+          <govtw-cluster space="2">
+            {category.tags.map((t) => <govtw-tag color="blue">#{t}</govtw-tag>)}
+          </govtw-cluster>
+          {items.length > 0 ? (
+            <div class="site-card-grid">
+              {items.map((s) => (
+                <govtw-card heading={s.name} href={`/egov/services/${s.id}/`}>
+                  <p>{s.summary}</p>
+                </govtw-card>
+              ))}
+            </div>
+          ) : (
+            <govtw-inset-text><p>（示範）此分類尚無示範服務。</p></govtw-inset-text>
+          )}
+        </govtw-stack>
+      </div>
+    </govtw-sidebar>
+  </govtw-stack>
+</Layout>

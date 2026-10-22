@@ -1,0 +1,39 @@
+---
+import Layout from '../../sites/ey/Layout.astro'
+---
+<Layout title="關於本院" current="about">
+  <govtw-stack space="6">
+    <govtw-breadcrumbs>
+      <a href="/ey/">首頁</a>
+      <span>關於本院</span>
+    </govtw-breadcrumbs>
+    <govtw-sidebar side="left" side-width="14rem" space="8">
+      <govtw-side-navigation label="關於本院選單">
+        <ul>
+          <li><a href="/ey/about/" aria-current="page">本院簡介</a></li>
+          <li><a href="/ey/about/">組織架構</a></li>
+          <li><a href="/ey/about/">歷任院長</a></li>
+        </ul>
+      </govtw-side-navigation>
+      <div>
+        <govtw-stack space="6">
+          <h1>本院簡介</h1>
+          <govtw-contents-list>
+            <ol>
+              <li><a href="#role">一、職權</a></li>
+              <li><a href="#organization">二、組織</a></li>
+              <li><a href="#contact">三、聯絡資訊</a></li>
+            </ol>
+          </govtw-contents-list>
+          <h2 id="role">一、職權</h2>
+          <p>（示範內文）行政院為國家最高行政機關，依憲法規定行使職權。</p>
+          <h2 id="organization">二、組織</h2>
+          <p>（示範內文）本院設院長、副院長各一人，政務委員若干人，並設各部會。</p>
+          <h2 id="contact">三、聯絡資訊</h2>
+          <p>（示範內文）聯絡資訊為示範資料。</p>
+          <govtw-page-tools></govtw-page-tools>
+        </govtw-stack>
+      </div>
+    </govtw-sidebar>
+  </govtw-stack>
+</Layout>

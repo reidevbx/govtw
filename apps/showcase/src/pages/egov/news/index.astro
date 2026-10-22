@@ -1,0 +1,20 @@
+---
+import Layout from '../../../sites/egov/Layout.astro'
+import { news } from '../../../sites/egov/data/news'
+---
+<Layout title="資訊快遞" current="news">
+  <govtw-stack space="6">
+    <govtw-breadcrumbs>
+      <a href="/egov/">首頁</a>
+      <span>資訊快遞</span>
+    </govtw-breadcrumbs>
+    <h1>資訊快遞</h1>
+    <govtw-document-list>
+      {news.map((item) => (
+        <govtw-document-list-item heading={item.title} href="/egov/news/" date={item.date} unit={item.unit}>
+          {item.tag && <govtw-tag slot="tags" color={item.tag.color}>{item.tag.label}</govtw-tag>}
+        </govtw-document-list-item>
+      ))}
+    </govtw-document-list>
+  </govtw-stack>
+</Layout>

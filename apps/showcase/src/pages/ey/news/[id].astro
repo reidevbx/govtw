@@ -1,0 +1,30 @@
+---
+import Layout from '../../../sites/ey/Layout.astro'
+import { news, type NewsItem } from '../../../sites/ey/data/news'
+
+export function getStaticPaths() {
+  return news.map((item) => ({ params: { id: item.id }, props: { item } }))
+}
+
+const { item } = Astro.props as { item: NewsItem }
+---
+<Layout title={item.title} current="news">
+  <govtw-stack space="6">
+    <govtw-breadcrumbs>
+      <a href="/ey/">首頁</a>
+      <a href="/ey/news/">新聞與公告</a>
+      <span>{item.title}</span>
+    </govtw-breadcrumbs>
+    <article>
+      <govtw-stack space="4">
+        <h1>{item.title}</h1>
+        <p class="site-meta">
+          發布日期：<time datetime={item.date}>{item.date}</time>｜發布單位：{item.unit}
+        </p>
+        {item.body.map((p) => <p>{p}</p>)}
+      </govtw-stack>
+    </article>
+    <govtw-back-link href="/ey/news/">回新聞列表</govtw-back-link>
+    <govtw-page-tools></govtw-page-tools>
+  </govtw-stack>
+</Layout>

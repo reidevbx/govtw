@@ -1,0 +1,26 @@
+/* 行政院（示範）主題
+ *
+ * 只由 src/sites/ey/Layout.astro 引入，只在 /ey/ 頁面載入。
+ * 這是 token 層：覆寫 Semantic / Component / --site-* token，等同自訂主題，可引用 Primitive。
+ * 主題色 teal 為示範佔位，需依行政院識別規範調整。
+ */
+
+:root {
+  --govtw-color-brand-primary: var(--govtw-primitive-color-teal-9);
+  --govtw-color-link-default: var(--govtw-primitive-color-teal-9);
+  --govtw-button-primary-bg: var(--govtw-primitive-color-teal-8);
+  --govtw-search-button-bg: var(--govtw-primitive-color-teal-8);
+}
+
+/* 暗色：選擇器與 tokens.css 的 dark 主題一致 */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --govtw-color-brand-primary: var(--govtw-primitive-color-teal-6);
+    --govtw-color-link-default: var(--govtw-primitive-color-teal-6);
+  }
+}
+[data-theme="dark"],
+.dark {
+  --govtw-color-brand-primary: var(--govtw-primitive-color-teal-6);
+  --govtw-color-link-default: var(--govtw-primitive-color-teal-6);
+}

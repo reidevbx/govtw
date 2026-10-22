@@ -1,0 +1,46 @@
+---
+import Layout from '../../../sites/egov/Layout.astro'
+import { categories, groups } from '../../../sites/egov/data/categories'
+import { services, type Service } from '../../../sites/egov/data/services'
+
+export function getStaticPaths() {
+  return services.map((service) => ({ params: { id: service.id }, props: { service } }))
+}
+
+const { service } = Astro.props as { service: Service }
+const category = categories.find((c) => c.slug === service.category)!
+const rows = [
+  ['辦理機關', service.agency],
+  ['申辦方式', service.method],
+  ['費用', service.fee],
+  ['處理時間', service.duration],
+]
+---
+<Layout title={service.name} current={category.group}>
+  <govtw-stack space="6">
+    <govtw-breadcrumbs>
+      <a href="/egov/">首頁</a>
+      <a href={`/egov/category/${category.slug}/`}>{groups[category.group]}：{category.name}</a>
+      <span>{service.name}</span>
+    </govtw-breadcrumbs>
+    <h1>{service.name}</h1>
+    <p>{service.summary}</p>
+    <govtw-summary-list>
+      <dl>
+        {rows.map(([k, v]) => (
+          <div>
+            <dt>{k}</dt>
+            <dd>{v}</dd>
+          </div>
+        ))}
+      </dl>
+    </govtw-summary-list>
+    <h2>申辦步驟</h2>
+    <ol>
+      {service.steps.map((step) => <li>{step}</li>)}
+    </ol>
+    <govtw-warning-text>（示範）本頁內容為示範資料，實際申辦規定請洽辦理機關。</govtw-warning-text>
+    {service.online && <govtw-button variant="start" href="/egov/">線上申辦</govtw-button>}
+    <govtw-back-link href={`/egov/category/${category.slug}/`}>回{category.name}</govtw-back-link>
+  </govtw-stack>
+</Layout>

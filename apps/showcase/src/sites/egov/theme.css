@@ -1,0 +1,41 @@
+/* 我的E政府（示範）主題
+ *
+ * 只由 src/sites/egov/Layout.astro 引入，只在 /egov/ 頁面載入。
+ * 這是 token 層：先定義站點原色（--egov-*，等同本站的 primitive），
+ * 再對應到 Semantic / Component / --site-* token。頁面與版面 CSS 不直接使用 --egov-*。
+ *
+ * 色碼取自 https://www.gov.tw/css/global.css（2026-10-22）。
+ * 原站藍綠色（H≈192、C≈0.07）與系統 teal（H170、C≥0.115）色相、彩度差距大，故不用系統 primitive。
+ */
+
+:root {
+  /* 站點原色 */
+  --egov-teal-900: #012928;  /* 深色：頁尾、深底 */
+  --egov-teal-700: #035a58;  /* 主色：白字對比 8.05 */
+  --egov-teal-400: #339e97;  /* 亮色：暗色模式主色 */
+  --egov-teal-50: #e2fefd;   /* 淺底 */
+
+  /* 對應 */
+  --govtw-color-brand-primary: var(--egov-teal-700);
+  --govtw-color-link-default: var(--egov-teal-700);
+  --govtw-button-primary-bg: var(--egov-teal-700);
+  --govtw-search-button-bg: var(--egov-teal-700);
+
+  --site-hero-bg: var(--egov-teal-50);
+  --site-hero-color: var(--govtw-color-text-primary);
+}
+
+/* 暗色：選擇器與 tokens.css 的 dark 主題一致；按鈕底色固定，不需覆寫 */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --govtw-color-brand-primary: var(--egov-teal-400);
+    --govtw-color-link-default: var(--egov-teal-400);
+    --site-hero-bg: var(--egov-teal-900);
+  }
+}
+[data-theme="dark"],
+.dark {
+  --govtw-color-brand-primary: var(--egov-teal-400);
+  --govtw-color-link-default: var(--egov-teal-400);
+  --site-hero-bg: var(--egov-teal-900);
+}

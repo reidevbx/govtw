@@ -1,0 +1,70 @@
+---
+import Layout from '../../sites/egov/Layout.astro'
+import { categories, groups } from '../../sites/egov/data/categories'
+import { services, recommended } from '../../sites/egov/data/services'
+import { news } from '../../sites/egov/data/news'
+
+const recommendedServices = recommended
+  .map((id) => services.find((s) => s.id === id))
+  .filter((s) => s !== undefined)
+---
+<Layout title="首頁" current="home">
+  <section slot="hero" class="site-hero">
+    <govtw-container>
+      <govtw-stack space="4">
+        <h1>我的E政府</h1>
+        <p>（示範）一站找到政府服務：依人生階段或生活需求查詢申辦方式。</p>
+        <govtw-search action="/egov/" label="找服務"></govtw-search>
+      </govtw-stack>
+    </govtw-container>
+  </section>
+
+  <govtw-stack space="12">
+    <govtw-notification-banner heading="系統公告">
+      <p>（示範）本網站將於週六 00:00–06:00 進行系統維護，期間暫停部分線上服務。</p>
+    </govtw-notification-banner>
+
+    <section>
+      <h2>依需求找服務</h2>
+      <govtw-tabs label="服務分類">
+        {(Object.keys(groups) as (keyof typeof groups)[]).map((g) => (
+          <section data-label={groups[g]}>
+            <h3 class="govtw-visually-hidden">{groups[g]}</h3>
+            <div class="site-card-grid">
+              {categories.filter((c) => c.group === g).map((c) => (
+                <govtw-card heading={c.name} href={`/egov/category/${c.slug}/`}>
+                  <p>{c.description}</p>
+                </govtw-card>
+              ))}
+            </div>
+          </section>
+        ))}
+      </govtw-tabs>
+    </section>
+
+    <section>
+      <div class="site-section-heading">
+        <h2>資訊快遞</h2>
+        <govtw-link href="/egov/news/">更多資訊快遞</govtw-link>
+      </div>
+      <govtw-document-list>
+        {news.slice(0, 3).map((item) => (
+          <govtw-document-list-item heading={item.title} href="/egov/news/" date={item.date} unit={item.unit}>
+            {item.tag && <govtw-tag slot="tags" color={item.tag.color}>{item.tag.label}</govtw-tag>}
+          </govtw-document-list-item>
+        ))}
+      </govtw-document-list>
+    </section>
+
+    <section>
+      <h2>推薦服務</h2>
+      <div class="site-card-grid">
+        {recommendedServices.map((s) => (
+          <govtw-card heading={s.name} href={`/egov/services/${s.id}/`}>
+            <p>{s.summary}</p>
+          </govtw-card>
+        ))}
+      </div>
+    </section>
+  </govtw-stack>
+</Layout>

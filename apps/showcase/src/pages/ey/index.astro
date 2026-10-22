@@ -1,0 +1,46 @@
+---
+import Layout from '../../sites/ey/Layout.astro'
+import { news } from '../../sites/ey/data/news'
+
+const latest = news.slice(0, 3)
+const services = [
+  { heading: '施政重點', href: '/ey/about/', text: '本院年度施政方針與重點計畫。' },
+  { heading: '院會決議', href: '/ey/news/', text: '每週院會通過的法案與政策。' },
+  { heading: '資訊公開', href: '/ey/about/', text: '預算、決算與政府資訊公開專區。' },
+  { heading: '首長信箱', href: '/ey/about/', text: '向本院提出意見與陳情。' },
+]
+---
+<Layout title="首頁" current="home">
+  <section slot="hero" class="site-hero">
+    <govtw-container>
+      <h1>行政院</h1>
+      <p>（示範）提供施政資訊、院會決議與政府資訊公開。</p>
+      <govtw-button variant="secondary" href="/ey/news/">查看最新新聞</govtw-button>
+    </govtw-container>
+  </section>
+
+  <section class="site-section">
+    <div class="site-section-heading">
+      <h2>最新新聞</h2>
+      <govtw-link href="/ey/news/">更多新聞</govtw-link>
+    </div>
+    <govtw-document-list>
+      {latest.map((item) => (
+        <govtw-document-list-item heading={item.title} href={`/ey/news/${item.id}/`} date={item.date} unit={item.unit}>
+          {item.tag && <govtw-tag slot="tags" color={item.tag.color}>{item.tag.label}</govtw-tag>}
+        </govtw-document-list-item>
+      ))}
+    </govtw-document-list>
+  </section>
+
+  <section class="site-section">
+    <h2>常用服務</h2>
+    <div class="site-card-grid">
+      {services.map((s) => (
+        <govtw-card heading={s.heading} href={s.href}>
+          <p>{s.text}</p>
+        </govtw-card>
+      ))}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import Layout from '../../../sites/ey/Layout.astro'
+import { news } from '../../../sites/ey/data/news'
+---
+<Layout title="新聞與公告" current="news">
+  <govtw-stack space="6">
+    <govtw-breadcrumbs>
+      <a href="/ey/">首頁</a>
+      <span>新聞與公告</span>
+    </govtw-breadcrumbs>
+    <h1>新聞與公告</h1>
+    <govtw-document-list>
+      {news.map((item) => (
+        <govtw-document-list-item heading={item.title} href={`/ey/news/${item.id}/`} date={item.date} unit={item.unit}>
+          {item.tag && <govtw-tag slot="tags" color={item.tag.color}>{item.tag.label}</govtw-tag>}
+        </govtw-document-list-item>
+      ))}
+    </govtw-document-list>
+    <govtw-pagination total="1" current="1" href-template="?page={n}"></govtw-pagination>
+  </govtw-stack>
+</Layout>

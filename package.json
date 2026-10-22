@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter docs dev",
+    "dev:showcase": "pnpm --filter showcase dev",
     "build": "pnpm build:tokens && pnpm --filter @gov-tw/web-components build && pnpm sync:public && pnpm build:previews && pnpm --filter docs build",
+    "build:showcase": "pnpm --filter showcase build",
     "build:tokens": "pnpm --filter @gov-tw/tokens build",
     "build:components": "pnpm --filter @gov-tw/web-components build",
     "build:previews": "node scripts/build-previews.mjs",

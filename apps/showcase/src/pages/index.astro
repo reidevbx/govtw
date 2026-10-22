@@ -1,0 +1,66 @@
+---
+import Document from '../layouts/Document.astro'
+import { site as ey } from '../sites/ey/site'
+import { pageGroups as eyPages } from '../sites/ey/pages'
+import { site as egov } from '../sites/egov/site'
+import { pageGroups as egovPages } from '../sites/egov/pages'
+
+const sites = [
+  { config: ey, description: '院會決議、新聞與公告、施政資訊。', groups: eyPages },
+  { config: egov, description: '依人生大事與日常生活查詢政府服務。', groups: egovPages },
+]
+const count = (groups: typeof eyPages) => groups.reduce((n, g) => n + g.pages.length, 0)
+---
+<Document title="網站重構示範｜gov.tw Design System">
+  <main id="main-content">
+    <govtw-container>
+      <govtw-stack space="12">
+        <govtw-stack space="6">
+          <h1>網站重構示範</h1>
+          <p>以 gov.tw Design System 重構的政府網站示範。所有內容皆為示範資料，非各機關官方網站。</p>
+          <govtw-contents-list>
+            <ol>
+              {sites.map(({ config, groups }) => (
+                <li><a href={`#${config.base.slice(1)}`}>{config.name}（{count(groups)} 頁）</a></li>
+              ))}
+            </ol>
+          </govtw-contents-list>
+        </govtw-stack>
+
+        {sites.map(({ config, description, groups }) => (
+          <section id={config.base.slice(1)}>
+            <govtw-stack space="4">
+              <h2>{config.name}</h2>
+              <p>{description}</p>
+              <govtw-cluster space="4">
+                <govtw-button href={`${config.base}/`}>進入示範</govtw-button>
+                <govtw-link href={config.origin} target="_blank">原站</govtw-link>
+              </govtw-cluster>
+              <govtw-table>
+                <table>
+                  <caption>{config.name}重構頁面（{count(groups)} 頁）</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">頁面類型</th>
+                      <th scope="col">頁面</th>
+                      <th scope="col">網址</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {groups.flatMap((g) => g.pages.map((p) => (
+                      <tr>
+                        <td>{g.type}</td>
+                        <th scope="row"><a href={p.href}>{p.label}</a></th>
+                        <td><code>{p.href}</code></td>
+                      </tr>
+                    )))}
+                  </tbody>
+                </table>
+              </govtw-table>
+            </govtw-stack>
+          </section>
+        ))}
+      </govtw-stack>
+    </govtw-container>
+  </main>
+</Document>

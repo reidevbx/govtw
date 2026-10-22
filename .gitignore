@@ -12,8 +12,9 @@ apps/docs/public/tokens.css
 apps/docs/.vitepress/cache
 apps/docs/.vitepress/dist
 
-# Astro (legacy)
+# Astro
 apps/docs/.astro
+apps/showcase/.astro
 
 # Logs
 *.log

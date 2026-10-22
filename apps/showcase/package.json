@@ -1,0 +1,15 @@
+{
+  "name": "showcase",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@gov-tw/tokens": "workspace:*",
+    "@gov-tw/web-components": "workspace:*",
+    "astro": "^7.4.2"
+  }
+}
