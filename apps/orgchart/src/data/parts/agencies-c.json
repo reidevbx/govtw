@@ -1,0 +1,225 @@
+{
+  "units": [
+    {
+      "id": "ndc-naa",
+      "name": "國家發展委員會檔案管理局",
+      "parent": "ndc",
+      "group": null,
+      "url": "https://www.archives.gov.tw/",
+      "members": [
+        {
+          "id": "ndc-naa-head",
+          "name": "莊明芬",
+          "title": "局長",
+          "photo": "photos/ndc-naa-head.jpg",
+          "photoSource": "https://www.archives.gov.tw/wSite/public/Attachment/0/f1784095525815.jpg",
+          "source": "https://www.archives.gov.tw/tw/arctw/142.html"
+        }
+      ]
+    },
+    {
+      "id": "nstc-sipa",
+      "name": "國家科學及技術委員會新竹科學園區管理局",
+      "parent": "nstc",
+      "group": null,
+      "url": "https://www.sipa.gov.tw/",
+      "members": [
+        {
+          "id": "nstc-sipa-head",
+          "name": "胡世民",
+          "title": "局長",
+          "photo": "photos/nstc-sipa-head.jpg",
+          "photoSource": "https://www.sipa.gov.tw/showimage.jsp?file=staticpic/chief_1140602.jpg",
+          "source": "https://www.sipa.gov.tw/home.jsp?serno=201001210025&mserno=201001210023&menudata=ChineseMenu&contlink=content/about_2.jsp"
+        }
+      ]
+    },
+    {
+      "id": "nstc-ctsp",
+      "name": "國家科學及技術委員會中部科學園區管理局",
+      "parent": "nstc",
+      "group": null,
+      "url": "https://www.ctsp.gov.tw/",
+      "members": [
+        {
+          "id": "nstc-ctsp-head",
+          "name": "許茂新",
+          "title": "局長",
+          "photo": "photos/nstc-ctsp-head.jpg",
+          "photoSource": "https://www.ctsp.gov.tw/files/d39c6676-6542-4668-b566-f0f8b572d357.jpg",
+          "source": "https://www.ctsp.gov.tw/chinese/02-CTSP_Bureau/01-leader.aspx?v=1&fr=1012&no=1013"
+        }
+      ]
+    },
+    {
+      "id": "nstc-stsp",
+      "name": "國家科學及技術委員會南部科學園區管理局",
+      "parent": "nstc",
+      "group": null,
+      "url": "https://www.stsp.gov.tw/",
+      "members": [
+        {
+          "id": "nstc-stsp-head",
+          "name": "鄭秀絨",
+          "title": "局長",
+          "photo": "photos/nstc-stsp-head.jpg",
+          "photoSource": "https://www.stsp.gov.tw/STSIPA_UPLOAD/AboutUs/1720425034804.jpg",
+          "source": "https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=11"
+        }
+      ]
+    },
+    {
+      "id": "fsc-boba",
+      "name": "金融監督管理委員會銀行局",
+      "parent": "fsc",
+      "group": null,
+      "url": "https://www.banking.gov.tw/",
+      "members": [
+        {
+          "id": "fsc-boba-head",
+          "name": "童政彰",
+          "title": "局長",
+          "photo": "photos/fsc-boba-head.jpg",
+          "photoSource": "https://www.banking.gov.tw/userfiles/image/%E9%8A%80%E8%A1%8C%E5%B1%80%E7%AB%A5%E5%B1%80%E9%95%B7%E6%94%BF%E5%BD%B0%E7%85%A7%E7%89%87.jpeg",
+          "source": "https://www.banking.gov.tw/ch/home.jsp?id=526&parentpath=0,523"
+        }
+      ]
+    },
+    {
+      "id": "fsc-sfb",
+      "name": "金融監督管理委員會證券期貨局",
+      "parent": "fsc",
+      "group": null,
+      "url": "https://www.sfb.gov.tw/",
+      "members": [
+        {
+          "id": "fsc-sfb-head",
+          "name": "高晶萍",
+          "title": "局長",
+          "photo": "photos/fsc-sfb-head.jpg",
+          "photoSource": "http://www.fsc.gov.tw/fckdowndoc?file=/證期局高局長.png&flag=pic",
+          "source": "https://www.sfb.gov.tw/ch/home.jsp?id=1&parentpath=0"
+        }
+      ]
+    },
+    {
+      "id": "fsc-ib",
+      "name": "金融監督管理委員會保險局",
+      "parent": "fsc",
+      "group": null,
+      "url": "https://www.ib.gov.tw/",
+      "members": [
+        {
+          "id": "fsc-ib-head",
+          "name": "王麗惠",
+          "title": "局長",
+          "photo": "photos/fsc-ib-head.jpg",
+          "photoSource": "https://www.ib.gov.tw/userfiles/image/%E4%BF%9D%E9%9A%AA%E5%B1%80%E5%B1%80%E9%95%B7_%E7%8E%8B%E9%BA%97%E6%83%A0.jpg",
+          "source": "https://www.ib.gov.tw/ch/home.jsp?id=213&parentpath=0,1"
+        }
+      ]
+    },
+    {
+      "id": "fsc-feb",
+      "name": "金融監督管理委員會檢查局",
+      "parent": "fsc",
+      "group": null,
+      "url": "https://www.feb.gov.tw/",
+      "members": [
+        {
+          "id": "fsc-feb-head",
+          "name": "賴欣國",
+          "title": "局長",
+          "photo": "photos/fsc-feb-head.jpg",
+          "photoSource": "https://www.fsc.gov.tw/userfiles/image/Lai%2CShin-Kuo.JPG",
+          "source": "https://www.feb.gov.tw/ch/home.jsp?id=417&parentpath=0,1"
+        }
+      ]
+    },
+    {
+      "id": "oac-cga",
+      "name": "海洋委員會海巡署",
+      "parent": "oac",
+      "group": null,
+      "url": "https://www.cga.gov.tw/",
+      "members": [
+        {
+          "id": "oac-cga-head",
+          "name": "張忠龍",
+          "title": "署長",
+          "photo": "photos/oac-cga-head.jpg",
+          "photoSource": "https://www.oac.gov.tw/userfiles/A47000000C/images/DeputyMinisterChangChung-Lung.jpg",
+          "source": "https://www.oac.gov.tw/ch/home.jsp?id=431&parentpath=0,425&mcustomize=onemessages_view.jsp&dataserno=202506250002"
+        }
+      ]
+    },
+    {
+      "id": "oac-oca",
+      "name": "海洋委員會海洋保育署",
+      "parent": "oac",
+      "group": null,
+      "url": "https://www.oca.gov.tw/",
+      "members": [
+        {
+          "id": "oac-oca-head",
+          "name": "陸曉筠",
+          "title": "署長",
+          "photo": "photos/oac-oca-head.jpg",
+          "photoSource": "https://www.oca.gov.tw/userfiles/A47020000A/images/%E7%BD%B2%E9%95%B7%E7%85%A7%E7%89%87.jpg",
+          "source": "https://www.oca.gov.tw/ch/home.jsp?id=435&parentpath=0,300,431,433"
+        }
+      ]
+    },
+    {
+      "id": "oac-namr",
+      "name": "海洋委員會國家海洋研究院",
+      "parent": "oac",
+      "group": null,
+      "url": "https://www.namr.gov.tw/",
+      "members": [
+        {
+          "id": "oac-namr-head",
+          "name": "陳璋玲",
+          "title": "院長",
+          "photo": "photos/oac-namr-head.jpg",
+          "photoSource": "https://www.namr.gov.tw/userfiles/A47040000A/images/%E9%99%B3%E7%92%8B%E7%8E%B2%E9%99%A2%E9%95%B7.jpg",
+          "source": "https://www.namr.gov.tw/ch/home.jsp?id=279&parentpath=0,1,11&mcustomize=president2025.jsp&namrspeial=2"
+        }
+      ]
+    },
+    {
+      "id": "cip-ipcdc",
+      "name": "原住民族委員會原住民族文化發展中心",
+      "parent": "cip",
+      "group": null,
+      "url": "https://www.tacp.gov.tw/",
+      "members": [
+        {
+          "id": "cip-ipcdc-head",
+          "name": "邱黃肇崇",
+          "title": "主任",
+          "photo": "photos/cip-ipcdc-head.jpg",
+          "photoSource": "https://event.tacp.gov.tw/storage/leader-introduction/01K9FCEV785JVDYB0REAA14H4M.png",
+          "source": "https://www.tacp.gov.tw/about/about-leadership"
+        }
+      ]
+    },
+    {
+      "id": "hakka-hcdc",
+      "name": "客家委員會客家文化發展中心",
+      "parent": "hakka",
+      "group": null,
+      "url": "https://thcdc.hakka.gov.tw/",
+      "members": [
+        {
+          "id": "hakka-hcdc-head",
+          "name": "謝勝信",
+          "title": "主任",
+          "photo": "photos/hakka-hcdc-head.jpg",
+          "photoSource": "https://thcdc.hakka.gov.tw/media/4lwkht1z/hsiehshenghsin.jpg",
+          "source": "https://thcdc.hakka.gov.tw/12271/149637/12208/157223/post"
+        }
+      ]
+    }
+  ]
+}

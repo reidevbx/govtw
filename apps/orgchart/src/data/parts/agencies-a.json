@@ -1,0 +1,676 @@
+{
+  "units": [
+    {
+      "id": "moi-npa",
+      "name": "內政部警政署",
+      "parent": "moi",
+      "group": null,
+      "url": "https://www.npa.gov.tw/",
+      "members": [
+        {
+          "id": "moi-npa-head",
+          "name": "張榮興",
+          "title": "署長",
+          "photo": "photos/moi-npa-head.jpg",
+          "photoSource": "https://www.npa.gov.tw/userfiles/chnpa/images/20240523171952138.JPG",
+          "source": "https://www.npa.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=18890&serno=56a31935-252d-4a87-b41e-2e995b917d9b"
+        }
+      ]
+    },
+    {
+      "id": "moi-nfa",
+      "name": "內政部消防署",
+      "parent": "moi",
+      "group": null,
+      "url": "https://www.nfa.gov.tw/",
+      "members": [
+        {
+          "id": "moi-nfa-head",
+          "name": "蕭煥章",
+          "title": "署長",
+          "photo": "photos/moi-nfa-head.jpg",
+          "photoSource": "https://www.nfa.gov.tw/upload/ckfinder/images/minister.png",
+          "source": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=521"
+        }
+      ]
+    },
+    {
+      "id": "moi-nia",
+      "name": "內政部移民署",
+      "parent": "moi",
+      "group": null,
+      "url": "https://www.immigration.gov.tw/",
+      "members": [
+        {
+          "id": "moi-nia-head",
+          "name": "林宏恩",
+          "title": "署長",
+          "photo": "photos/moi-nia-head.jpg",
+          "photoSource": "https://www.immigration.gov.tw/media/111462/%E4%BB%A3%E7%90%86%E7%BD%B2%E9%95%B7%E6%9E%97%E5%AE%8F%E6%81%A9.png",
+          "source": "https://www.immigration.gov.tw/5385/5388/7172/390416/cp_news"
+        }
+      ]
+    },
+    {
+      "id": "moi-nlma",
+      "name": "內政部國土管理署",
+      "parent": "moi",
+      "group": null,
+      "url": "https://www.nlma.gov.tw/",
+      "members": [
+        {
+          "id": "moi-nlma-head",
+          "name": "蔡長展",
+          "title": "署長",
+          "photo": "photos/moi-nlma-head.jpg",
+          "photoSource": "https://ws.moi.gov.tw/001/Upload/400/relpic/11266/296476/cfa04142-8b88-4489-8206-34646121cce1.jpg",
+          "source": "https://www.moi.gov.tw/Occupation_Content.aspx?n=12260&_CSN=1777"
+        }
+      ]
+    },
+    {
+      "id": "moi-nps",
+      "name": "內政部國家公園署",
+      "parent": "moi",
+      "group": null,
+      "url": "https://www.nps.gov.tw/",
+      "members": [
+        {
+          "id": "moi-nps-head",
+          "name": "王成機",
+          "title": "署長",
+          "photo": "photos/moi-nps-head.jpg",
+          "photoSource": "https://ws.moi.gov.tw/001/Upload/400/relpic/11266/296477/2707ede0-22c0-4b32-91c0-deb4107e9ddb.jpg",
+          "source": "https://www.moi.gov.tw/Occupation_Content.aspx?n=12260&_CSN=5348"
+        }
+      ]
+    },
+    {
+      "id": "mofa-boca",
+      "name": "外交部領事事務局",
+      "parent": "mofa",
+      "group": null,
+      "url": "https://www.boca.gov.tw/",
+      "members": [
+        {
+          "id": "mofa-boca-head",
+          "name": "鄭正勇",
+          "title": "局長",
+          "photo": "photos/mofa-boca-head.jpg",
+          "photoSource": "https://www.boca.gov.tw/Public/Images/202507/3962507011041a9d9a.jpg",
+          "source": "https://www.boca.gov.tw/np-200-1.html"
+        }
+      ]
+    },
+    {
+      "id": "mnd-gpwd",
+      "name": "國防部政治作戰局",
+      "parent": "mnd",
+      "group": null,
+      "url": "https://gpwd.mnd.gov.tw/",
+      "members": [
+        {
+          "id": "mnd-gpwd-head",
+          "name": "史順文",
+          "title": "局長",
+          "photo": "photos/mnd-gpwd-head.jpg",
+          "photoSource": "https://gpwd.mnd.gov.tw/UserFiles/image/090109_%E5%A4%A7%E9%A0%AD%E7%85%A7.jpg",
+          "source": "https://gpwd.mnd.gov.tw/Publish.aspx?cnid=677"
+        }
+      ]
+    },
+    {
+      "id": "mnd-aa",
+      "name": "國防部軍備局",
+      "parent": "mnd",
+      "group": null,
+      "url": null,
+      "members": [
+        {
+          "id": "mnd-aa-head",
+          "name": "黃超政",
+          "title": "局長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.mnd.gov.tw/news/mnd/87227"
+        }
+      ]
+    },
+    {
+      "id": "mnd-cb",
+      "name": "國防部主計局",
+      "parent": "mnd",
+      "group": null,
+      "url": null,
+      "members": [],
+      "note": "查無現任資料"
+    },
+    {
+      "id": "mnd-mab",
+      "name": "國防部軍醫局",
+      "parent": "mnd",
+      "group": null,
+      "url": "https://mab.mnd.gov.tw/",
+      "members": [
+        {
+          "id": "mnd-mab-head",
+          "name": "陳元皓",
+          "title": "局長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://mab.mnd.gov.tw/page.aspx?path=2566"
+        }
+      ]
+    },
+    {
+      "id": "mnd-adma",
+      "name": "國防部全民防衛動員署",
+      "parent": "mnd",
+      "group": null,
+      "url": "https://adma.mnd.gov.tw/",
+      "members": [
+        {
+          "id": "mnd-adma-head",
+          "name": "廖建興",
+          "title": "署長",
+          "photo": "photos/mnd-adma-head.jpg",
+          "photoSource": "https://adma.mnd.gov.tw/files/web/191/contents/10000/7983/%E5%BB%96%E5%BB%BA%E8%88%88%E7%BD%B2%E9%95%B7.jpg",
+          "source": "https://adma.mnd.gov.tw/unit/10000/24"
+        }
+      ]
+    },
+    {
+      "id": "mof-nta",
+      "name": "財政部國庫署",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.nta.gov.tw/",
+      "members": [
+        {
+          "id": "mof-nta-head",
+          "name": "陳柏誠",
+          "title": "署長",
+          "photo": "photos/mof-nta-head.jpg",
+          "photoSource": "https://www.nta.gov.tw/getCKEditorImage?localFileName=/upload/content/image/nta_13_13/1705281556204_4071443561350717.jpg&portalUuid=c18ff4c219db40279d1632f1c29ec595",
+          "source": "https://www.nta.gov.tw/singlehtml/13"
+        }
+      ]
+    },
+    {
+      "id": "mof-dot",
+      "name": "財政部賦稅署",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.dot.gov.tw/",
+      "members": [
+        {
+          "id": "mof-dot-head",
+          "name": "樓美鐘",
+          "title": "署長",
+          "photo": "photos/mof-dot-head.jpg",
+          "photoSource": "https://www.dot.gov.tw/getCKEditorImage?localFileName=/upload/content/image/dot_202007060001_17/1784190798954_1672842392712482.jpg&portalUuid=dfa82556ff054406a764f69901e77268",
+          "source": "https://www.dot.gov.tw/singlehtml/ch_17"
+        }
+      ]
+    },
+    {
+      "id": "mof-ntbt",
+      "name": "財政部臺北國稅局",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.ntbt.gov.tw/",
+      "members": [
+        {
+          "id": "mof-ntbt-head",
+          "name": "李雅晶",
+          "title": "局長",
+          "photo": "photos/mof-ntbt-head.jpg",
+          "photoSource": "https://www.ntbt.gov.tw/getCKEditorImage?localFileName=%2Fupload%2Fcontent%2Fimage%2F9ca94c4af3764a8f95fde75e7563cf7b%2F1785481492059_1355322793745985.jpg&portalUuid=94d7f74ca8744dd4a86f292a8ef73a98",
+          "source": "https://www.ntbt.gov.tw/multiplehtml/29541bfcb0af469eb160687277b4d815"
+        }
+      ]
+    },
+    {
+      "id": "mof-ntbk",
+      "name": "財政部高雄國稅局",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.ntbk.gov.tw/",
+      "members": [
+        {
+          "id": "mof-ntbk-head",
+          "name": "許寧佑",
+          "title": "局長",
+          "photo": "photos/mof-ntbk-head.jpg",
+          "photoSource": "https://www.ntbk.gov.tw/getCKEditorImage?localFileName=%2Fupload%2Fcontent%2Fimage%2Fff40c708edf84823b17a730f7223e2cb%2F1774247099381_6698375891512481.png&portalUuid=6b8565feaf4b408bb40e815003acd7e5",
+          "source": "https://www.ntbk.gov.tw/multiplehtml/249197e92b4641fd81ff978a6399031a"
+        }
+      ]
+    },
+    {
+      "id": "mof-ntbna",
+      "name": "財政部北區國稅局",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.ntbna.gov.tw/",
+      "members": [
+        {
+          "id": "mof-ntbna-head",
+          "name": "翁培祐",
+          "title": "局長",
+          "photo": "photos/mof-ntbna-head.jpg",
+          "photoSource": "https://www.ntbna.gov.tw/getCKEditorImage?localFileName=%2Fupload%2Fcontent%2Fimage%2F25576d7231cc4f3c868f00272cdf0adb%2F1785458665582_8658789458311954.jpg&portalUuid=135e7105728f48d6a1425c5d0791cf2a",
+          "source": "https://www.ntbna.gov.tw/multiplehtml/6ed934c14115400f936cf01191beb7f0"
+        }
+      ]
+    },
+    {
+      "id": "mof-ntbca",
+      "name": "財政部中區國稅局",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.ntbca.gov.tw/",
+      "members": [
+        {
+          "id": "mof-ntbca-head",
+          "name": "倪麗心",
+          "title": "局長",
+          "photo": "photos/mof-ntbca-head.jpg",
+          "photoSource": "https://www.ntbca.gov.tw/getCKEditorImage?localFileName=%2Fupload%2Fcontent%2Fimage%2F444e6aef8f9545c68614775b90763f9c%2F1787799600164_7757896640443566.jpg&portalUuid=cc93edceec044364b6e97bd821572372",
+          "source": "https://www.ntbca.gov.tw/multiplehtml/0c7de7936e3146b29e636a3095f59a7b"
+        }
+      ]
+    },
+    {
+      "id": "mof-ntbsa",
+      "name": "財政部南區國稅局",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.ntbsa.gov.tw/",
+      "members": [
+        {
+          "id": "mof-ntbsa-head",
+          "name": "陳慧綺",
+          "title": "局長",
+          "photo": "photos/mof-ntbsa-head.jpg",
+          "photoSource": "https://www.ntbsa.gov.tw/getCKEditorImage?localFileName=/upload/content/image/eb87220e18884254b4905fdd57853b0e/1758261048630_8622119909202395.JPG&portalUuid=c2c5e39a792a425796135886abc7c72f",
+          "source": "https://www.ntbsa.gov.tw/singlehtml/cf6b164433784cbfaed717fc33949b90"
+        }
+      ]
+    },
+    {
+      "id": "mof-customs",
+      "name": "財政部關務署",
+      "parent": "mof",
+      "group": null,
+      "url": "https://web.customs.gov.tw/",
+      "members": [
+        {
+          "id": "mof-customs-head",
+          "name": "彭英偉",
+          "title": "署長",
+          "photo": "photos/mof-customs-head.jpg",
+          "photoSource": "https://web.customs.gov.tw/getCKEditorImage?localFileName=/upload/content/image/d77a83e91d7a40889b1d08cd8b0f2a59/1646883146860_4515190715589896.jpg&portalUuid=078bc2659020493ca83b7afc2f4cfe6b",
+          "source": "https://web.customs.gov.tw/link/3c323d8173c740bc80efcd6f35cf8a83"
+        }
+      ]
+    },
+    {
+      "id": "mof-fnp",
+      "name": "財政部國有財產署",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.fnp.gov.tw/",
+      "members": [
+        {
+          "id": "mof-fnp-head",
+          "name": "曾國基",
+          "title": "署長",
+          "photo": "photos/mof-fnp-head.jpg",
+          "photoSource": "https://www.fnp.gov.tw/FiaPortalAdmin/getCKEditorImage?localFileName=/upload/content/image/f0616b622e634f3eb424d394ea314221/1570081762172_3763984325232193.jpg&portalUuid=3c0f498b652f47b6932ad54884af744c",
+          "source": "https://www.fnp.gov.tw/singlehtml/7d29f276d90a49f8a4d49e65d6d8d301?cntId=f0616b622e634f3eb424d394ea314221"
+        }
+      ]
+    },
+    {
+      "id": "mof-fia",
+      "name": "財政部財政資訊中心",
+      "parent": "mof",
+      "group": null,
+      "url": "https://www.fia.gov.tw/",
+      "members": [
+        {
+          "id": "mof-fia-head",
+          "name": "張文熙",
+          "title": "主任",
+          "photo": "photos/mof-fia-head.jpg",
+          "photoSource": "https://www.fia.gov.tw/getCKEditorImage?localFileName=/upload/content/image/fia_56_56/1631263106363_3219683483733495.jpg&portalUuid=243b2bf837204fd38685f65650072504",
+          "source": "https://www.fia.gov.tw/singlehtml/56"
+        }
+      ]
+    },
+    {
+      "id": "moe-k12ea",
+      "name": "教育部國民及學前教育署",
+      "parent": "moe",
+      "group": null,
+      "url": "https://www.k12ea.gov.tw/",
+      "members": [
+        {
+          "id": "moe-k12ea-head",
+          "name": "彭富源",
+          "title": "署長",
+          "photo": "photos/moe-k12ea-head.jpg",
+          "photoSource": "https://www.k12ea.gov.tw/Tw/Common/ShowImg?fkfield=common_unit_id&fkid=c6f5f0c4-8652-404b-a8c7-a92aa969efbc&filename=pengfuyuan_s.jpg",
+          "source": "https://www.k12ea.gov.tw/Tw/Overview/ManagerDetail?filter=718D7EFF-5A3E-478B-86F8-9D8BB11F7B7B&id=c6f5f0c4-8652-404b-a8c7-a92aa969efbc"
+        }
+      ]
+    },
+    {
+      "id": "moe-yda",
+      "name": "教育部青年發展署",
+      "parent": "moe",
+      "group": null,
+      "url": "https://www.yda.gov.tw/",
+      "members": [
+        {
+          "id": "moe-yda-head",
+          "name": "陳雪玉",
+          "title": "署長",
+          "photo": "photos/moe-yda-head.jpg",
+          "photoSource": "https://www.yda.gov.tw/assets/images/chairmain.jpg",
+          "source": "https://www.yda.gov.tw/mainList.aspx?uid=75&pid=54"
+        }
+      ]
+    },
+    {
+      "id": "moj-mjib",
+      "name": "法務部調查局",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.mjib.gov.tw/",
+      "members": [
+        {
+          "id": "moj-mjib-head",
+          "name": "陳白立",
+          "title": "局長",
+          "photo": "photos/moj-mjib-head.jpg",
+          "photoSource": "https://www.mjib.gov.tw/userfiles/files/14-%E8%B3%87%E9%80%9A%E5%AE%89%E5%85%A8%E8%99%95/IMG_6408-3.jpg",
+          "source": "https://www.mjib.gov.tw/EditPage/?PageID=8493a027-12e4-468f-8cb7-0b5281e13b30"
+        }
+      ]
+    },
+    {
+      "id": "moj-aee",
+      "name": "法務部行政執行署",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.tpk.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-aee-head",
+          "name": "繆卓然",
+          "title": "署長",
+          "photo": "photos/moj-aee-head.jpg",
+          "photoSource": "https://www.tpk.moj.gov.tw/media/20613684/%E7%BD%B2%E9%95%B7%E7%85%A7%E7%89%871.jpeg",
+          "source": "https://www.tpk.moj.gov.tw/9539/9543/9545/107950/"
+        }
+      ]
+    },
+    {
+      "id": "moj-aac",
+      "name": "法務部廉政署",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.aac.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-aac-head",
+          "name": "謝名冠",
+          "title": "署長",
+          "photo": "photos/moj-aac-head.jpg",
+          "photoSource": "https://www.aac.moj.gov.tw/media/429023/img_2418.jpg",
+          "source": "https://www.aac.moj.gov.tw/6398/6400/6428/6430/1373264/post"
+        }
+      ]
+    },
+    {
+      "id": "moj-mjac",
+      "name": "法務部矯正署",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.mjac.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-mjac-head",
+          "name": "林憲銘",
+          "title": "署長",
+          "photo": "photos/moj-mjac-head.jpg",
+          "photoSource": "https://www.mjac.moj.gov.tw/media/20678863/%E6%9E%97%E6%86%B2%E9%8A%98.jpg",
+          "source": "https://www.mjac.moj.gov.tw/4786/4788/4796/92480/post"
+        }
+      ]
+    },
+    {
+      "id": "moj-tps",
+      "name": "最高檢察署",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.tps.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-tps-head",
+          "name": "徐錫祥",
+          "title": "代理檢察總長",
+          "photo": "photos/moj-tps-head.jpg",
+          "photoSource": "https://www.tps.moj.gov.tw/media/438701/%E5%9C%96%E7%89%871.jpg",
+          "source": "https://www.tps.moj.gov.tw/16314/16316/16318/957314/post"
+        }
+      ]
+    },
+    {
+      "id": "moj-tph",
+      "name": "臺灣高等檢察署",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.tph.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-tph-head",
+          "name": "張斗輝",
+          "title": "檢察長",
+          "photo": "photos/moj-tph-head.jpg",
+          "photoSource": "https://www.tph.moj.gov.tw/media/282474/%E6%AA%A2%E5%AF%9F%E9%95%B7%E7%8E%89%E7%85%A7.png",
+          "source": "https://www.tph.moj.gov.tw/4421/4423/4425/277259/"
+        }
+      ]
+    },
+    {
+      "id": "moj-tpi",
+      "name": "法務部司法官學院",
+      "parent": "moj",
+      "group": null,
+      "url": "https://www.tpi.moj.gov.tw/",
+      "members": [
+        {
+          "id": "moj-tpi-head",
+          "name": "吳巡龍",
+          "title": "院長",
+          "photo": "photos/moj-tpi-head.jpg",
+          "photoSource": "https://www.tpi.moj.gov.tw/media/385541/_z620500.jpg",
+          "source": "https://www.tpi.moj.gov.tw/290822/290823/290825/580370/"
+        }
+      ]
+    },
+    {
+      "id": "moea-aoc",
+      "name": "經濟部商業發展署",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.aoc.gov.tw/",
+      "members": [
+        {
+          "id": "moea-aoc-head",
+          "name": "蘇文玲",
+          "title": "署長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.aoc.gov.tw/subclass/cont/82"
+        }
+      ]
+    },
+    {
+      "id": "moea-ida",
+      "name": "經濟部產業發展署",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.ida.gov.tw/",
+      "members": [
+        {
+          "id": "moea-ida-head",
+          "name": "邱求慧",
+          "title": "署長",
+          "photo": "photos/moea-ida-head.jpg",
+          "photoSource": "https://www.ida.gov.tw/images/intro/chief-L.jpg",
+          "source": "https://www.ida.gov.tw/ctlr?PRO=intro.02&lang=0"
+        }
+      ]
+    },
+    {
+      "id": "moea-trade",
+      "name": "經濟部國際貿易署",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.trade.gov.tw/",
+      "members": [
+        {
+          "id": "moea-trade-head",
+          "name": "劉威亷",
+          "title": "署長",
+          "photo": "photos/moea-trade-head.jpg",
+          "photoSource": "https://www.trade.gov.tw/Files/PageImage/resume/21/214vclq20250115095501.JPG",
+          "source": "https://www.trade.gov.tw/Pages/List.aspx?nodeID=32"
+        }
+      ]
+    },
+    {
+      "id": "moea-ea",
+      "name": "經濟部能源署",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.moeaea.gov.tw/",
+      "members": [
+        {
+          "id": "moea-ea-head",
+          "name": "吳志偉",
+          "title": "署長",
+          "photo": "photos/moea-ea-head.jpg",
+          "photoSource": "https://www.moeaea.gov.tw/ECW/main/content/wHandEditorFile.ashx?file_id=13841",
+          "source": "https://www.moeaea.gov.tw/ECW/populace/content/Content.aspx?menu_id=151"
+        }
+      ]
+    },
+    {
+      "id": "moea-sme",
+      "name": "經濟部中小及新創企業署",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.sme.gov.tw/",
+      "members": [
+        {
+          "id": "moea-sme-head",
+          "name": "李冠志",
+          "title": "署長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.sme.gov.tw/list-tw-2314"
+        }
+      ]
+    },
+    {
+      "id": "moea-wra",
+      "name": "經濟部水利署",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.wra.gov.tw/",
+      "members": [
+        {
+          "id": "moea-wra-head",
+          "name": "林元鵬",
+          "title": "署長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.wra.gov.tw/News_Content_Table2.aspx?n=4899&s=230607"
+        }
+      ]
+    },
+    {
+      "id": "moea-tipo",
+      "name": "經濟部智慧財產局",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.tipo.gov.tw/",
+      "members": [
+        {
+          "id": "moea-tipo-head",
+          "name": "廖承威",
+          "title": "局長",
+          "photo": "photos/moea-tipo-head.jpg",
+          "photoSource": "https://www.tipo.gov.tw/wSite/public/Attachment/0/f1743401699615.jpg",
+          "source": "https://www.tipo.gov.tw/tw/tipo1/157.html"
+        }
+      ]
+    },
+    {
+      "id": "moea-bip",
+      "name": "經濟部產業園區管理局",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.bip.gov.tw/",
+      "members": [
+        {
+          "id": "moea-bip-head",
+          "name": "楊志清",
+          "title": "局長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://technews.tw/2025/03/26/yang-zhiqing-the-new-director-of-bip/"
+        }
+      ]
+    },
+    {
+      "id": "moea-bsmi",
+      "name": "經濟部標準檢驗局",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.bsmi.gov.tw/",
+      "members": [
+        {
+          "id": "moea-bsmi-head",
+          "name": "陳怡鈴",
+          "title": "局長",
+          "photo": "photos/moea-bsmi-head.jpg",
+          "photoSource": "https://www.bsmi.gov.tw/wSite/public/Mmo/1/1120920b.jpg",
+          "source": "https://www.bsmi.gov.tw/wSite/np?ctNode=9939&CtUnit=1576&BaseDSD=7&mp=1"
+        }
+      ]
+    },
+    {
+      "id": "moea-gsmma",
+      "name": "經濟部地質調查及礦業管理中心",
+      "parent": "moea",
+      "group": null,
+      "url": "https://www.gsmma.gov.tw/",
+      "members": [
+        {
+          "id": "moea-gsmma-head",
+          "name": "徐銘宏",
+          "title": "主任",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.moea.gov.tw/Mns/Populace/news/News.aspx?kind=1&menu_id=40&news_id=124128"
+        }
+      ]
+    }
+  ]
+}

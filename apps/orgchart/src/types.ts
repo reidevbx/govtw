@@ -9,6 +9,8 @@ export interface Member {
   photoSource: string | null
   /** 首長介紹頁網址 */
   source: string
+  /** 職位出缺：name 為「出缺」，不計入人數 */
+  vacant?: boolean
 }
 
 export interface Unit {
@@ -16,6 +18,9 @@ export interface Unit {
   name: string
   parent: string | null
   group: Group | null
-  url: string
+  /** 機關官網；查不到為 null */
+  url: string | null
   members: Member[]
+  /** members 為空時顯示的說明，預設「出缺」 */
+  note?: string
 }

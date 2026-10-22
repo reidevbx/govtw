@@ -106,7 +106,13 @@ function download() {
   stage.scale({ x: 1, y: 1 })
   stage.position({ x: -area.x, y: -area.y })
   stage.size({ width: area.width, height: area.height })
-  const url = stage.toDataURL({ pixelRatio: 2 })
+  // 瀏覽器 canvas 有尺寸上限（單邊約 16384px、面積約 2.6 億像素），圖太大就降低倍率
+  const pixelRatio = Math.min(
+    2,
+    16000 / Math.max(area.width, area.height),
+    Math.sqrt(1.5e8 / (area.width * area.height)),
+  )
+  const url = stage.toDataURL({ pixelRatio })
   stage.scale(prev.scale)
   stage.position(prev.pos)
   stage.size(prev.size)
@@ -130,22 +136,24 @@ document.querySelectorAll<HTMLElement>('[data-action]').forEach((el) => {
 // 文字版名單：canvas 讀不到內容，給螢幕閱讀器與搜尋用；順序同圖
 const esc = (s: string) =>
   s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`)
-const link = (href: string, text: string) =>
-  `<a href="${esc(href)}" rel="noopener" target="_blank">${esc(text)}</a>`
+const link = (href: string | null, text: string) =>
+  href ? `<a href="${esc(href)}" rel="noopener" target="_blank">${esc(text)}</a>` : esc(text)
 const list = document.getElementById('list')!
 list.innerHTML = layout.units
   .map(
     ({ unit: u }) => `<li>${link(u.url, u.name)}<ul>${
       u.members.length
-        ? u.members.map((m) => `<li>${esc(m.title)}：${link(m.source, m.name)}</li>`).join('')
-        : '<li>首長出缺</li>'
+        ? u.members
+            .map((m) => `<li>${esc(m.title)}：${m.vacant ? '出缺' : link(m.source, m.name)}</li>`)
+            .join('')
+        : `<li>${esc(u.note ?? '出缺')}</li>`
     }</ul></li>`,
   )
   .join('')
 document.getElementById('as-of')!.textContent = asOf
-// 政務委員兼部會首長會出現兩次，人數依姓名去重
+// 政務委員兼部會首長會出現兩次，人數依姓名去重；出缺不計
 document.getElementById('count')!.textContent = String(
-  new Set(units.flatMap((u) => u.members.map((m) => m.name))).size,
+  new Set(units.flatMap((u) => u.members.filter((m) => !m.vacant).map((m) => m.name))).size,
 )
 
 fit()

@@ -61,7 +61,7 @@ function drawPhoto(member: Member, theme: Theme, layer: Konva.Layer) {
     clipFunc: (ctx) => ctx.arc(cx, cy, PHOTO_R, 0, Math.PI * 2),
   })
 
-  // 佔位：姓名第一個字
+  // 佔位：姓名第一個字；出缺顯示「缺」
   group.add(new Konva.Circle({ x: cx, y: cy, radius: PHOTO_R, fill: theme.neutral }))
   group.add(
     new Konva.Text({
@@ -69,7 +69,7 @@ function drawPhoto(member: Member, theme: Theme, layer: Konva.Layer) {
       y: cy - PHOTO_R,
       width: PHOTO_R * 2,
       height: PHOTO_R * 2,
-      text: member.name.slice(0, 1),
+      text: member.vacant ? '缺' : member.name.slice(0, 1),
       fontFamily: theme.font,
       fontSize: 36,
       fontStyle: 'bold',
@@ -117,7 +117,7 @@ function drawMember(member: Member, theme: Theme, layer: Konva.Layer, onOpen: (m
       fontFamily: theme.font,
       fontSize: 18,
       fontStyle: 'bold',
-      fill: theme.text,
+      fill: member.vacant ? theme.textSecondary : theme.text,
       align: 'center',
     }),
   )
@@ -186,7 +186,7 @@ function drawUnit(box: UnitBox, theme: Theme, layer: Konva.Layer, onOpen: (m: Me
         y: HEADER_H,
         width: box.w,
         height: box.h - HEADER_H,
-        text: '首長出缺',
+        text: box.unit.note ?? '出缺',
         fontFamily: theme.font,
         fontSize: 16,
         fill: theme.textSecondary,
@@ -238,6 +238,22 @@ export function drawChart(layout: Layout, theme: Theme, layer: Konva.Layer, onOp
         fontSize: 16,
         fontStyle: 'bold',
         fill: theme.text,
+        listening: false,
+      }),
+    )
+  }
+
+  for (const c of layout.containers) {
+    layer.add(
+      new Konva.Rect({
+        x: c.x,
+        y: c.y,
+        width: c.w,
+        height: c.h,
+        cornerRadius: 8,
+        stroke: theme.line,
+        strokeWidth: 1,
+        dash: [6, 4],
         listening: false,
       }),
     )

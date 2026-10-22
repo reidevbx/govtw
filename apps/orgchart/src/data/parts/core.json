@@ -23,6 +23,62 @@
           "photo": "photos/vice-president.jpg",
           "photoSource": "https://www.president.gov.tw/img/Page/510223ed-c538-45fa-9442-a48f78646995.jpg",
           "source": "https://www.president.gov.tw/Page/695"
+        },
+        {
+          "id": "president-office-secretary-general",
+          "name": "潘孟安",
+          "title": "秘書長",
+          "photo": "photos/president-office-secretary-general.jpg",
+          "photoSource": "https://www.president.gov.tw/img/Page/c5459ab5-0b81-4281-8d49-99637b41394d.jpg",
+          "source": "https://www.president.gov.tw/Page/107"
+        },
+        {
+          "id": "president-office-deputy-secretary-general-1",
+          "name": "何志偉",
+          "title": "副秘書長",
+          "photo": "photos/president-office-deputy-secretary-general-1.jpg",
+          "photoSource": "https://www.president.gov.tw/img/Page/020a7c50-5bc9-4ffe-a97d-6ea85b1be7b6.jpg",
+          "source": "https://www.president.gov.tw/Page/108"
+        },
+        {
+          "id": "president-office-deputy-secretary-general-2",
+          "name": "鄭俊昇",
+          "title": "副秘書長",
+          "photo": "photos/president-office-deputy-secretary-general-2.jpg",
+          "photoSource": "https://www.president.gov.tw/img/Page/7c0540e3-8ed2-4e05-a14a-4b1fde712bef.jpg",
+          "source": "https://www.president.gov.tw/Page/108"
+        },
+        {
+          "id": "nsc-secretary-general",
+          "name": "吳釗燮",
+          "title": "國家安全會議秘書長",
+          "photo": "photos/nsc-secretary-general.jpg",
+          "photoSource": "https://www.president.gov.tw/nsc/images/management_pic.jpg",
+          "source": "https://www.president.gov.tw/nsc/management.html"
+        },
+        {
+          "id": "nsc-deputy-secretary-general-1",
+          "name": "林飛帆",
+          "title": "國家安全會議副秘書長",
+          "photo": "photos/nsc-deputy-secretary-general-1.jpg",
+          "photoSource": "https://www.president.gov.tw/nsc/images/submanager07.jpg",
+          "source": "https://www.president.gov.tw/nsc/sub_management.html#manager1"
+        },
+        {
+          "id": "nsc-deputy-secretary-general-2",
+          "name": "趙怡翔",
+          "title": "國家安全會議副秘書長",
+          "photo": "photos/nsc-deputy-secretary-general-2.jpg",
+          "photoSource": "https://www.president.gov.tw/nsc/images/submanager08.jpg",
+          "source": "https://www.president.gov.tw/nsc/sub_management.html#manager2"
+        },
+        {
+          "id": "nsc-deputy-secretary-general-3",
+          "name": "李問",
+          "title": "國家安全會議副秘書長",
+          "photo": "photos/nsc-deputy-secretary-general-3.jpg",
+          "photoSource": "https://www.president.gov.tw/nsc/images/submanager09.jpg",
+          "source": "https://www.president.gov.tw/nsc/sub_management.html#manager3"
         }
       ]
     },
@@ -73,6 +129,22 @@
           "photo": "photos/ly-deputy-speaker.jpg",
           "photoSource": "https://www.ly.gov.tw/Images/Legislators/110009.jpg",
           "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=121"
+        },
+        {
+          "id": "ly-secretary-general",
+          "name": "周萬來",
+          "title": "秘書長",
+          "photo": "photos/ly-secretary-general.jpg",
+          "photoSource": "https://www.ly.gov.tw/Images/Presidents/20017.jpg",
+          "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=122"
+        },
+        {
+          "id": "ly-deputy-secretary-general-1",
+          "name": "張裕榮",
+          "title": "副秘書長",
+          "photo": "photos/ly-deputy-secretary-general-1.jpg",
+          "photoSource": "https://www.ly.gov.tw/Images/Presidents/2016080816505501.jpg",
+          "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=123"
         }
       ]
     },
@@ -90,6 +162,31 @@
           "photo": "photos/jy-president.jpg",
           "photoSource": "https://www.judicial.gov.tw/Public/Images/202411/90924110117556f19c.jpg",
           "source": "https://www.judicial.gov.tw/tw/np-23-1.html"
+        },
+        {
+          "id": "jy-vice-president",
+          "name": "出缺",
+          "title": "副院長",
+          "vacant": true,
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.judicial.gov.tw/tw/np-23-1.html"
+        },
+        {
+          "id": "jy-secretary-general",
+          "name": "高金枝",
+          "title": "秘書長",
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.judicial.gov.tw/tw/np-24-1.html"
+        },
+        {
+          "id": "jy-deputy-secretary-general-1",
+          "name": "李釱任",
+          "title": "副秘書長",
+          "photo": "photos/jy-deputy-secretary-general-1.jpg",
+          "photoSource": "https://www.judicial.gov.tw/Public/Images/202602/98626020617547b5fc.png",
+          "source": "https://www.judicial.gov.tw/tw/np-1696-1.html"
         }
       ]
     },
@@ -115,6 +212,22 @@
           "photo": "photos/exam-vice-president.jpg",
           "photoSource": "https://ws.exam.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9ja2ZpbGUvNGZhMGMwN2UtMmY3NC00OWY1LTg4ZDAtN2VlMjE5ODQwYTg4LmpwZw%3d%3d&n=QTExMeWJr%2bmZoumVt%2bioseiIkue%2flC5qcGc%3d&icon=.jpg",
           "source": "https://www.exam.gov.tw/cp.aspx?n=3749&s=1143"
+        },
+        {
+          "id": "exam-secretary-general",
+          "name": "劉建忻",
+          "title": "秘書長",
+          "photo": "photos/exam-secretary-general.jpg",
+          "photoSource": "https://ws.exam.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9ja2ZpbGUvNWJkOTc4OTYtZDYwNi00NmY4LWE4MzQtZDZhZWFmYjg4YTc2LmpwZw%3d%3d&n=5YqJ5bu65b%2b7cy5qcGc%3d&icon=.jpg",
+          "source": "https://www.exam.gov.tw/cp.aspx?n=3749&s=1016"
+        },
+        {
+          "id": "exam-deputy-secretary-general-1",
+          "name": "龔癸藝",
+          "title": "副秘書長",
+          "photo": "photos/exam-deputy-secretary-general-1.jpg",
+          "photoSource": "https://ws.exam.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9ja2ZpbGUvZTFhMjJiOGEtYmUyMC00ZmI4LTgyNzQtYjAxNWJjYTBjMjc1LmpwZw%3d%3d&n=5ZyW54mHMS5qcGc%3d&icon=.jpg",
+          "source": "https://www.exam.gov.tw/cp.aspx?n=3749&s=1177"
         }
       ]
     },
@@ -124,7 +237,42 @@
       "parent": "president-office",
       "group": null,
       "url": "https://www.cy.gov.tw/",
-      "members": []
+      "members": [
+        {
+          "id": "cy-president",
+          "name": "出缺",
+          "title": "院長",
+          "vacant": true,
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.cy.gov.tw/News.aspx?n=52&sms=8879"
+        },
+        {
+          "id": "cy-vice-president",
+          "name": "出缺",
+          "title": "副院長",
+          "vacant": true,
+          "photo": null,
+          "photoSource": null,
+          "source": "https://www.cy.gov.tw/News.aspx?n=726&sms=8879"
+        },
+        {
+          "id": "cy-secretary-general",
+          "name": "黃適卓",
+          "title": "秘書長",
+          "photo": "photos/cy-secretary-general.jpg",
+          "photoSource": "https://www-ws.cy.gov.tw/001/Upload/3/relpic/9145/35539/b1885151-6f48-4e56-96b1-9a089382adb1.jpg",
+          "source": "https://www.cy.gov.tw/IntraGnrl_Detail.aspx?stype=1&n=55&sms=0"
+        },
+        {
+          "id": "cy-deputy-secretary-general-1",
+          "name": "陳美延",
+          "title": "代理副秘書長",
+          "photo": "photos/cy-deputy-secretary-general-1.jpg",
+          "photoSource": "https://www-ws.cy.gov.tw/001/Upload/3/relpic/9145/37708/216d7e96-a0c9-40c8-8382-71a63ad667d2.jpg",
+          "source": "https://www.cy.gov.tw/IntraGnrl_Detail.aspx?stype=2&n=644&sms=0"
+        }
+      ]
     }
   ]
 }
