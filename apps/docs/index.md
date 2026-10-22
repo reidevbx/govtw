@@ -32,6 +32,14 @@ features:
     link: /governance/
 ---
 
+## 網站重構示範
+
+以本設計系統重構既有政府網站，目前有行政院與我的E政府兩站。詳見[網站重構示範](/resources/showcase)。
+
+- [前往示範總覽](https://govtw-showcase.vercel.app/)
+- [行政院](https://govtw-showcase.vercel.app/ey/)
+- [我的E政府](https://govtw-showcase.vercel.app/egov/)
+
 ## 參考
 
 本設計系統參考其他國家的政府設計系統，以及以 Web Components 實作的元件庫。詳見[參考](/resources/references)。
