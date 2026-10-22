@@ -39,7 +39,7 @@ pnpm workspace monorepo，分為 `apps/`（應用）與 `packages/`（共用套�
 - **`packages/web-components`** — Lit 3 Web Components，每個元件一個檔案
 - **`apps/docs`** — VitePress 文件站台，元件頁面含 live demo
 - **`apps/showcase`** — Astro 政府網站重構示範，每站一個資料夾（`src/sites/<站>/` + `src/pages/<站>/`），主題只在該站載入，不修改 `packages/`
-- **`apps/orgchart`** — Vite + Konva 中央政府首長組織圖，資料在 `src/data/parts/*.json`（建置時合併），照片在 `public/photos/`
+- **`apps/orgchart`** — Vite + Konva 中央政府首長組織圖，資料在 `src/data/parts/*.json`（建置時合併），照片在 `public/photos/`。部署在 Cloudflare Workers 靜態資源（Git 連動，根目錄為 repo 根目錄、建置 `pnpm build:orgchart`、部署 `npx wrangler deploy --config apps/orgchart/wrangler.jsonc`），不用 Vercel
 
 ## 指令
 
